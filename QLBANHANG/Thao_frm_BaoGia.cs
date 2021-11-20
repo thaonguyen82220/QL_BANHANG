@@ -207,6 +207,11 @@ namespace QLBANHANG
 
         }
 
+        private void btnTrove_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
         private void btnTao_Click(object sender, EventArgs e)
         {
             if (dpHieuLuc.Value < dpNgaybaogia.Value)

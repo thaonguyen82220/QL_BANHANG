@@ -65,6 +65,7 @@ namespace QLBANHANG
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -73,7 +74,6 @@ namespace QLBANHANG
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTrove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgChitiet)).BeginInit();
@@ -87,11 +87,11 @@ namespace QLBANHANG
             // txtSoBaoGia
             // 
             this.txtSoBaoGia.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoBaoGia.Location = new System.Drawing.Point(131, 27);
-            this.txtSoBaoGia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoBaoGia.Location = new System.Drawing.Point(175, 33);
+            this.txtSoBaoGia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSoBaoGia.Name = "txtSoBaoGia";
             this.txtSoBaoGia.ReadOnly = true;
-            this.txtSoBaoGia.Size = new System.Drawing.Size(214, 25);
+            this.txtSoBaoGia.Size = new System.Drawing.Size(284, 29);
             this.txtSoBaoGia.TabIndex = 142;
             // 
             // btnLuu
@@ -100,10 +100,10 @@ namespace QLBANHANG
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(29, 167);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLuu.Location = new System.Drawing.Point(39, 206);
+            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(95, 35);
+            this.btnLuu.Size = new System.Drawing.Size(127, 43);
             this.btnLuu.TabIndex = 159;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -115,10 +115,10 @@ namespace QLBANHANG
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(28, 62);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Location = new System.Drawing.Point(37, 76);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(95, 39);
+            this.btnSua.Size = new System.Drawing.Size(127, 48);
             this.btnSua.TabIndex = 157;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = false;
@@ -130,10 +130,10 @@ namespace QLBANHANG
             this.btnThemKH.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemKH.Image")));
             this.btnThemKH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemKH.Location = new System.Drawing.Point(386, 28);
-            this.btnThemKH.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemKH.Location = new System.Drawing.Point(515, 34);
+            this.btnThemKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(35, 28);
+            this.btnThemKH.Size = new System.Drawing.Size(47, 34);
             this.btnThemKH.TabIndex = 156;
             this.btnThemKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemKH.UseVisualStyleBackColor = false;
@@ -141,18 +141,18 @@ namespace QLBANHANG
             // 
             // dpNgaybaogia
             // 
-            this.dpNgaybaogia.Location = new System.Drawing.Point(131, 80);
-            this.dpNgaybaogia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpNgaybaogia.Location = new System.Drawing.Point(175, 98);
+            this.dpNgaybaogia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dpNgaybaogia.Name = "dpNgaybaogia";
-            this.dpNgaybaogia.Size = new System.Drawing.Size(214, 20);
+            this.dpNgaybaogia.Size = new System.Drawing.Size(284, 22);
             this.dpNgaybaogia.TabIndex = 154;
             // 
             // dpHieuLuc
             // 
-            this.dpHieuLuc.Location = new System.Drawing.Point(131, 126);
-            this.dpHieuLuc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpHieuLuc.Location = new System.Drawing.Point(175, 155);
+            this.dpHieuLuc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dpHieuLuc.Name = "dpHieuLuc";
-            this.dpHieuLuc.Size = new System.Drawing.Size(214, 20);
+            this.dpHieuLuc.Size = new System.Drawing.Size(284, 22);
             this.dpHieuLuc.TabIndex = 153;
             // 
             // cbNhanvien
@@ -160,9 +160,10 @@ namespace QLBANHANG
             this.cbNhanvien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNhanvien.Enabled = false;
             this.cbNhanvien.FormattingEnabled = true;
-            this.cbNhanvien.Location = new System.Drawing.Point(131, 171);
+            this.cbNhanvien.Location = new System.Drawing.Point(175, 210);
+            this.cbNhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbNhanvien.Name = "cbNhanvien";
-            this.cbNhanvien.Size = new System.Drawing.Size(214, 21);
+            this.cbNhanvien.Size = new System.Drawing.Size(284, 24);
             this.cbNhanvien.TabIndex = 152;
             // 
             // btnTim
@@ -171,10 +172,10 @@ namespace QLBANHANG
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
             this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTim.Location = new System.Drawing.Point(342, 28);
-            this.btnTim.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTim.Location = new System.Drawing.Point(456, 34);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(29, 28);
+            this.btnTim.Size = new System.Drawing.Size(39, 34);
             this.btnTim.TabIndex = 180;
             this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTim.UseVisualStyleBackColor = false;
@@ -183,40 +184,40 @@ namespace QLBANHANG
             // txtLienHe
             // 
             this.txtLienHe.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLienHe.Location = new System.Drawing.Point(119, 76);
-            this.txtLienHe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLienHe.Location = new System.Drawing.Point(159, 94);
+            this.txtLienHe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtLienHe.Name = "txtLienHe";
             this.txtLienHe.ReadOnly = true;
-            this.txtLienHe.Size = new System.Drawing.Size(314, 25);
+            this.txtLienHe.Size = new System.Drawing.Size(417, 29);
             this.txtLienHe.TabIndex = 158;
             // 
             // txtGhiChu
             // 
             this.txtGhiChu.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGhiChu.Location = new System.Drawing.Point(119, 167);
-            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGhiChu.Location = new System.Drawing.Point(159, 206);
+            this.txtGhiChu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtGhiChu.Name = "txtGhiChu";
-            this.txtGhiChu.Size = new System.Drawing.Size(314, 25);
+            this.txtGhiChu.Size = new System.Drawing.Size(417, 29);
             this.txtGhiChu.TabIndex = 149;
             // 
             // txtKhachhang
             // 
             this.txtKhachhang.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhachhang.Location = new System.Drawing.Point(120, 28);
-            this.txtKhachhang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtKhachhang.Location = new System.Drawing.Point(160, 34);
+            this.txtKhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKhachhang.Name = "txtKhachhang";
             this.txtKhachhang.ReadOnly = true;
-            this.txtKhachhang.Size = new System.Drawing.Size(207, 25);
+            this.txtKhachhang.Size = new System.Drawing.Size(275, 29);
             this.txtKhachhang.TabIndex = 142;
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(119, 122);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiaChi.Location = new System.Drawing.Point(159, 150);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ReadOnly = true;
-            this.txtDiaChi.Size = new System.Drawing.Size(314, 25);
+            this.txtDiaChi.Size = new System.Drawing.Size(417, 29);
             this.txtDiaChi.TabIndex = 148;
             // 
             // dgChitiet
@@ -231,11 +232,12 @@ namespace QLBANHANG
             this.Column9,
             this.Column8,
             this.Column11});
-            this.dgChitiet.Location = new System.Drawing.Point(17, 66);
+            this.dgChitiet.Location = new System.Drawing.Point(23, 81);
+            this.dgChitiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgChitiet.Name = "dgChitiet";
             this.dgChitiet.ReadOnly = true;
             this.dgChitiet.RowHeadersWidth = 51;
-            this.dgChitiet.Size = new System.Drawing.Size(1096, 238);
+            this.dgChitiet.Size = new System.Drawing.Size(1461, 293);
             this.dgChitiet.TabIndex = 172;
             this.dgChitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             this.dgChitiet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
@@ -297,10 +299,11 @@ namespace QLBANHANG
             // txtMasp
             // 
             this.txtMasp.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMasp.Location = new System.Drawing.Point(132, 21);
+            this.txtMasp.Location = new System.Drawing.Point(176, 26);
+            this.txtMasp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.ReadOnly = true;
-            this.txtMasp.Size = new System.Drawing.Size(211, 25);
+            this.txtMasp.Size = new System.Drawing.Size(280, 29);
             this.txtMasp.TabIndex = 175;
             // 
             // label16
@@ -308,9 +311,10 @@ namespace QLBANHANG
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Navy;
-            this.label16.Location = new System.Drawing.Point(436, 23);
+            this.label16.Location = new System.Drawing.Point(581, 28);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(64, 19);
+            this.label16.Size = new System.Drawing.Size(82, 22);
             this.label16.TabIndex = 178;
             this.label16.Text = "Số lượng";
             // 
@@ -319,28 +323,30 @@ namespace QLBANHANG
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Navy;
-            this.label15.Location = new System.Drawing.Point(24, 23);
+            this.label15.Location = new System.Drawing.Point(32, 28);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(69, 19);
+            this.label15.Size = new System.Drawing.Size(86, 22);
             this.label15.TabIndex = 179;
             this.label15.Text = "Sản phẩm";
             // 
             // txtSoLuong
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(534, 21);
+            this.txtSoLuong.Location = new System.Drawing.Point(712, 26);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(73, 25);
+            this.txtSoLuong.Size = new System.Drawing.Size(96, 29);
             this.txtSoLuong.TabIndex = 176;
             // 
             // txtTongtien
             // 
             this.txtTongtien.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongtien.Location = new System.Drawing.Point(947, 325);
-            this.txtTongtien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTongtien.Location = new System.Drawing.Point(1263, 400);
+            this.txtTongtien.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTongtien.Name = "txtTongtien";
             this.txtTongtien.ReadOnly = true;
-            this.txtTongtien.Size = new System.Drawing.Size(166, 25);
+            this.txtTongtien.Size = new System.Drawing.Size(220, 29);
             this.txtTongtien.TabIndex = 157;
             // 
             // label6
@@ -348,10 +354,9 @@ namespace QLBANHANG
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(861, 325);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(1148, 400);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(63, 17);
+            this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 158;
             this.label6.Text = "Tổng tiền";
             // 
@@ -361,9 +366,10 @@ namespace QLBANHANG
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(1014, 14);
+            this.btnXoa.Location = new System.Drawing.Point(1352, 17);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(99, 32);
+            this.btnXoa.Size = new System.Drawing.Size(132, 39);
             this.btnXoa.TabIndex = 174;
             this.btnXoa.Text = "     Xóa";
             this.btnXoa.UseVisualStyleBackColor = false;
@@ -372,10 +378,10 @@ namespace QLBANHANG
             // btnSearch
             // 
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(357, 21);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(476, 26);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(22, 21);
+            this.btnSearch.Size = new System.Drawing.Size(29, 26);
             this.btnSearch.TabIndex = 177;
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.button1_Click);
@@ -386,9 +392,10 @@ namespace QLBANHANG
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(889, 14);
+            this.btnThem.Location = new System.Drawing.Point(1185, 17);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(104, 33);
+            this.btnThem.Size = new System.Drawing.Size(139, 41);
             this.btnThem.TabIndex = 173;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = false;
@@ -400,10 +407,10 @@ namespace QLBANHANG
             this.btnTao.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTao.Image = ((System.Drawing.Image)(resources.GetObject("btnTao.Image")));
             this.btnTao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTao.Location = new System.Drawing.Point(29, 114);
-            this.btnTao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTao.Location = new System.Drawing.Point(39, 140);
+            this.btnTao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTao.Name = "btnTao";
-            this.btnTao.Size = new System.Drawing.Size(95, 38);
+            this.btnTao.Size = new System.Drawing.Size(127, 47);
             this.btnTao.TabIndex = 180;
             this.btnTao.Text = "Tạo ";
             this.btnTao.UseVisualStyleBackColor = false;
@@ -414,10 +421,9 @@ namespace QLBANHANG
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Navy;
-            this.label11.Location = new System.Drawing.Point(550, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Location = new System.Drawing.Point(733, 11);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(235, 32);
+            this.label11.Size = new System.Drawing.Size(303, 42);
             this.label11.TabIndex = 181;
             this.label11.Text = "PHIẾU BÁO GIÁ";
             // 
@@ -428,9 +434,11 @@ namespace QLBANHANG
             this.groupBox4.Controls.Add(this.panel4);
             this.groupBox4.Controls.Add(this.panel5);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.groupBox4.Location = new System.Drawing.Point(24, 61);
+            this.groupBox4.Location = new System.Drawing.Point(32, 75);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(1133, 274);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Size = new System.Drawing.Size(1511, 337);
             this.groupBox4.TabIndex = 182;
             this.groupBox4.TabStop = false;
             // 
@@ -442,9 +450,10 @@ namespace QLBANHANG
             this.panel2.Controls.Add(this.btnTao);
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnLuu);
-            this.panel2.Location = new System.Drawing.Point(950, 24);
+            this.panel2.Location = new System.Drawing.Point(1267, 30);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(163, 237);
+            this.panel2.Size = new System.Drawing.Size(216, 291);
             this.panel2.TabIndex = 23;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -453,9 +462,10 @@ namespace QLBANHANG
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(25, 27);
+            this.label12.Location = new System.Drawing.Point(33, 33);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(54, 17);
+            this.label12.Size = new System.Drawing.Size(68, 21);
             this.label12.TabIndex = 30;
             this.label12.Text = "Quản lý";
             // 
@@ -465,9 +475,10 @@ namespace QLBANHANG
             this.label13.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label13.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label13.Location = new System.Drawing.Point(25, 27);
+            this.label13.Location = new System.Drawing.Point(33, 33);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 17);
+            this.label13.Size = new System.Drawing.Size(68, 21);
             this.label13.TabIndex = 29;
             this.label13.Text = "Quản lý";
             // 
@@ -484,19 +495,33 @@ namespace QLBANHANG
             this.panel4.Controls.Add(this.txtKhachhang);
             this.panel4.Controls.Add(this.btnThemKH);
             this.panel4.Controls.Add(this.txtDiaChi);
-            this.panel4.Location = new System.Drawing.Point(432, 24);
+            this.panel4.Location = new System.Drawing.Point(576, 30);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(488, 237);
+            this.panel4.Size = new System.Drawing.Size(649, 291);
             this.panel4.TabIndex = 22;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
+            this.label14.Location = new System.Drawing.Point(52, 215);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(69, 21);
+            this.label14.TabIndex = 30;
+            this.label14.Text = "Ghi chú";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label17.Location = new System.Drawing.Point(36, 30);
+            this.label17.Location = new System.Drawing.Point(48, 37);
+            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(79, 17);
+            this.label17.Size = new System.Drawing.Size(98, 21);
             this.label17.TabIndex = 29;
             this.label17.Text = "Khách hàng";
             // 
@@ -505,9 +530,10 @@ namespace QLBANHANG
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label19.Location = new System.Drawing.Point(39, 130);
+            this.label19.Location = new System.Drawing.Point(52, 160);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 17);
+            this.label19.Size = new System.Drawing.Size(65, 21);
             this.label19.TabIndex = 24;
             this.label19.Text = "Địa chỉ";
             // 
@@ -516,9 +542,10 @@ namespace QLBANHANG
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label20.Location = new System.Drawing.Point(36, 83);
+            this.label20.Location = new System.Drawing.Point(48, 102);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(52, 17);
+            this.label20.Size = new System.Drawing.Size(64, 21);
             this.label20.TabIndex = 23;
             this.label20.Text = "Liên hệ";
             // 
@@ -533,9 +560,10 @@ namespace QLBANHANG
             this.panel5.Controls.Add(this.label23);
             this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.txtSoBaoGia);
-            this.panel5.Location = new System.Drawing.Point(17, 24);
+            this.panel5.Location = new System.Drawing.Point(23, 30);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(386, 237);
+            this.panel5.Size = new System.Drawing.Size(513, 291);
             this.panel5.TabIndex = 21;
             // 
             // label21
@@ -543,9 +571,10 @@ namespace QLBANHANG
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label21.Location = new System.Drawing.Point(30, 131);
+            this.label21.Location = new System.Drawing.Point(40, 161);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(58, 17);
+            this.label21.Size = new System.Drawing.Size(72, 21);
             this.label21.TabIndex = 16;
             this.label21.Text = "Hiệu lực";
             // 
@@ -554,9 +583,10 @@ namespace QLBANHANG
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label22.Location = new System.Drawing.Point(30, 175);
+            this.label22.Location = new System.Drawing.Point(40, 215);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(68, 17);
+            this.label22.Size = new System.Drawing.Size(84, 21);
             this.label22.TabIndex = 15;
             this.label22.Text = "Nhân viên";
             // 
@@ -565,9 +595,10 @@ namespace QLBANHANG
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label23.Location = new System.Drawing.Point(30, 84);
+            this.label23.Location = new System.Drawing.Point(40, 103);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(86, 17);
+            this.label23.Size = new System.Drawing.Size(108, 21);
             this.label23.TabIndex = 14;
             this.label23.Text = "Ngày báo giá";
             // 
@@ -576,22 +607,12 @@ namespace QLBANHANG
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label24.Location = new System.Drawing.Point(30, 31);
+            this.label24.Location = new System.Drawing.Point(40, 38);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(69, 17);
+            this.label24.Size = new System.Drawing.Size(90, 21);
             this.label24.TabIndex = 13;
             this.label24.Text = "Số báo giá";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(39, 175);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(53, 17);
-            this.label14.TabIndex = 30;
-            this.label14.Text = "Ghi chú";
             // 
             // panel1
             // 
@@ -605,9 +626,10 @@ namespace QLBANHANG
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Location = new System.Drawing.Point(24, 353);
+            this.panel1.Location = new System.Drawing.Point(32, 434);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1133, 366);
+            this.panel1.Size = new System.Drawing.Size(1511, 450);
             this.panel1.TabIndex = 183;
             // 
             // btnTrove
@@ -615,25 +637,27 @@ namespace QLBANHANG
             this.btnTrove.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrove.Image = ((System.Drawing.Image)(resources.GetObject("btnTrove.Image")));
             this.btnTrove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrove.Location = new System.Drawing.Point(1062, 733);
-            this.btnTrove.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTrove.Location = new System.Drawing.Point(1416, 902);
+            this.btnTrove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTrove.Name = "btnTrove";
-            this.btnTrove.Size = new System.Drawing.Size(95, 31);
+            this.btnTrove.Size = new System.Drawing.Size(127, 38);
             this.btnTrove.TabIndex = 187;
             this.btnTrove.Text = "Trở về";
             this.btnTrove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTrove.UseVisualStyleBackColor = true;
+            this.btnTrove.Click += new System.EventHandler(this.btnTrove_Click);
             // 
             // Thao_frm_BaoGia
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 780);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(1579, 960);
             this.Controls.Add(this.btnTrove);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label11);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Thao_frm_BaoGia";
             this.Text = "Bảng báo giá";
             this.Load += new System.EventHandler(this.frm_BaoGia_Load);

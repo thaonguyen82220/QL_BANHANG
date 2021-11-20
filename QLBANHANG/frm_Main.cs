@@ -9,7 +9,7 @@ using DevComponents.DotNetBar;
 
 namespace QLBANHANG
 {
-    public partial class frm_Main : DevComponents.DotNetBar.Office2007RibbonForm
+    public partial class frm_Main : Form
     {
         public frm_Main()
         {

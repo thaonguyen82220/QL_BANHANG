@@ -14,7 +14,7 @@ namespace QLBANHANG
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false); //TheAnh up code mới vào đây
+            Application.SetCompatibleTextRenderingDefault(false); 
                 Application.Run(new frm_Main());
         }
     }
