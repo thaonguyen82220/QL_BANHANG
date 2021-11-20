@@ -1,0 +1,4 @@
+﻿Của THẢO
+<add name="Context" connectionString="Data Source=.;Initial Catalog=FPT;User ID=sa;Password=060313192000;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" providerName="System.Data.SqlClient"/>
+CỦA TA
+	  <add name="Context" connectionString="Data Source=TA1O9ER\SQLEXPRESS;Initial Catalog=QL_BANHANG;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False" providerName="System.Data.SqlClient"/>	  
