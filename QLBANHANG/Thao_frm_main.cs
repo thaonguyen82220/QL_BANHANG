@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace QLBANHANG
 {
-    public partial class frm_Main2 : Form
+    public partial class Thao_frm_main : Form
     {
-        public frm_Main2()
+        public Thao_frm_main()
         {
             InitializeComponent();
         }
 
-        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
 
         }

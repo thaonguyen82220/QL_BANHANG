@@ -165,7 +165,6 @@
             // 
             // 
             // 
-            this.labelX4.BackgroundStyle.Class = "";
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX4.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelX4.ForeColor = System.Drawing.Color.Black;
@@ -183,7 +182,6 @@
             // 
             // 
             // 
-            this.labelX3.BackgroundStyle.Class = "";
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.labelX3.ForeColor = System.Drawing.Color.Black;
@@ -231,7 +229,7 @@
             this.msds.Location = new System.Drawing.Point(0, 127);
             this.msds.Name = "msds";
             this.msds.ReadOnly = true;
-            this.msds.Size = new System.Drawing.Size(575, 320);
+            this.msds.Size = new System.Drawing.Size(575, 309);
             this.msds.TabIndex = 26;
             this.msds.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.msds_CellDoubleClick);
             // 
@@ -253,7 +251,7 @@
             // 
             // frm_Loai
             // 
-            this.ClientSize = new System.Drawing.Size(575, 447);
+            this.ClientSize = new System.Drawing.Size(575, 436);
             this.Controls.Add(this.msds);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;

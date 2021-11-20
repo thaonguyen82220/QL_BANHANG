@@ -114,6 +114,12 @@
     <Compile Include="PlaceHolder_Text.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Thao_frmNhan_Vien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thao_frmNhan_Vien.Designer.cs">
+      <DependentUpon>Thao_frmNhan_Vien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thao_frm_BaoGia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -300,6 +306,30 @@
     <Compile Include="Thao_DSHoaDon.Designer.cs">
       <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Thao_frm_Hang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thao_frm_Hang.Designer.cs">
+      <DependentUpon>Thao_frm_Hang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thao_frm_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thao_frm_KhachHang.Designer.cs">
+      <DependentUpon>Thao_frm_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thao_frm_main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thao_frm_main.Designer.cs">
+      <DependentUpon>Thao_frm_main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Thao_frm_TKDoanhThu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Thao_frm_TKDoanhThu.Designer.cs">
+      <DependentUpon>Thao_frm_TKDoanhThu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Thao_TaoDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -326,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PickKhachHang.resx">
       <DependentUpon>frm_PickKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thao_frmNhan_Vien.resx">
+      <DependentUpon>Thao_frmNhan_Vien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thao_frm_BaoGia.resx">
       <DependentUpon>Thao_frm_BaoGia.cs</DependentUpon>
@@ -423,6 +456,18 @@
     <EmbeddedResource Include="Report\rp_Thongkephieuxuat.rdlc" />
     <EmbeddedResource Include="Thao_DSHoaDon.resx">
       <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thao_frm_Hang.resx">
+      <DependentUpon>Thao_frm_Hang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thao_frm_KhachHang.resx">
+      <DependentUpon>Thao_frm_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thao_frm_main.resx">
+      <DependentUpon>Thao_frm_main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Thao_frm_TKDoanhThu.resx">
+      <DependentUpon>Thao_frm_TKDoanhThu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Thao_TaoDonHang.resx">
       <DependentUpon>Thao_TaoDonHang.cs</DependentUpon>
