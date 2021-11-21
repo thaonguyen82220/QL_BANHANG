@@ -15,25 +15,48 @@ namespace QLBANHANG
         string id = "no";
         ConnectDB cn = new ConnectDB();
         Function f = new Function();
-        public frm_PickSanPham()
+        bool nhap = false;
+        public frm_PickSanPham(bool n=false)
         {
             InitializeComponent();
             cn.LoadCombobox(cbLoaihang, "Select * from tbl_loai", "TenLoai", "Ma");
-            hienthi();
+            if (n==false)
+            {
+                hienthi(false);              
+            }
+            else
+            {
+                nhap = true;
+                hienthi(true);
+            }    
         }
-        public void hienthi(string loai="no",string ten="no")
+        public void hienthi(bool nhap,string loai = "no", string ten = "no")
         {
             string sql = "";
-            if (loai == "no" && ten == "no")
-                sql = @"SELECT * from tbl_HANG where SoLuong > 0";
-            else
+            if (nhap)
+            {
+                if (loai == "no" && ten == "no")
+                    sql = @"SELECT * from tbl_HANG";
+                else
             if (loai != "no" && ten == "no")
-                sql = @"SELECT * from tbl_HANG where SoLuong > 0 and LOAI='" + loai + "'";
-            else
+                    sql = @"SELECT * from tbl_HANG where LOAI='" + loai + "'";
+                else
             if (loai != "no" && ten != "no")
-                sql = @"SELECT * from tbl_HANG where SoLuong > 0 and LOAI='"+loai+"' and Ten like N'%"+ten+"%'";
+                    sql = @"SELECT * from tbl_HANG where LOAI='" + loai + "' and Ten like N'%" + ten + "%'";
+            }  
+            else
+            {
+                if (loai == "no" && ten == "no")
+                    sql = @"SELECT * from tbl_HANG where SoLuong > 0";
+                else
+            if (loai != "no" && ten == "no")
+                    sql = @"SELECT * from tbl_HANG where SoLuong > 0 and LOAI='" + loai + "'";
+                else
+            if (loai != "no" && ten != "no")
+                    sql = @"SELECT * from tbl_HANG where SoLuong > 0 and LOAI='" + loai + "' and Ten like N'%" + ten + "%'";
+            }    
             dgvSanPham.DataSource = cn.taobang(sql);
-        } 
+        }
         public string GetID()
         {
             return id;
@@ -62,7 +85,14 @@ namespace QLBANHANG
 
         private void ThayDoiLoai(object sender, EventArgs e)
         {
-            hienthi(cbLoaihang.SelectedValue.ToString());
+            if (nhap)
+            {
+                hienthi(false, cbLoaihang.SelectedValue.ToString());
+            }else
+            {
+                hienthi(true, cbLoaihang.SelectedValue.ToString());
+
+            }
         }
 
         private void btnTimkiem_Click(object sender, EventArgs e)
@@ -70,7 +100,10 @@ namespace QLBANHANG
             if (!string.IsNullOrEmpty(txtTensp.Text))
             {
                 string t = txtTensp.Text;
-                hienthi(cbLoaihang.SelectedValue.ToString(),t);
+                if(nhap)
+                hienthi(true,cbLoaihang.SelectedValue.ToString(),t);
+                else
+                    hienthi(false, cbLoaihang.SelectedValue.ToString(), t);
             }
             else
                 MessageBox.Show("Vui lòng nhập tên sản phẩm muốn tìm");

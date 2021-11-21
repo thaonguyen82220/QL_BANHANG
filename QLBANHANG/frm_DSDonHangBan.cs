@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace QLBANHANG
 {
-    public partial class Thao_DSDonHang : Form
+    public partial class frm_DSDonHangBan : Form
     {
         ConnectDB cn = new ConnectDB();
         Function f = new Function();
         int dong = -1;
         string id_don;
         bool pick=false;
-        public Thao_DSDonHang(bool pick=false)
+        public frm_DSDonHangBan(bool pick=false)
         {
             InitializeComponent();
             this.pick = pick;
@@ -144,7 +144,7 @@ namespace QLBANHANG
             try
             {
                 var phieu = f.GetPhieuBanHang(id_don);
-                frm_DonHang frm = new frm_DonHang(phieu);
+                frm_DonHangBan frm = new frm_DonHangBan(phieu);
                 this.Hide();
                 frm.ShowDialog();             
                 this.Show();
@@ -161,7 +161,7 @@ namespace QLBANHANG
         private void btnThem_Click(object sender, EventArgs e)
         {
             this.Hide();
-            using (frm_DonHang frm = new frm_DonHang())
+            using (frm_DonHangBan frm = new frm_DonHangBan())
             {
                 frm.ShowDialog();
             }

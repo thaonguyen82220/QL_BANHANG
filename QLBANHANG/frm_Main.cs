@@ -70,13 +70,13 @@ namespace QLBANHANG
 
         private void btdot_Click(object sender, EventArgs e)
         {
-            frm_PhieuNhapHang frm = new frm_PhieuNhapHang();
+            frm_DSDonHangNhap frm = new frm_DSDonHangNhap();
             frm.ShowDialog();
         }
 
         private void btlich_Click(object sender, EventArgs e)
         {
-            Thao_DSDonHang frm = new Thao_DSDonHang();
+            frm_DSDonHangBan frm = new frm_DSDonHangBan();
             frm.ShowDialog();
         }
 

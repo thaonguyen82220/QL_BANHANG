@@ -18,9 +18,6 @@ namespace QLBANHANG.Model
         [StringLength(50)]
         public string IDPN { get; set; }
 
-        [StringLength(50)]
-        public string NCC { get; set; }
-
         public double? TONGTIEN { get; set; }
 
         [Column(TypeName = "date")]
@@ -34,7 +31,11 @@ namespace QLBANHANG.Model
         [StringLength(20)]
         public string Sdt { get; set; }
 
-        public virtual tbl_NhaCungCap tbl_NhaCungCap { get; set; }
+        [StringLength(50)]
+        public string MANCC { get; set; }
+
+        [StringLength(50)]
+        public string MANV { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_PhieuNhapChiTiet> tbl_PhieuNhapChiTiet { get; set; }

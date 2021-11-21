@@ -10,7 +10,7 @@ using QLBANHANG.Model;
 
 namespace QLBANHANG
 {
-    public partial class Thao_frm_BaoGia : Form
+    public partial class frm_BaoGia : Form
     {
         int dong = -1;
         string current_p_id ;
@@ -20,7 +20,7 @@ namespace QLBANHANG
         tbl_KhachHang khach = new tbl_KhachHang();
         bool them = false, sua = false, create = false, suact =false;
 
-        public Thao_frm_BaoGia()
+        public frm_BaoGia()
         {
             InitializeComponent();
             txtSoBaoGia.Text = "BG" + f.RandomNumber() + f.Random(2);
@@ -37,7 +37,7 @@ namespace QLBANHANG
 
             }
         }
-        public Thao_frm_BaoGia(string id)
+        public frm_BaoGia(string id)
         {
             InitializeComponent();
             txtSoBaoGia.Text = id;

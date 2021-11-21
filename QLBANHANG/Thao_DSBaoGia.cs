@@ -24,7 +24,7 @@ namespace QLBANHANG
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            Thao_frm_BaoGia frm = new Thao_frm_BaoGia();
+            frm_BaoGia frm = new frm_BaoGia();
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -32,7 +32,7 @@ namespace QLBANHANG
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            Thao_frm_BaoGia frm = new Thao_frm_BaoGia(current_id);
+            frm_BaoGia frm = new frm_BaoGia(current_id);
             this.Hide();
             frm.ShowDialog();
             this.Show();

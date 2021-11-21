@@ -88,6 +88,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_DSDonHangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DSDonHangNhap.Designer.cs">
+      <DependentUpon>frm_DSDonHangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DSThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,13 +106,19 @@
     <Compile Include="frm_Main2.Designer.cs">
       <DependentUpon>frm_Main2.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DonHangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DonHangNhap.Designer.cs">
+      <DependentUpon>frm_DonHangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_PickKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_PickKhachHang.Designer.cs">
       <DependentUpon>frm_PickKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Context.cs" />
+    <Compile Include="Model\Context2.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\tbl_BaoGia.cs" />
     <Compile Include="Model\tbl_ChiTietBaoGia.cs" />
@@ -114,11 +126,11 @@
     <Compile Include="PlaceHolder_Text.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Thao_frm_BaoGia.cs">
+    <Compile Include="frm_BaoGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thao_frm_BaoGia.Designer.cs">
-      <DependentUpon>Thao_frm_BaoGia.cs</DependentUpon>
+    <Compile Include="frm_BaoGia.Designer.cs">
+      <DependentUpon>frm_BaoGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_ChiTietHoaDon.cs">
       <SubType>Form</SubType>
@@ -126,11 +138,11 @@
     <Compile Include="frm_ChiTietHoaDon.Designer.cs">
       <DependentUpon>frm_ChiTietHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_DonHang.cs">
+    <Compile Include="frm_DonHangBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_DonHang.Designer.cs">
-      <DependentUpon>frm_DonHang.cs</DependentUpon>
+    <Compile Include="frm_DonHangBan.Designer.cs">
+      <DependentUpon>frm_DonHangBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_HoaDon.cs">
       <SubType>Form</SubType>
@@ -152,12 +164,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="frm_CTHDBANHANG.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_CTHDBANHANG.Designer.cs">
-      <DependentUpon>frm_CTHDBANHANG.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DangNhap.cs">
       <SubType>Form</SubType>
@@ -212,18 +218,6 @@
     </Compile>
     <Compile Include="frm_NhanVien.Designer.cs">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_PhieuBanHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_PhieuBanHang.Designer.cs">
-      <DependentUpon>frm_PhieuBanHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_PhieuNhapHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_PhieuNhapHang.Designer.cs">
-      <DependentUpon>frm_PhieuNhapHang.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_PhucHoi.cs">
       <SubType>Form</SubType>
@@ -300,50 +294,47 @@
     <Compile Include="Thao_DSHoaDon.Designer.cs">
       <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thao_TaoDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Thao_TaoDonHang.Designer.cs">
-      <DependentUpon>Thao_TaoDonHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="Thao_DSBaoGia.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Thao_DSBaoGia.Designer.cs">
       <DependentUpon>Thao_DSBaoGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thao_DSDonHang.cs">
+    <Compile Include="frm_DSDonHangBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thao_DSDonHang.Designer.cs">
-      <DependentUpon>Thao_DSDonHang.cs</DependentUpon>
+    <Compile Include="frm_DSDonHangBan.Designer.cs">
+      <DependentUpon>frm_DSDonHangBan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_DSDonHangNhap.resx">
+      <DependentUpon>frm_DSDonHangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DSThongKe.resx">
       <DependentUpon>frm_DSThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main2.resx">
       <DependentUpon>frm_Main2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_DonHangNhap.resx">
+      <DependentUpon>frm_DonHangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_PickKhachHang.resx">
       <DependentUpon>frm_PickKhachHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thao_frm_BaoGia.resx">
-      <DependentUpon>Thao_frm_BaoGia.cs</DependentUpon>
+    <EmbeddedResource Include="frm_BaoGia.resx">
+      <DependentUpon>frm_BaoGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_ChiTietHoaDon.resx">
       <DependentUpon>frm_ChiTietHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_DonHang.resx">
-      <DependentUpon>frm_DonHang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DonHangBan.resx">
+      <DependentUpon>frm_DonHangBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_HoaDon.resx">
       <DependentUpon>frm_HoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_HoTro.resx">
       <DependentUpon>frm_HoTro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_CTHDBANHANG.resx">
-      <DependentUpon>frm_CTHDBANHANG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DangNhap.resx">
       <DependentUpon>frm_DangNhap.cs</DependentUpon>
@@ -371,12 +362,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_NhanVien.resx">
       <DependentUpon>frm_NhanVien.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_PhieuBanHang.resx">
-      <DependentUpon>frm_PhieuBanHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_PhieuNhapHang.resx">
-      <DependentUpon>frm_PhieuNhapHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_PhucHoi.resx">
       <DependentUpon>frm_PhucHoi.cs</DependentUpon>
@@ -424,14 +409,11 @@
     <EmbeddedResource Include="Thao_DSHoaDon.resx">
       <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thao_TaoDonHang.resx">
-      <DependentUpon>Thao_TaoDonHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Thao_DSBaoGia.resx">
       <DependentUpon>Thao_DSBaoGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thao_DSDonHang.resx">
-      <DependentUpon>Thao_DSDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DSDonHangBan.resx">
+      <DependentUpon>frm_DSDonHangBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="DataSet1.xsc">

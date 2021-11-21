@@ -9,10 +9,10 @@ namespace QLBANHANG
 {
     public class Function
     {
-        Context db = null;
+        Context2 db = null;
         public Function()
         {
-            db = new Context();
+            db = new Context2();
         }
         public string Random(int length)
         {
@@ -413,6 +413,15 @@ namespace QLBANHANG
                 db.SaveChanges();
             }
         }
+        public void TongTienPhieuNhap(string id)
+        {
+            var o = GetPhieuNhap(id);
+            if (o != null)
+            {
+                o.TONGTIEN = TotalCTPN(id);
+                db.SaveChanges();
+            }
+        }
         public void TongTienHoaDon(string id)
         {
             var o = GetHoaDon(id);
@@ -420,6 +429,19 @@ namespace QLBANHANG
             {
                 o.tongtien = TotalCTHD(id);
             }
+        }
+        public bool XoaPhieuNhap(string id)
+        {
+            var o = GetPhieuNhap(id);
+            if (o != null)
+            {
+                db.tbl_PhieuNhap.Remove(o);
+                var list = db.tbl_PhieuNhapChiTiet.ToList();
+                list.RemoveAll(x => x.ID_PN == id);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
         }
         public bool XoaPhieuBan(string id)
         {
@@ -488,6 +510,25 @@ namespace QLBANHANG
             }
             return t;
         }
+        public bool DeleteCTPN(string id, string sp)
+        {
+            if (GetPhieuNhapChiTiet(id, sp) != null)
+            {
+                try
+                {
+                    db.tbl_PhieuNhapChiTiet.Remove(GetPhieuNhapChiTiet(id, sp));
+                    GetPhieuNhap(id).TONGTIEN = GetPhieuNhap(id).TONGTIEN - (GetPhieuNhapChiTiet(id, sp).SL * GetPhieuNhapChiTiet(id, sp).DonGia);
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception x)
+                {
+                    throw x;
+                }
+            }
+            else
+                return false;
+        }
         public bool DeleteCTPB(string id, string sp)
         {
             if (GetPhieuBanChiTiet(id, sp) != null)
@@ -526,6 +567,25 @@ namespace QLBANHANG
                 throw ex;
             }
         }
+        public bool EditCTPN(string id, string sp, int sl)
+        {
+            try
+            {
+                var o = db.tbl_PhieuNhapChiTiet.SingleOrDefault(x => x.ID_PN == id && x.HANG == sp);
+                if (o != null)
+                {
+                    o.SL = sl;
+                    TongTienPhieuNhap(id);
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public bool AddCTPB(tbl_PhieuBanChiTiet phieu)
         {
             try
@@ -548,6 +608,32 @@ namespace QLBANHANG
                 }
             }
             catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool AddCTPN(tbl_PhieuNhapChiTiet phieu)
+        {
+            try
+            {
+                var o = db.tbl_PhieuNhapChiTiet.SingleOrDefault(x => x.ID_PN == phieu.ID_PN && x.HANG == phieu.HANG);
+                if (o != null)
+                {
+                    o.SL = o.SL + phieu.SL;
+                    TongTienPhieuNhap(phieu.ID_PN);
+                    db.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    db.tbl_PhieuNhapChiTiet.Add(phieu);
+                    db.SaveChanges();
+                    TongTienPhieuNhap(phieu.ID_PN);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            catch (Exception ex)
             {
                 throw ex;
             }

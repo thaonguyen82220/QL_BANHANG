@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace QLBANHANG.Model
 {
-    public partial class Context : DbContext
+    public partial class Context2 : DbContext
     {
-        public Context()
+        public Context2()
             : base("name=Context")
         {
         }
@@ -57,12 +57,6 @@ namespace QLBANHANG.Model
                 .HasMany(e => e.tbl_HANG)
                 .WithOptional(e => e.tbl_Loai)
                 .HasForeignKey(e => e.LOAI)
-                .WillCascadeOnDelete();
-
-            modelBuilder.Entity<tbl_NhaCungCap>()
-                .HasMany(e => e.tbl_PhieuNhap)
-                .WithOptional(e => e.tbl_NhaCungCap)
-                .HasForeignKey(e => e.NCC)
                 .WillCascadeOnDelete();
 
             modelBuilder.Entity<tbl_NhanVien>()

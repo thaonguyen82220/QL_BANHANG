@@ -373,10 +373,10 @@ namespace QLBANHANG
             this.RibbonTabItem2,
             this.ribbonTabItem4});
             this.RibbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
-            this.RibbonControl1.Location = new System.Drawing.Point(5, 1);
+            this.RibbonControl1.Location = new System.Drawing.Point(0, 0);
             this.RibbonControl1.Name = "RibbonControl1";
             this.RibbonControl1.Padding = new System.Windows.Forms.Padding(0, 0, 0, 3);
-            this.RibbonControl1.Size = new System.Drawing.Size(1168, 155);
+            this.RibbonControl1.Size = new System.Drawing.Size(1178, 155);
             this.RibbonControl1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.RibbonControl1.SystemText.MaximizeRibbonText = "&Maximize the Ribbon";
             this.RibbonControl1.SystemText.MinimizeRibbonText = "Mi&nimize the Ribbon";
@@ -406,7 +406,7 @@ namespace QLBANHANG
             this.ribbonPanel4.Location = new System.Drawing.Point(0, 53);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(1168, 99);
+            this.ribbonPanel4.Size = new System.Drawing.Size(1178, 99);
             // 
             // 
             // 
@@ -634,11 +634,11 @@ namespace QLBANHANG
             this.tabControl1.CloseButtonPosition = DevComponents.DotNetBar.eTabCloseButtonPosition.Right;
             this.tabControl1.Controls.Add(this.tabControlPanel1);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(5, 156);
+            this.tabControl1.Location = new System.Drawing.Point(0, 155);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedTabFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
             this.tabControl1.SelectedTabIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1168, 467);
+            this.tabControl1.Size = new System.Drawing.Size(1178, 470);
             this.tabControl1.TabIndex = 3;
             this.tabControl1.TabLayoutType = DevComponents.DotNetBar.eTabLayoutType.FixedWithNavigationBox;
             this.tabControl1.Tabs.Add(this.tabItem1);
@@ -653,7 +653,7 @@ namespace QLBANHANG
             this.tabControlPanel1.Location = new System.Drawing.Point(0, 26);
             this.tabControlPanel1.Name = "tabControlPanel1";
             this.tabControlPanel1.Padding = new System.Windows.Forms.Padding(1);
-            this.tabControlPanel1.Size = new System.Drawing.Size(1168, 441);
+            this.tabControlPanel1.Size = new System.Drawing.Size(1178, 444);
             this.tabControlPanel1.Style.BackColor1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(179)))), ((int)(((byte)(231)))));
             this.tabControlPanel1.Style.BackColor2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(237)))), ((int)(((byte)(254)))));
             this.tabControlPanel1.Style.Border = DevComponents.DotNetBar.eBorderType.SingleLine;
@@ -670,7 +670,7 @@ namespace QLBANHANG
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1166, 439);
+            this.pictureBox1.Size = new System.Drawing.Size(1176, 442);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -685,7 +685,7 @@ namespace QLBANHANG
             // 
             this.btnThongKeDS.Location = new System.Drawing.Point(583, 29);
             this.btnThongKeDS.Name = "btnThongKeDS";
-            this.btnThongKeDS.Size = new System.Drawing.Size(75, 23);
+            this.btnThongKeDS.Size = new System.Drawing.Size(111, 23);
             this.btnThongKeDS.TabIndex = 4;
             this.btnThongKeDS.Text = "Thống kê";
             this.btnThongKeDS.UseVisualStyleBackColor = true;

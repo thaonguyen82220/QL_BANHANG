@@ -10,7 +10,7 @@ using QLBANHANG.Model;
 
 namespace QLBANHANG
 {
-    public partial class frm_DonHang : Form
+    public partial class frm_DonHangBan : Form
     {
         int dong, flag=0;
         tbl_PhieuBanHang phieu;
@@ -28,7 +28,7 @@ namespace QLBANHANG
             cn.LoadCombobox(cbManv, "Select * from tbl_NhanVien", "tennv", "manv");
             cn.LoadCombobox(cbKhachhang, "Select * from tbl_khachhang", "tenkh", "makh");
         }
-        public frm_DonHang(tbl_PhieuBanHang phieu)
+        public frm_DonHangBan(tbl_PhieuBanHang phieu)
         {
             InitializeComponent();
             btnTao.Enabled = false;
@@ -65,7 +65,7 @@ namespace QLBANHANG
             Lock();
             Reload();
         }
-        public frm_DonHang()
+        public frm_DonHangBan()
         {
             InitializeComponent();
             load();

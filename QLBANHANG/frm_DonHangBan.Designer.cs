@@ -1,7 +1,7 @@
 ﻿
 namespace QLBANHANG
 {
-    partial class frm_DonHang
+    partial class frm_DonHangBan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DonHang));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_DonHangBan));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnChon = new System.Windows.Forms.Button();
             this.btnTrove = new System.Windows.Forms.Button();
@@ -155,9 +155,9 @@ namespace QLBANHANG
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
             this.label9.Location = new System.Drawing.Point(576, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(239, 45);
+            this.label9.Size = new System.Drawing.Size(334, 45);
             this.label9.TabIndex = 17;
-            this.label9.Text = "ĐƠN HÀNG";
+            this.label9.Text = "ĐƠN HÀNG BÁN";
             // 
             // panel4
             // 
@@ -646,11 +646,12 @@ namespace QLBANHANG
             // cbTrangthai
             // 
             this.cbTrangthai.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTrangthai.Enabled = false;
             this.cbTrangthai.FormattingEnabled = true;
             this.cbTrangthai.Items.AddRange(new object[] {
             "0",
             "1"});
-            this.cbTrangthai.Location = new System.Drawing.Point(113, 736);
+            this.cbTrangthai.Location = new System.Drawing.Point(126, 736);
             this.cbTrangthai.Name = "cbTrangthai";
             this.cbTrangthai.Size = new System.Drawing.Size(121, 29);
             this.cbTrangthai.TabIndex = 98;
@@ -683,7 +684,7 @@ namespace QLBANHANG
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1253, 779);
+            this.ClientSize = new System.Drawing.Size(1280, 779);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel4);

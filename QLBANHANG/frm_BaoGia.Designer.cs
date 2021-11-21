@@ -1,7 +1,7 @@
 ﻿
 namespace QLBANHANG
 {
-    partial class Thao_frm_BaoGia
+    partial class frm_BaoGia
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Thao_frm_BaoGia));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_BaoGia));
             this.txtSoBaoGia = new System.Windows.Forms.TextBox();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();

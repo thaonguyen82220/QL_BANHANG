@@ -409,7 +409,7 @@ namespace QLBANHANG
 
         private void button1_Click(object sender, EventArgs e)
         {
-            using (Thao_DSDonHang frm = new Thao_DSDonHang(true))
+            using (frm_DSDonHangBan frm = new frm_DSDonHangBan(true))
             {
                 frm.ShowDialog();
                 if (frm.DialogResult == DialogResult.OK)
