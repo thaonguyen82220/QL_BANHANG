@@ -22,6 +22,7 @@ namespace QLBANHANG
             InitializeComponent();
             TaoID();
             load();
+            UnLock();
             cbTrangthai.SelectedIndex = 0;
             btnTao.Enabled = true;
         }
@@ -39,7 +40,7 @@ namespace QLBANHANG
             txtNguoigiao.Text = p.NguoiGiao;
             txtSdt.Text = phieu.Sdt;
             cbManv.SelectedValue = phieu.MANV;
-            cbNhacc.Text = phieu.MANCC;
+            cbNhacc.SelectedValue = phieu.MANCC;
             dpNgaylap.Value = phieu.NGAY.Value;
             if (phieu.TrangThai == 0)
             {
@@ -91,6 +92,35 @@ namespace QLBANHANG
         private void btnTao_Click(object sender, EventArgs e)
         {
             btnLuu.Enabled = true;
+            if (!string.IsNullOrEmpty(txtNguoigiao.Text))
+            {
+                if(!string.IsNullOrEmpty(txtSdt.Text))
+                {
+                    tbl_PhieuNhap p = new tbl_PhieuNhap();
+                    p.IDPN = txtMaphieu.Text;
+                    p.MANCC = cbNhacc.SelectedValue.ToString();
+                    p.NGAY = dpNgaylap.Value;
+                    p.MANV = cbManv.SelectedValue.ToString();
+                    p.NguoiGiao = txtNguoigiao.Text;
+                    p.Sdt = txtSdt.Text;
+                    p.TONGTIEN = 0;
+                    var up = f.AddPhieuNhap(p);
+                    if (up)
+                    {
+                        this.phieu = p;
+                        tao = true;
+                        btnTao.Enabled = false;
+                        MessageBox.Show("Tạo thành công");
+                        Reload();
+                    }
+                    else
+                        MessageBox.Show("Lỗi");
+                }   
+                else
+                    MessageBox.Show("Bạn chưa nhập đủ thông tin");
+            }
+            else
+                MessageBox.Show("Bạn chưa nhập đủ thông tin");
         }
         public void Lock()
         {
@@ -111,12 +141,37 @@ namespace QLBANHANG
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-            if (tao)
+            if (!string.IsNullOrEmpty(txtSdt.Text))
             {
+                if (!string.IsNullOrEmpty(txtNguoigiao.Text))
+                {
+                    if (tao)
+                    {
+                        tbl_PhieuNhap p = new tbl_PhieuNhap();
+                        p.IDPN = txtMaphieu.Text;
+                        p.MANCC = cbNhacc.SelectedValue.ToString();
+                        p.MANV = cbManv.SelectedValue.ToString();
+                        p.NGAY = dpNgaylap.Value;
+                        p.NguoiGiao = txtNguoigiao.Text;
+                        p.Sdt = txtSdt.Text;
+                        
 
-            }
-            else
-                MessageBox.Show("Vui lòng tạo đơn trước khi lưu");
+                        var up = f.EditPhieuNhap(p);
+                        if (up)
+                        {
+                            MessageBox.Show("Lưu thành công");
+                            Reload();
+                        }
+                        else
+                            MessageBox.Show("Lỗi");
+                    }
+                    else
+                        MessageBox.Show("Vui lòng tạo đơn trước khi lưu");
+                }
+                else
+                    MessageBox.Show("Bạn chưa nhập đủ thông tin");
+            }else
+                MessageBox.Show("Bạn chưa nhập đủ thông tin");
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -191,7 +246,7 @@ namespace QLBANHANG
         {
             try
             {
-                var up = f.DeleteCTPB(txtMaphieu.Text, txtMasp.Text);
+                var up = f.DeleteCTPN(txtMaphieu.Text, txtMasp.Text);
                 if (up)
                 {
                     btnXoa.Enabled = false;
@@ -208,6 +263,19 @@ namespace QLBANHANG
             }
 
         }
+
+        private void btnXuathoadon_Click(object sender, EventArgs e)
+        {
+            var p = f.GetPhieuNhap(txtMaphieu.Text);
+            if (p != null)
+            {
+                frm_HoaDon frm = new frm_HoaDon(p);
+                frm.ShowDialog();
+            }
+            else
+                MessageBox.Show("Vui lòng tạo đơn trước khi thanh toán");
+        }
+
         private void Select(object sender, DataGridViewCellEventArgs e)
         {
             try

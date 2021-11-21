@@ -224,7 +224,7 @@ namespace QLBANHANG
                 frm.ShowDialog();
             }
             else
-                MessageBox.Show("Không tìm thấy hóa đơn");
+                MessageBox.Show("Vui lòng tạo đơn trước khi thanh toán");
 
         }
 

@@ -36,12 +36,12 @@ namespace QLBANHANG
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(284, 261);
+            this.reportViewer1.Size = new System.Drawing.Size(1209, 466);
             this.reportViewer1.TabIndex = 0;
             // 
             // frm_ThongKePhieuNhap
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(1209, 466);
             this.Controls.Add(this.reportViewer1);
             this.DoubleBuffered = true;
             this.Name = "frm_ThongKePhieuNhap";

@@ -540,6 +540,7 @@ namespace QLBANHANG
             this.btnXuathoadon.Text = "Thanh toán";
             this.btnXuathoadon.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnXuathoadon.UseVisualStyleBackColor = false;
+            this.btnXuathoadon.Click += new System.EventHandler(this.btnXuathoadon_Click);
             // 
             // btnTrove
             // 
