@@ -12,19 +12,19 @@ using QLBANHANG.Model;
 
 namespace QLBANHANG
 {
-    public partial class frm_HoaDon : Form
+    public partial class frm_HoaDonBan : Form
     {
         int flag = 0;
         bool thanhtoan = false, edit = false, tao = false;
         Function f = new Function();
         int dong = -1;
         ConnectDB cn = new ConnectDB();
-        tbl_HoaDon hd = new tbl_HoaDon();
+        tbl_HoaDonBan hd = new tbl_HoaDonBan();
         tbl_PhieuBanHang phieu;
         string pt = "Tiền mặt";
         public void CreateMaHD()
         {
-            var id = "HD" + f.RandomNumber() + f.Random(2);
+            var id = "HDB" + f.RandomNumber() + f.Random(2);
             txtMahoadon.Text = id;
         }
         public void load()
@@ -32,7 +32,7 @@ namespace QLBANHANG
             cn.LoadCombobox(cbNhanvien, "Select * from tbl_NhanVien", "tennv", "manv");
             cn.LoadCombobox(cbKhachhang, "Select * from tbl_khachhang", "tenkh", "makh");
         }
-        public frm_HoaDon()
+        public frm_HoaDonBan()
         {
             InitializeComponent();
             CreateMaHD();
@@ -40,7 +40,7 @@ namespace QLBANHANG
             load();
             btnThanhToan.Enabled = true;
         }
-        public frm_HoaDon(tbl_HoaDon hd)
+        public frm_HoaDonBan(tbl_HoaDonBan hd)
         {
             InitializeComponent();
             this.edit = true;
@@ -48,12 +48,16 @@ namespace QLBANHANG
             this.hd = hd;
             this.tao = true;
             this.Text = "Hóa đơn " + hd.Id;
-            load();
+            load();           
             txtMahoadon.Text = hd.Id;
             dpNgaylap.Value = hd.Ngay.Value;
             cbNhanvien.SelectedValue = hd.manv;
             cbKhachhang.SelectedValue = hd.makh;
             txtChungtu.Text = hd.chungtu;
+            if (string.IsNullOrEmpty(hd.chungtu))
+            {
+                button1.Enabled = false;
+            }
             cbNhanvien.SelectedText = "dã chọn";
             if (hd.trangthai != 1)
             {
@@ -64,6 +68,11 @@ namespace QLBANHANG
             {
                 thanhtoan = true;
                 cbTrangthai.SelectedIndex = 1;
+                btnInhoadon.Enabled = true;
+                btnLuu.Enabled = false;
+                txtDanhan.ReadOnly = true;
+                lbStt.Text = "Đơn hàng đã được thanh toán, bạn không thể chỉnh sửa";
+                button1.Enabled = false;
             }    
                 
             if (hd.phuongthuc == "Thẻ")
@@ -73,37 +82,34 @@ namespace QLBANHANG
                 rbVidientu.Checked = true;
             else
                 rbTienmat.Checked = true;
-            if (thanhtoan)
-            {
-                btnInhoadon.Enabled = true;
-                btnLuu.Enabled = false;
-                txtDanhan.ReadOnly = true;
-                grStt.Visible = true;
-                lbStt.Text = "Đơn hàng đã được thanh toán, bạn không thể chỉnh sửa";
-                button1.Enabled = false;
-            }
             txtDanhan.Text = hd.danhan.ToString();
+            if (hd.danhan != 0)
+                txtTrakhach.Text = (hd.danhan - hd.tongtien).ToString();
             flag = 1;
             Reload();
         }
-        public frm_HoaDon(tbl_PhieuBanHang phieu)
+        public frm_HoaDonBan(tbl_PhieuBanHang phieu)
         {
             InitializeComponent();
             this.phieu = phieu;
-            var check = f.TimHoaDonByMaPhieuBan(phieu.IDPHIEU);
+            button1.Enabled = false;
+            var check = f.TimHoaDonBanByMaPhieu(phieu.IDPHIEU);
             if (check != null)
             {
                 txtMahoadon.Text = check.Id;
+                tao = true;
             }
+            else
+            {
+                btnLuu.Text = "Tạo hóa đơn";
+            }    
             load();
             cbKhachhang.SelectedValue = phieu.MAKH;
             if (phieu.TrangThai == 0)
             {
                 cbTrangthai.SelectedIndex = 0;
-                btnThanhToan.Enabled = true;
-                btnLuu.Text = "Tạo hóa đơn";
+                btnThanhToan.Enabled = true;              
                 btnInhoadon.Enabled = false;
-                CreateMaHD();
             }
             else
             {
@@ -130,19 +136,10 @@ namespace QLBANHANG
                 where sp.Ma = pb.HANG and pb.ID_Pb=N'" + id + "'";
             else //load chi tiết hóa đơn
                 sql = @"select sp.Ma, sp.Ten,sp.dvt, sp.DONGIA, pb.soluong as 'SL' , (pb.soluong*sp.DONGIA) as 'thanhtien'
-            from tbl_ChiTietHoaDon pb, tbl_HANG sp
+            from tbl_ChiTietHoaDonBan pb, tbl_HANG sp
             where sp.Ma = pb.masp and pb.ID_hd=N'" + id + "'";
 
             dgvChitiet.DataSource = cn.taobang(sql);
-        }
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -201,7 +198,7 @@ namespace QLBANHANG
         {
             try
             {
-                var hoadon = new tbl_HoaDon();
+                var hoadon = new tbl_HoaDonBan();
                 hoadon.Id = txtMahoadon.Text;
                 hoadon.makh = cbKhachhang.SelectedValue.ToString();
                 hoadon.manv = cbNhanvien.SelectedValue.ToString();
@@ -214,7 +211,7 @@ namespace QLBANHANG
                 hoadon.trangthai = 0;
                 if (tao)
                 {
-                    var up = f.EditHoaDon(hoadon);
+                    var up = f.EditHoaDonBan(hoadon);
                     if (up)
                     {
                         MessageBox.Show("Lưu thành công");
@@ -224,7 +221,7 @@ namespace QLBANHANG
                 }
                 else
                 {
-                    var up = f.AddHoaDon(hoadon);
+                    var up = f.AddHoaDonBan(hoadon);
                     if (up)
                     {
                         MessageBox.Show("Tạo thành công");
@@ -248,8 +245,8 @@ namespace QLBANHANG
             {
                 if (thanhtoan)
                 {
-                    var hd = f.GetHoaDon(txtMahoadon.Text);
-                    frm_ChiTietHoaDon frm = new frm_ChiTietHoaDon(hd);
+                    var hd = f.GetHoaDonBan(txtMahoadon.Text);
+                    frm_ChiTietHoaDonBan frm = new frm_ChiTietHoaDonBan(hd);
                     this.Hide();
                     frm.ShowDialog();
                     this.Show();
@@ -275,7 +272,7 @@ namespace QLBANHANG
             {
                 if (tao)
                 {
-                    var hd = new tbl_HoaDon();
+                    var hd = new tbl_HoaDonBan();
                     if (rbThe.Checked)
                     {
                         hd.phuongthuc = "Thẻ";
@@ -304,7 +301,7 @@ namespace QLBANHANG
                         hd.chungtu = txtChungtu.Text;
                         hd.Ngay = dpNgaylap.Value;
                         hd.tongtien = double.Parse(txtTongtien.Text);
-                        var up = f.ThanhToanHoaDon(hd.Id);
+                        var up = f.ThanhToanHoaDonBan(hd.Id);
                         if (up)
                         {
                             MessageBox.Show("Thanh toán thành công");
@@ -391,14 +388,35 @@ namespace QLBANHANG
         {
             try
             {
-                var up = f.DeleteCTPB(txtChungtu.Text, txtMasp.Text);
-                if (up)
+                if (!thanhtoan)
                 {
-                    btnXoa.Enabled = false;
-                    Reload();
+                    if (!string.IsNullOrEmpty(txtChungtu.Text) && f.GetPhieuBanHang(txtChungtu.Text)!=null)
+                    {
+                        var up = f.DeleteCTPB(txtChungtu.Text, txtMasp.Text);
+                        if (up)
+                        {
+                            btnXoa.Enabled = false;
+                            Reload();
+                        }
+                        else
+                            MessageBox.Show("Xóa Thất Bại");
+                    }
+                    else
+                    {
+                        var up = f.DeleteCTHDB(txtMahoadon.Text, txtMasp.Text);
+                        if (up)
+                        {
+                            btnXoa.Enabled = false;
+                            Reload();
+                        }
+                        else
+                            MessageBox.Show("Xóa Thất Bại");
+                    }    
+
                 }
                 else
-                    MessageBox.Show("Xóa Thất Bại");
+                    MessageBox.Show("Hóa đơn đã thanh toán, bạn không thể sửa");
+
 
             }
             catch (Exception x)
@@ -407,23 +425,7 @@ namespace QLBANHANG
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            using (frm_DSDonHangBan frm = new frm_DSDonHangBan(true))
-            {
-                frm.ShowDialog();
-                if (frm.DialogResult == DialogResult.OK)
-                {
-                    txtChungtu.Text = frm.Get_ID_Don();
-                    var dh = f.GetPhieuBanHang(txtChungtu.Text);
-                    txtStk.Text = f.GetKhachHang(dh.MAKH).stk;
-                    cbKhachhang.SelectedValue = dh.MAKH;
-                    txtTongtien.Text = dh.TongTien.ToString();
-                    Reload();
-                }
-            }
 
-        }
 
         private void btnChon_Click(object sender, EventArgs e)
         {
@@ -485,11 +487,11 @@ namespace QLBANHANG
                             else
                             {
                                 //tạo đơn hang mới cho hóa đơn này
-                                tbl_ChiTietHoaDon cthd = new tbl_ChiTietHoaDon();
+                                tbl_ChiTietHoaDonBan cthd = new tbl_ChiTietHoaDonBan();
                                 cthd.Id_hd = txtMahoadon.Text;
                                 cthd.masp = txtMasp.Text;
                                 cthd.soluong = int.Parse(txtSoluong.Text);
-                                var up = f.AddChiTietHoaDon(txtMahoadon.Text, cthd);
+                                var up = f.AddChiTietHoaDonBan(txtMahoadon.Text, cthd);
                                 if (up)
                                 {
                                     Reload();
@@ -519,19 +521,21 @@ namespace QLBANHANG
 
         }
 
-        private void lbStt_Click(object sender, EventArgs e)
+        private void ChungTu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void grStt_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvChitiet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            using (frm_DSDonHangBan frm = new frm_DSDonHangBan(true))
+            {
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                {
+                    txtChungtu.Text = frm.Get_ID_Don();
+                    var dh = f.GetPhieuBanHang(txtChungtu.Text);
+                    txtStk.Text = f.GetKhachHang(dh.MAKH).stk;
+                    cbKhachhang.SelectedValue = dh.MAKH;
+                    txtTongtien.Text = dh.TongTien.ToString();
+                    Reload();
+                }
+            }
         }
 
         private void Chon(object sender, EventArgs e)
@@ -559,13 +563,13 @@ namespace QLBANHANG
             {
                 if (f.GetPhieuBanHang(txtChungtu.Text) != null)
                 {
-                    txtTongtien.Text = f.GetHoaDon(txtMahoadon.Text).tongtien.ToString();
+                    txtTongtien.Text = f.GetHoaDonBan(txtMahoadon.Text).tongtien.ToString();
                     LoadChiTiet(txtChungtu.Text);
                 }
                 else
                 {
                     LoadChiTiet(txtMahoadon.Text, 1);
-                    txtTongtien.Text = f.GetHoaDon(txtMahoadon.Text).tongtien.ToString();
+                    txtTongtien.Text = f.GetHoaDonBan(txtMahoadon.Text).tongtien.ToString();
                 }
             }
             catch (Exception ex)

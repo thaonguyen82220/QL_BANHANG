@@ -6,7 +6,7 @@ namespace QLBANHANG.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_ChiTietHoaDon
+    public partial class tbl_ChiTietHoaDonNhap
     {
         [Key]
         [Column(Order = 0)]
@@ -20,6 +20,8 @@ namespace QLBANHANG.Model
 
         public int? soluong { get; set; }
 
-        public virtual tbl_HoaDon tbl_HoaDon { get; set; }
+        public virtual tbl_HANG tbl_HANG { get; set; }
+
+        public virtual tbl_HoaDonNhap tbl_HoaDonNhap { get; set; }
     }
 }

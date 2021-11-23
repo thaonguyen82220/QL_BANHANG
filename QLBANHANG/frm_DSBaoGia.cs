@@ -9,14 +9,14 @@ using System.Windows.Forms;
 
 namespace QLBANHANG
 {
-    public partial class Thao_DSBaoGia : Form
+    public partial class frm_DSBaoGia : Form
     {
         int dong = -1;
 
         Function f = new Function();
         ConnectDB cn = new ConnectDB();
         string current_id = "";
-        public Thao_DSBaoGia()
+        public frm_DSBaoGia()
         {
             InitializeComponent();
             LoadDanhSach();
@@ -105,6 +105,11 @@ namespace QLBANHANG
         private void button1_Click(object sender, EventArgs e)
         {
             LoadDanhSach();
+        }
+
+        private void btnTrove_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
         }
     }
 }

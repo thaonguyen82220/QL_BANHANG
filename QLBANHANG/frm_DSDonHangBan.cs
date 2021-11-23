@@ -85,7 +85,6 @@ namespace QLBANHANG
             INNER JOIN tbl_Hang ON tbl_PhieuBanChiTiet.HANG = tbl_Hang.Ma 
             where  tbl_PhieuBanChiTiet.ID_PB=N'" + id + "'";
              dgvChitiet.DataSource = cn.taobang(sql);
-
         }
         private void Select(object sender, DataGridViewCellEventArgs e)
         {
@@ -178,6 +177,19 @@ namespace QLBANHANG
         private void btnChon_Click(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
+        }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            if (dpNgay.Value > dpNgayGiao.Value)
+            {
+                MessageBox.Show("Ngày chọn không hợp lệ");
+            }
+            else
+            {
+                LoadDanhSach(dpNgay.Value, dpNgayGiao.Value);
+                LoadChiTiet(null);
+            }
         }
     }
 }

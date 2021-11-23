@@ -23,6 +23,7 @@ namespace QLBANHANG
         public frm_BaoGia()
         {
             InitializeComponent();
+            cn.LoadCombobox(cbNhanvien, "Select * from tbl_NhanVien", "tennv", "manv");
             txtSoBaoGia.Text = "BG" + f.RandomNumber() + f.Random(2);
             dpNgaybaogia.Value = DateTime.Now;
             them = true;
@@ -34,12 +35,12 @@ namespace QLBANHANG
             for (int i = 0; i < listnv.Count; i++)
             {
                 cbNhanvien.Items.Add(listnv[i].manv);
-
             }
         }
         public frm_BaoGia(string id)
         {
             InitializeComponent();
+            cn.LoadCombobox(cbNhanvien, "Select * from tbl_NhanVien", "tennv", "manv");
             txtSoBaoGia.Text = id;
             this.bg = f.GetBaoGia(id);
             this.khach = f.GetKhachHang(bg.makh);
@@ -49,14 +50,7 @@ namespace QLBANHANG
             txtLienHe.Text = khach.sdt;
             txtDiaChi.Text = khach.diachi;
             txtGhiChu.Text = bg.ghichu;
-            //cbNhanvien.SelectedValue = bg.manv;
-            var listnv = f.GetListNhanVien();
-            for (int i = 0; i < listnv.Count; i++)
-            {
-                cbNhanvien.Items.Add(listnv[i].manv);
-                if (listnv[i].manv == bg.manv)
-                    cbNhanvien.SelectedItem = listnv[i].manv;
-            }
+            cbNhanvien.SelectedValue = bg.manv;
             btnTao.Enabled = false;
             dpHieuLuc.Enabled = false;
             dpNgaybaogia.Enabled = false;
@@ -66,7 +60,7 @@ namespace QLBANHANG
         }
         private void frm_BaoGia_Load(object sender, EventArgs e)
         {
-            //cn.LoadCombobox(cbNhanvien, "Select * from tbl_NhanVien", "tennv", "manv");         
+                  
         }
 
         private void button2_Click(object sender, EventArgs e)

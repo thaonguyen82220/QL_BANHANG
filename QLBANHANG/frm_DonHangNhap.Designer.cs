@@ -55,12 +55,6 @@ namespace QLBANHANG
             this.btnChon = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.dgvChitiet = new System.Windows.Forms.DataGridView();
-            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtT = new System.Windows.Forms.Label();
             this.txtTongtien = new System.Windows.Forms.TextBox();
             this.txtSoluong = new System.Windows.Forms.TextBox();
@@ -77,6 +71,12 @@ namespace QLBANHANG
             this.btnTao = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DVT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -128,7 +128,7 @@ namespace QLBANHANG
             this.cbNhacc.FormattingEnabled = true;
             this.cbNhacc.Items.AddRange(new object[] {
             "sđsđ"});
-            this.cbNhacc.Location = new System.Drawing.Point(164, 51);
+            this.cbNhacc.Location = new System.Drawing.Point(164, 52);
             this.cbNhacc.Name = "cbNhacc";
             this.cbNhacc.Size = new System.Drawing.Size(257, 24);
             this.cbNhacc.TabIndex = 28;
@@ -136,7 +136,7 @@ namespace QLBANHANG
             // btnPick
             // 
             this.btnPick.Image = ((System.Drawing.Image)(resources.GetObject("btnPick.Image")));
-            this.btnPick.Location = new System.Drawing.Point(427, 48);
+            this.btnPick.Location = new System.Drawing.Point(427, 50);
             this.btnPick.Name = "btnPick";
             this.btnPick.Size = new System.Drawing.Size(35, 29);
             this.btnPick.TabIndex = 27;
@@ -155,7 +155,7 @@ namespace QLBANHANG
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(42, 155);
+            this.label6.Location = new System.Drawing.Point(47, 154);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 21);
             this.label6.TabIndex = 24;
@@ -166,7 +166,7 @@ namespace QLBANHANG
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(58, 107);
+            this.label7.Location = new System.Drawing.Point(55, 107);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 21);
             this.label7.TabIndex = 23;
@@ -174,7 +174,7 @@ namespace QLBANHANG
             // 
             // txtNguoigiao
             // 
-            this.txtNguoigiao.Location = new System.Drawing.Point(164, 104);
+            this.txtNguoigiao.Location = new System.Drawing.Point(164, 106);
             this.txtNguoigiao.Name = "txtNguoigiao";
             this.txtNguoigiao.ReadOnly = true;
             this.txtNguoigiao.Size = new System.Drawing.Size(257, 22);
@@ -196,7 +196,7 @@ namespace QLBANHANG
             // 
             // dpNgaylap
             // 
-            this.dpNgaylap.Location = new System.Drawing.Point(140, 95);
+            this.dpNgaylap.Location = new System.Drawing.Point(140, 107);
             this.dpNgaylap.Name = "dpNgaylap";
             this.dpNgaylap.Size = new System.Drawing.Size(239, 22);
             this.dpNgaylap.TabIndex = 18;
@@ -206,7 +206,7 @@ namespace QLBANHANG
             this.cbManv.BackColor = System.Drawing.Color.WhiteSmoke;
             this.cbManv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbManv.FormattingEnabled = true;
-            this.cbManv.Location = new System.Drawing.Point(140, 166);
+            this.cbManv.Location = new System.Drawing.Point(140, 172);
             this.cbManv.Name = "cbManv";
             this.cbManv.Size = new System.Drawing.Size(239, 24);
             this.cbManv.TabIndex = 17;
@@ -227,7 +227,7 @@ namespace QLBANHANG
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label2.Location = new System.Drawing.Point(30, 101);
+            this.label2.Location = new System.Drawing.Point(30, 108);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 21);
             this.label2.TabIndex = 14;
@@ -238,7 +238,7 @@ namespace QLBANHANG
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label1.Location = new System.Drawing.Point(30, 31);
+            this.label1.Location = new System.Drawing.Point(30, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 21);
             this.label1.TabIndex = 13;
@@ -246,7 +246,7 @@ namespace QLBANHANG
             // 
             // txtMaphieu
             // 
-            this.txtMaphieu.Location = new System.Drawing.Point(140, 31);
+            this.txtMaphieu.Location = new System.Drawing.Point(140, 49);
             this.txtMaphieu.Name = "txtMaphieu";
             this.txtMaphieu.ReadOnly = true;
             this.txtMaphieu.Size = new System.Drawing.Size(239, 22);
@@ -269,7 +269,7 @@ namespace QLBANHANG
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(273, 739);
+            this.label16.Location = new System.Drawing.Point(273, 733);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(217, 21);
             this.label16.TabIndex = 128;
@@ -292,7 +292,7 @@ namespace QLBANHANG
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(41, 735);
+            this.label15.Location = new System.Drawing.Point(41, 733);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 21);
             this.label15.TabIndex = 126;
@@ -384,60 +384,6 @@ namespace QLBANHANG
             this.dgvChitiet.TabIndex = 192;
             this.dgvChitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             // 
-            // MaSP
-            // 
-            this.MaSP.DataPropertyName = "Ma";
-            this.MaSP.HeaderText = "Mã sản phẩm";
-            this.MaSP.MinimumWidth = 6;
-            this.MaSP.Name = "MaSP";
-            this.MaSP.ReadOnly = true;
-            this.MaSP.Width = 125;
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "Ten";
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.MinimumWidth = 6;
-            this.TenSP.Name = "TenSP";
-            this.TenSP.ReadOnly = true;
-            this.TenSP.Width = 125;
-            // 
-            // DonGia
-            // 
-            this.DonGia.DataPropertyName = "DONGIA";
-            this.DonGia.HeaderText = "Đơn giá";
-            this.DonGia.MinimumWidth = 6;
-            this.DonGia.Name = "DonGia";
-            this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 125;
-            // 
-            // SL
-            // 
-            this.SL.DataPropertyName = "SL";
-            this.SL.HeaderText = "Số lượng";
-            this.SL.MinimumWidth = 6;
-            this.SL.Name = "SL";
-            this.SL.ReadOnly = true;
-            this.SL.Width = 125;
-            // 
-            // DVT
-            // 
-            this.DVT.DataPropertyName = "DVT";
-            this.DVT.HeaderText = "Đơn vị tính";
-            this.DVT.MinimumWidth = 6;
-            this.DVT.Name = "DVT";
-            this.DVT.ReadOnly = true;
-            this.DVT.Width = 125;
-            // 
-            // ThanhTien
-            // 
-            this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành tiền";
-            this.ThanhTien.MinimumWidth = 6;
-            this.ThanhTien.Name = "ThanhTien";
-            this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 125;
-            // 
             // txtT
             // 
             this.txtT.AutoSize = true;
@@ -450,7 +396,7 @@ namespace QLBANHANG
             // 
             // txtTongtien
             // 
-            this.txtTongtien.Location = new System.Drawing.Point(1004, 304);
+            this.txtTongtien.Location = new System.Drawing.Point(1004, 305);
             this.txtTongtien.Name = "txtTongtien";
             this.txtTongtien.ReadOnly = true;
             this.txtTongtien.Size = new System.Drawing.Size(215, 22);
@@ -459,7 +405,7 @@ namespace QLBANHANG
             // 
             // txtSoluong
             // 
-            this.txtSoluong.Location = new System.Drawing.Point(703, 15);
+            this.txtSoluong.Location = new System.Drawing.Point(703, 22);
             this.txtSoluong.Name = "txtSoluong";
             this.txtSoluong.Size = new System.Drawing.Size(90, 22);
             this.txtSoluong.TabIndex = 96;
@@ -468,7 +414,7 @@ namespace QLBANHANG
             // 
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(474, 10);
+            this.btnSearch.Location = new System.Drawing.Point(474, 17);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(45, 33);
             this.btnSearch.TabIndex = 95;
@@ -477,7 +423,7 @@ namespace QLBANHANG
             // 
             // txtMasp
             // 
-            this.txtMasp.Location = new System.Drawing.Point(261, 10);
+            this.txtMasp.Location = new System.Drawing.Point(261, 17);
             this.txtMasp.Multiline = true;
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.ReadOnly = true;
@@ -489,7 +435,7 @@ namespace QLBANHANG
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkRed;
-            this.label14.Location = new System.Drawing.Point(28, 16);
+            this.label14.Location = new System.Drawing.Point(28, 21);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 25);
             this.label14.TabIndex = 93;
@@ -500,7 +446,7 @@ namespace QLBANHANG
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Navy;
-            this.label17.Location = new System.Drawing.Point(616, 17);
+            this.label17.Location = new System.Drawing.Point(616, 22);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(82, 22);
             this.label17.TabIndex = 91;
@@ -511,7 +457,7 @@ namespace QLBANHANG
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.Navy;
-            this.label18.Location = new System.Drawing.Point(140, 16);
+            this.label18.Location = new System.Drawing.Point(140, 22);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(114, 22);
             this.label18.TabIndex = 91;
@@ -522,7 +468,7 @@ namespace QLBANHANG
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label9.Location = new System.Drawing.Point(488, 9);
+            this.label9.Location = new System.Drawing.Point(486, 9);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(363, 45);
             this.label9.TabIndex = 125;
@@ -533,7 +479,7 @@ namespace QLBANHANG
             this.btnXuathoadon.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnXuathoadon.Image = ((System.Drawing.Image)(resources.GetObject("btnXuathoadon.Image")));
             this.btnXuathoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXuathoadon.Location = new System.Drawing.Point(1040, 725);
+            this.btnXuathoadon.Location = new System.Drawing.Point(1040, 726);
             this.btnXuathoadon.Name = "btnXuathoadon";
             this.btnXuathoadon.Size = new System.Drawing.Size(114, 35);
             this.btnXuathoadon.TabIndex = 124;
@@ -547,7 +493,7 @@ namespace QLBANHANG
             this.btnTrove.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnTrove.Image = ((System.Drawing.Image)(resources.GetObject("btnTrove.Image")));
             this.btnTrove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrove.Location = new System.Drawing.Point(1159, 725);
+            this.btnTrove.Location = new System.Drawing.Point(1159, 726);
             this.btnTrove.Name = "btnTrove";
             this.btnTrove.Size = new System.Drawing.Size(100, 35);
             this.btnTrove.TabIndex = 123;
@@ -575,7 +521,7 @@ namespace QLBANHANG
             this.btnLuu.Enabled = false;
             this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLuu.Location = new System.Drawing.Point(28, 166);
+            this.btnLuu.Location = new System.Drawing.Point(25, 166);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(132, 34);
             this.btnLuu.TabIndex = 9;
@@ -588,7 +534,7 @@ namespace QLBANHANG
             this.btnTao.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btnTao.Image = ((System.Drawing.Image)(resources.GetObject("btnTao.Image")));
             this.btnTao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTao.Location = new System.Drawing.Point(28, 66);
+            this.btnTao.Location = new System.Drawing.Point(25, 66);
             this.btnTao.Name = "btnTao";
             this.btnTao.Size = new System.Drawing.Size(132, 37);
             this.btnTao.TabIndex = 8;
@@ -603,7 +549,7 @@ namespace QLBANHANG
             this.btnSua.Enabled = false;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(28, 116);
+            this.btnSua.Location = new System.Drawing.Point(25, 116);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(132, 37);
             this.btnSua.TabIndex = 7;
@@ -624,6 +570,60 @@ namespace QLBANHANG
             this.groupBox1.Size = new System.Drawing.Size(1256, 274);
             this.groupBox1.TabIndex = 130;
             this.groupBox1.TabStop = false;
+            // 
+            // MaSP
+            // 
+            this.MaSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.MaSP.DataPropertyName = "Ma";
+            this.MaSP.HeaderText = "Mã sản phẩm";
+            this.MaSP.MinimumWidth = 6;
+            this.MaSP.Name = "MaSP";
+            this.MaSP.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenSP.DataPropertyName = "Ten";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.MinimumWidth = 6;
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            // 
+            // DonGia
+            // 
+            this.DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DonGia.DataPropertyName = "DONGIA";
+            this.DonGia.HeaderText = "Đơn giá";
+            this.DonGia.MinimumWidth = 6;
+            this.DonGia.Name = "DonGia";
+            this.DonGia.ReadOnly = true;
+            // 
+            // SL
+            // 
+            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.SL.DataPropertyName = "SL";
+            this.SL.HeaderText = "Số lượng";
+            this.SL.MinimumWidth = 6;
+            this.SL.Name = "SL";
+            this.SL.ReadOnly = true;
+            // 
+            // DVT
+            // 
+            this.DVT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DVT.DataPropertyName = "DVT";
+            this.DVT.HeaderText = "Đơn vị tính";
+            this.DVT.MinimumWidth = 6;
+            this.DVT.Name = "DVT";
+            this.DVT.ReadOnly = true;
+            // 
+            // ThanhTien
+            // 
+            this.ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ThanhTien.DataPropertyName = "ThanhTien";
+            this.ThanhTien.HeaderText = "Thành tiền";
+            this.ThanhTien.MinimumWidth = 6;
+            this.ThanhTien.Name = "ThanhTien";
+            this.ThanhTien.ReadOnly = true;
             // 
             // frm_DonHangNhap
             // 

@@ -15,7 +15,7 @@ namespace QLBANHANG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false); 
-                Application.Run(new frm_DSDonHangNhap());
+                Application.Run(new frm_DSBaoGia());
         }
     }
 }

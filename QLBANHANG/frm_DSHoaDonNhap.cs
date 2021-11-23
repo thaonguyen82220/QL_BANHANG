@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using QLBANHANG.Model;
+
 namespace QLBANHANG
 {
-    public partial class Thao_DSHoaDon : Form
+    public partial class frm_DSHoaDonNhap : Form
     {
+        
         Function f = new Function();
         ConnectDB cn = new ConnectDB();
         int dong = -1;
         string id_don;
-        tbl_HoaDon hd = new tbl_HoaDon();
-        public Thao_DSHoaDon()
+        tbl_HoaDonNhap hd = new tbl_HoaDonNhap();
+
+        public frm_DSHoaDonNhap()
         {
             InitializeComponent();
             LoadDanhSach();
@@ -30,37 +33,37 @@ namespace QLBANHANG
         }
         public void LoadDanhSach()
         {
-            string sql = @"select hd.Id,hd.Ngay, kh.tenkh, nv.tennv, hd.chungtu, hd.tongtien,
+            string sql = @"select hd.Id,hd.Ngay, n.tenncc, nv.tennv,hd.nguoigiao,hd.sdt, hd.chungtu, hd.tongtien,
             (case hd.trangthai
             when 0 then N'Đang xử lý'
             when 1 then N'Đã thanh toán'
             end) as 'trangthai'
-            from tbl_HoaDon hd, tbl_KhachHang kh, tbl_NhanVien nv
-            where hd.makh = kh.makh and nv.manv=hd.manv";
+            from tbl_HoaDonNhap hd, tbl_NhaCungCap n, tbl_NhanVien nv
+            where hd.mancc = n.mancc and nv.manv=hd.manv";
             dgDanhsach.DataSource = cn.taobang(sql);
         }
         public void LoadDanhSach(DateTime s, DateTime e)
         {
-            string sql = @"select hd.Id,hd.Ngay, kh.tenkh, nv.tennv, hd.chungtu, hd.tongtien,
+            string sql = @"select hd.Id,hd.Ngay, n.tenncc, nv.tennv,hd.nguoigiao,hd.sdt, hd.chungtu, hd.tongtien,
             (case hd.trangthai
             when 0 then N'Đang xử lý'
             when 1 then N'Đã thanh toán'
             end) as 'trangthai'
-            from tbl_HoaDon hd, tbl_KhachHang kh, tbl_NhanVien nv
-            where hd.makh = kh.makh and nv.manv=hd.manv and hd.Ngay>= '" + s+"' and hd.Ngay<='"+e+"'";
+            from tbl_HoaDonNhap hd, tbl_NhaCungCap n, tbl_NhanVien nv
+            where hd.mancc = n.mancc and nv.manv=hd.manv and hd.Ngay>= '" + s + "' and hd.Ngay<='" + e + "'";
             dgDanhsach.DataSource = cn.taobang(sql);
         }
-        public void LoadChiTiet(string id,int n=0)
+        public void LoadChiTiet(string id, int n = 0)
         {
             string sql = "";
-            if(n==0)
-                sql = @"select sp.Ma, sp.Ten,sp.dvt, sp.DONGIA, pb.SL, (pb.SL*sp.DONGIA) as 'thanhtien'
-                from tbl_PhieuBanChiTiet pb, tbl_HANG sp
-                where sp.Ma = pb.HANG and pb.ID_Pb=N'" + id + "'";
+            if (n == 0)
+                sql = @"select sp.Ma, sp.Ten,sp.dvt, sp.DONGIA, pn.SL, (pn.SL*sp.DONGIA) as 'thanhtien'
+                from tbl_PhieuNhapChiTiet pn, tbl_HANG sp
+                where sp.Ma = pn.HANG and pn.ID_Pn=N'" + id + "'";
             else
-                sql = @"select sp.Ma, sp.Ten,sp.dvt, sp.DONGIA, pb.soluong as 'SL' , (pb.soluong*sp.DONGIA) as 'thanhtien'
-                from tbl_ChiTietHoaDon pb, tbl_HANG sp
-                where sp.Ma = pb.masp and pb.ID_hd=N'" + id + "'";
+                sql = @"select sp.Ma, sp.Ten,sp.dvt, sp.DONGIA, pn.soluong as 'SL' , (pn.soluong*sp.DONGIA) as 'thanhtien'
+                from tbl_ChiTietHoaDonNhap pn, tbl_HANG sp
+                where sp.Ma = pn.masp and pn.ID_hd=N'" + id + "'";
             dgChiTiet.DataSource = cn.taobang(sql);
         }
         private void Select(object sender, DataGridViewCellEventArgs e)
@@ -73,13 +76,13 @@ namespace QLBANHANG
                     btnXoa.Enabled = true;
                     btnSua.Enabled = true;
                     id_don = dgDanhsach.Rows[dong].Cells["id"].Value.ToString();
-                    hd = f.GetHoaDon(id_don);
-                    if(string.IsNullOrEmpty(hd.chungtu))
+                    hd = f.GetHoaDonNhap(id_don);
+                    if (hd!= null && string.IsNullOrEmpty(hd.chungtu))
                     {
-                        LoadChiTiet(id_don,1);
-                    }   
+                        LoadChiTiet(id_don, 1);
+                    }
                     else
-                    LoadChiTiet(hd.chungtu);
+                        LoadChiTiet(hd.chungtu);
                 }
                 else
                 {
@@ -108,7 +111,8 @@ namespace QLBANHANG
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            LoadDanhSach();
+            LoadChiTiet("");
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -118,7 +122,7 @@ namespace QLBANHANG
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            var up = f.XoaHoaDon(id_don);
+            var up = f.XoaHoaDonNhap(id_don);
             if (!up)
             {
                 MessageBox.Show("Lỗi");
@@ -131,8 +135,8 @@ namespace QLBANHANG
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            var d = f.GetHoaDon(id_don);
-            using (frm_HoaDon frm = new frm_HoaDon(d))
+            var d = f.GetHoaDonNhap(id_don);
+            using (frm_HoaDonNhap frm = new frm_HoaDonNhap(d))
             {
                 frm.ShowDialog();
             }
@@ -141,9 +145,9 @@ namespace QLBANHANG
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            using (frm_HoaDon frm = new frm_HoaDon())
+            using (frm_HoaDonNhap frm = new frm_HoaDonNhap())
             {
-                frm.ShowDialog();           
+                frm.ShowDialog();
             }
             Reload();
         }

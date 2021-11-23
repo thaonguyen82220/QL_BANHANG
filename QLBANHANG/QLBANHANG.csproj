@@ -59,14 +59,8 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.2012.Runtime.11.0.3452.0\lib\Microsoft.ReportViewer.WebForms.DLL</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
@@ -88,17 +82,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet2.cs">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ChiTietHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>frm_ChiTietHoaDonNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DSDonHangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_DSDonHangNhap.Designer.cs">
       <DependentUpon>frm_DSDonHangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_DSHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DSHoaDonNhap.Designer.cs">
+      <DependentUpon>frm_DSHoaDonNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DSThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frm_DSThongKe.Designer.cs">
       <DependentUpon>frm_DSThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_HoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_HoaDonNhap.Designer.cs">
+      <DependentUpon>frm_HoaDonNhap.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_Main2.cs">
       <SubType>Form</SubType>
@@ -119,10 +139,15 @@
       <DependentUpon>frm_PickKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\Context2.cs" />
+    <Compile Include="Model\Context3.cs" />
+    <Compile Include="Model\Context4.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\tbl_BaoGia.cs" />
     <Compile Include="Model\tbl_ChiTietBaoGia.cs" />
-    <Compile Include="Model\tbl_ChiTietHoaDon.cs" />
+    <Compile Include="Model\tbl_ChiTietHoaDonBan.cs" />
+    <Compile Include="Model\tbl_ChiTietHoaDonNhap.cs" />
+    <Compile Include="Model\tbl_HoaDonBan.cs" />
+    <Compile Include="Model\tbl_HoaDonNhap.cs" />
     <Compile Include="PlaceHolder_Text.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -132,11 +157,11 @@
     <Compile Include="frm_BaoGia.Designer.cs">
       <DependentUpon>frm_BaoGia.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ChiTietHoaDon.cs">
+    <Compile Include="frm_ChiTietHoaDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ChiTietHoaDon.Designer.cs">
-      <DependentUpon>frm_ChiTietHoaDon.cs</DependentUpon>
+    <Compile Include="frm_ChiTietHoaDonBan.Designer.cs">
+      <DependentUpon>frm_ChiTietHoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DonHangBan.cs">
       <SubType>Form</SubType>
@@ -144,11 +169,11 @@
     <Compile Include="frm_DonHangBan.Designer.cs">
       <DependentUpon>frm_DonHangBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_HoaDon.cs">
+    <Compile Include="frm_HoaDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_HoaDon.Designer.cs">
-      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    <Compile Include="frm_HoaDonBan.Designer.cs">
+      <DependentUpon>frm_HoaDonBan.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_HoTro.cs">
       <SubType>Form</SubType>
@@ -276,7 +301,6 @@
     <Compile Include="Function.cs" />
     <Compile Include="Model\tbl_DVT.cs" />
     <Compile Include="Model\tbl_HANG.cs" />
-    <Compile Include="Model\tbl_HoaDon.cs" />
     <Compile Include="Model\tbl_KhachHang.cs" />
     <Compile Include="Model\tbl_Loai.cs" />
     <Compile Include="Model\tbl_nguoidung.cs" />
@@ -288,17 +312,17 @@
     <Compile Include="Model\tbl_PhieuNhapChiTiet.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Thao_DSHoaDon.cs">
+    <Compile Include="frm_DSHoaDonBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thao_DSHoaDon.Designer.cs">
-      <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
+    <Compile Include="frm_DSHoaDonBan.Designer.cs">
+      <DependentUpon>frm_DSHoaDonBan.cs</DependentUpon>
     </Compile>
-    <Compile Include="Thao_DSBaoGia.cs">
+    <Compile Include="frm_DSBaoGia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Thao_DSBaoGia.Designer.cs">
-      <DependentUpon>Thao_DSBaoGia.cs</DependentUpon>
+    <Compile Include="frm_DSBaoGia.Designer.cs">
+      <DependentUpon>frm_DSBaoGia.cs</DependentUpon>
     </Compile>
     <Compile Include="frm_DSDonHangBan.cs">
       <SubType>Form</SubType>
@@ -306,11 +330,20 @@
     <Compile Include="frm_DSDonHangBan.Designer.cs">
       <DependentUpon>frm_DSDonHangBan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frm_ChiTietHoaDonNhap.resx">
+      <DependentUpon>frm_ChiTietHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DSDonHangNhap.resx">
       <DependentUpon>frm_DSDonHangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_DSHoaDonNhap.resx">
+      <DependentUpon>frm_DSHoaDonNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_DSThongKe.resx">
       <DependentUpon>frm_DSThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_HoaDonNhap.resx">
+      <DependentUpon>frm_HoaDonNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_Main2.resx">
       <DependentUpon>frm_Main2.cs</DependentUpon>
@@ -324,14 +357,14 @@
     <EmbeddedResource Include="frm_BaoGia.resx">
       <DependentUpon>frm_BaoGia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ChiTietHoaDon.resx">
-      <DependentUpon>frm_ChiTietHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frm_ChiTietHoaDonBan.resx">
+      <DependentUpon>frm_ChiTietHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DonHangBan.resx">
       <DependentUpon>frm_DonHangBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_HoaDon.resx">
-      <DependentUpon>frm_HoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frm_HoaDonBan.resx">
+      <DependentUpon>frm_HoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_HoTro.resx">
       <DependentUpon>frm_HoTro.cs</DependentUpon>
@@ -405,12 +438,13 @@
     <EmbeddedResource Include="Report\rpt_ThongKeKhachHang.rdlc" />
     <EmbeddedResource Include="Report\rpt_ThongKePhieuNhap.rdlc" />
     <EmbeddedResource Include="Report\rpt_ThongKeTheTon.rdlc" />
+    <EmbeddedResource Include="Report\rp_BaoGia.rdlc" />
     <EmbeddedResource Include="Report\rp_Thongkephieuxuat.rdlc" />
-    <EmbeddedResource Include="Thao_DSHoaDon.resx">
-      <DependentUpon>Thao_DSHoaDon.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DSHoaDonBan.resx">
+      <DependentUpon>frm_DSHoaDonBan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Thao_DSBaoGia.resx">
-      <DependentUpon>Thao_DSBaoGia.cs</DependentUpon>
+    <EmbeddedResource Include="frm_DSBaoGia.resx">
+      <DependentUpon>frm_DSBaoGia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_DSDonHangBan.resx">
       <DependentUpon>frm_DSDonHangBan.cs</DependentUpon>
@@ -426,6 +460,17 @@
     </None>
     <None Include="DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

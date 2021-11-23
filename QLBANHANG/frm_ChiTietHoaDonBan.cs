@@ -11,38 +11,52 @@ using QLBANHANG.Model;
 
 namespace QLBANHANG
 {
-    public partial class frm_ChiTietHoaDon : Form
+    public partial class frm_ChiTietHoaDonBan : Form
     {
         Function f = new Function();
-        public frm_ChiTietHoaDon()
+        public frm_ChiTietHoaDonBan()
         {
             InitializeComponent();
         }
-        public frm_ChiTietHoaDon(tbl_HoaDon hd)
+        public frm_ChiTietHoaDonBan(tbl_HoaDonBan hd)
         {
             InitializeComponent();
             var khach = f.GetKhachHang(hd.makh);
             txtDiachi.Text = khach.diachi;
             txtNguoimua.Text = txtTenkach.Text = khach.tenkh;
-            txtNgaysinh.Text = khach.ngaysinh.ToString();
+            txtNgaysinh.Text = khach.ngaysinh.Value.ToString("yyyy/MM/dd");
             txtNhanvien.Text = f.GetNhanVien(hd.manv).tennv;
             txtPhuongthuc.Text = hd.phuongthuc;
             txtSdt.Text = khach.sdt;
             txtTongtien.Text = hd.tongtien.ToString();
             txtNguoiban.Text = f.GetNhanVien(hd.manv).tennv;
-            var chitiet = f.ListCTPB(hd.chungtu);
-            foreach (var item in chitiet)
-            {
-                var ct = "Sản phẩm: " + item.HANG + " Số lượng: " + item.SL + " Đơn giá: " + item.DonGia;
-                lbChitiet.Items.Add(ct);
-            }
-            txtTenHoaDon.Text = "HÓA ĐƠN " + hd.Id;
-        }
-        private void frm_ChiTietHoaDon_Load(object sender, EventArgs e)
-        {
-            
-        }
+            theanh.Text = "";
 
+            if (f.GetPhieuBanHang(hd.chungtu) == null)
+            {
+                var chitiet = f.ListCTHDB(hd.Id);
+                foreach (var item in chitiet)
+                {
+                    var i = (tbl_ChiTietHoaDonBan)item;
+                    var sp = f.GetSanPham(i.masp);
+                    var ct = "Sản phẩm: " + i.masp + " x Số lượng: " + i.soluong + " --- Đơn giá: " + sp.DONGIA.ToString()+ '\n';
+                    theanh.Text += ct;
+                }
+            }
+            else
+            {
+                var chitiet = f.ListCTPB(hd.chungtu);
+                foreach (var item in chitiet)
+                {
+                    var ct = "Sản phẩm: " + item.HANG + " x Số lượng: " + item.SL + " --- Đơn giá: " + item.DonGia + '\n';
+                    theanh.Text += ct;
+                }
+
+            }    
+            
+            
+            txtTenHoaDon.Text = "HÓA ĐƠN BÁN " + hd.Id;
+        }
         /*private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
 
@@ -77,9 +91,6 @@ namespace QLBANHANG
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
 
-        private void txtDiachi_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

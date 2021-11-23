@@ -213,7 +213,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="PHIEUBANHANG" msprop:Generator_TableClassName="PHIEUBANHANGDataTable" msprop:Generator_TableVarName="tablePHIEUBANHANG" msprop:Generator_TablePropName="PHIEUBANHANG" msprop:Generator_RowDeletingName="PHIEUBANHANGRowDeleting" msprop:Generator_RowChangingName="PHIEUBANHANGRowChanging" msprop:Generator_RowEvHandlerName="PHIEUBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PHIEUBANHANGRowDeleted" msprop:Generator_UserTableName="PHIEUBANHANG" msprop:Generator_RowChangedName="PHIEUBANHANGRowChanged" msprop:Generator_RowEvArgName="PHIEUBANHANGRowChangeEvent" msprop:Generator_RowClassName="PHIEUBANHANGRow">
+        <xs:element name="PHIEUBANHANG" msprop:Generator_TableClassName="PHIEUBANHANGDataTable" msprop:Generator_TableVarName="tablePHIEUBANHANG" msprop:Generator_RowChangedName="PHIEUBANHANGRowChanged" msprop:Generator_TablePropName="PHIEUBANHANG" msprop:Generator_RowDeletingName="PHIEUBANHANGRowDeleting" msprop:Generator_RowChangingName="PHIEUBANHANGRowChanging" msprop:Generator_RowEvHandlerName="PHIEUBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PHIEUBANHANGRowDeleted" msprop:Generator_RowClassName="PHIEUBANHANGRow" msprop:Generator_UserTableName="PHIEUBANHANG" msprop:Generator_RowEvArgName="PHIEUBANHANGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDPHIEU" msprop:Generator_ColumnVarNameInTable="columnIDPHIEU" msprop:Generator_ColumnPropNameInRow="IDPHIEU" msprop:Generator_ColumnPropNameInTable="IDPHIEUColumn" msprop:Generator_UserColumnName="IDPHIEU">
@@ -259,7 +259,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PHIEUNHAPHANG" msprop:Generator_TableClassName="PHIEUNHAPHANGDataTable" msprop:Generator_TableVarName="tablePHIEUNHAPHANG" msprop:Generator_TablePropName="PHIEUNHAPHANG" msprop:Generator_RowDeletingName="PHIEUNHAPHANGRowDeleting" msprop:Generator_RowChangingName="PHIEUNHAPHANGRowChanging" msprop:Generator_RowEvHandlerName="PHIEUNHAPHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PHIEUNHAPHANGRowDeleted" msprop:Generator_UserTableName="PHIEUNHAPHANG" msprop:Generator_RowChangedName="PHIEUNHAPHANGRowChanged" msprop:Generator_RowEvArgName="PHIEUNHAPHANGRowChangeEvent" msprop:Generator_RowClassName="PHIEUNHAPHANGRow">
+        <xs:element name="PHIEUNHAPHANG" msprop:Generator_TableClassName="PHIEUNHAPHANGDataTable" msprop:Generator_TableVarName="tablePHIEUNHAPHANG" msprop:Generator_RowChangedName="PHIEUNHAPHANGRowChanged" msprop:Generator_TablePropName="PHIEUNHAPHANG" msprop:Generator_RowDeletingName="PHIEUNHAPHANGRowDeleting" msprop:Generator_RowChangingName="PHIEUNHAPHANGRowChanging" msprop:Generator_RowEvHandlerName="PHIEUNHAPHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="PHIEUNHAPHANGRowDeleted" msprop:Generator_RowClassName="PHIEUNHAPHANGRow" msprop:Generator_UserTableName="PHIEUNHAPHANG" msprop:Generator_RowEvArgName="PHIEUNHAPHANGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDPN" msprop:Generator_ColumnVarNameInTable="columnIDPN" msprop:Generator_ColumnPropNameInRow="IDPN" msprop:Generator_ColumnPropNameInTable="IDPNColumn" msprop:Generator_UserColumnName="IDPN">
@@ -298,7 +298,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="THONGKEPHIEUNHAP" msprop:Generator_TableClassName="THONGKEPHIEUNHAPDataTable" msprop:Generator_TableVarName="tableTHONGKEPHIEUNHAP" msprop:Generator_TablePropName="THONGKEPHIEUNHAP" msprop:Generator_RowDeletingName="THONGKEPHIEUNHAPRowDeleting" msprop:Generator_RowChangingName="THONGKEPHIEUNHAPRowChanging" msprop:Generator_RowEvHandlerName="THONGKEPHIEUNHAPRowChangeEventHandler" msprop:Generator_RowDeletedName="THONGKEPHIEUNHAPRowDeleted" msprop:Generator_UserTableName="THONGKEPHIEUNHAP" msprop:Generator_RowChangedName="THONGKEPHIEUNHAPRowChanged" msprop:Generator_RowEvArgName="THONGKEPHIEUNHAPRowChangeEvent" msprop:Generator_RowClassName="THONGKEPHIEUNHAPRow">
+        <xs:element name="THONGKEPHIEUNHAP" msprop:Generator_TableClassName="THONGKEPHIEUNHAPDataTable" msprop:Generator_TableVarName="tableTHONGKEPHIEUNHAP" msprop:Generator_RowChangedName="THONGKEPHIEUNHAPRowChanged" msprop:Generator_TablePropName="THONGKEPHIEUNHAP" msprop:Generator_RowDeletingName="THONGKEPHIEUNHAPRowDeleting" msprop:Generator_RowChangingName="THONGKEPHIEUNHAPRowChanging" msprop:Generator_RowEvHandlerName="THONGKEPHIEUNHAPRowChangeEventHandler" msprop:Generator_RowDeletedName="THONGKEPHIEUNHAPRowDeleted" msprop:Generator_RowClassName="THONGKEPHIEUNHAPRow" msprop:Generator_UserTableName="THONGKEPHIEUNHAP" msprop:Generator_RowEvArgName="THONGKEPHIEUNHAPRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDPN" msprop:Generator_ColumnVarNameInTable="columnIDPN" msprop:Generator_ColumnPropNameInRow="IDPN" msprop:Generator_ColumnPropNameInTable="IDPNColumn" msprop:Generator_UserColumnName="IDPN">
@@ -327,7 +327,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="THONGKEPHIEUBANHANG" msprop:Generator_TableClassName="THONGKEPHIEUBANHANGDataTable" msprop:Generator_TableVarName="tableTHONGKEPHIEUBANHANG" msprop:Generator_TablePropName="THONGKEPHIEUBANHANG" msprop:Generator_RowDeletingName="THONGKEPHIEUBANHANGRowDeleting" msprop:Generator_RowChangingName="THONGKEPHIEUBANHANGRowChanging" msprop:Generator_RowEvHandlerName="THONGKEPHIEUBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="THONGKEPHIEUBANHANGRowDeleted" msprop:Generator_UserTableName="THONGKEPHIEUBANHANG" msprop:Generator_RowChangedName="THONGKEPHIEUBANHANGRowChanged" msprop:Generator_RowEvArgName="THONGKEPHIEUBANHANGRowChangeEvent" msprop:Generator_RowClassName="THONGKEPHIEUBANHANGRow">
+        <xs:element name="THONGKEPHIEUBANHANG" msprop:Generator_TableClassName="THONGKEPHIEUBANHANGDataTable" msprop:Generator_TableVarName="tableTHONGKEPHIEUBANHANG" msprop:Generator_RowChangedName="THONGKEPHIEUBANHANGRowChanged" msprop:Generator_TablePropName="THONGKEPHIEUBANHANG" msprop:Generator_RowDeletingName="THONGKEPHIEUBANHANGRowDeleting" msprop:Generator_RowChangingName="THONGKEPHIEUBANHANGRowChanging" msprop:Generator_RowEvHandlerName="THONGKEPHIEUBANHANGRowChangeEventHandler" msprop:Generator_RowDeletedName="THONGKEPHIEUBANHANGRowDeleted" msprop:Generator_RowClassName="THONGKEPHIEUBANHANGRow" msprop:Generator_UserTableName="THONGKEPHIEUBANHANG" msprop:Generator_RowEvArgName="THONGKEPHIEUBANHANGRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="IDPHIEU" msprop:Generator_ColumnVarNameInTable="columnIDPHIEU" msprop:Generator_ColumnPropNameInRow="IDPHIEU" msprop:Generator_ColumnPropNameInTable="IDPHIEUColumn" msprop:Generator_UserColumnName="IDPHIEU">
@@ -370,7 +370,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="TenLoai" msprop:Generator_ColumnVarNameInTable="columnTenLoai" msprop:Generator_ColumnPropNameInRow="TenLoai" msprop:Generator_ColumnPropNameInTable="TenLoaiColumn" msprop:Generator_UserColumnName="TenLoai" minOccurs="0">
@@ -406,7 +406,7 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tbl_KhachHang" msprop:Generator_TableClassName="tbl_KhachHangDataTable" msprop:Generator_TableVarName="tabletbl_KhachHang" msprop:Generator_TablePropName="tbl_KhachHang" msprop:Generator_RowDeletingName="tbl_KhachHangRowDeleting" msprop:Generator_RowChangingName="tbl_KhachHangRowChanging" msprop:Generator_RowEvHandlerName="tbl_KhachHangRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_KhachHangRowDeleted" msprop:Generator_UserTableName="tbl_KhachHang" msprop:Generator_RowChangedName="tbl_KhachHangRowChanged" msprop:Generator_RowEvArgName="tbl_KhachHangRowChangeEvent" msprop:Generator_RowClassName="tbl_KhachHangRow">
+        <xs:element name="tbl_KhachHang" msprop:Generator_TableClassName="tbl_KhachHangDataTable" msprop:Generator_TableVarName="tabletbl_KhachHang" msprop:Generator_RowChangedName="tbl_KhachHangRowChanged" msprop:Generator_TablePropName="tbl_KhachHang" msprop:Generator_RowDeletingName="tbl_KhachHangRowDeleting" msprop:Generator_RowChangingName="tbl_KhachHangRowChanging" msprop:Generator_RowEvHandlerName="tbl_KhachHangRowChangeEventHandler" msprop:Generator_RowDeletedName="tbl_KhachHangRowDeleted" msprop:Generator_RowClassName="tbl_KhachHangRow" msprop:Generator_UserTableName="tbl_KhachHang" msprop:Generator_RowEvArgName="tbl_KhachHangRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="makh" msprop:Generator_ColumnVarNameInTable="columnmakh" msprop:Generator_ColumnPropNameInRow="makh" msprop:Generator_ColumnPropNameInTable="makhColumn" msprop:Generator_UserColumnName="makh">
@@ -438,6 +438,10 @@ SELECT makh, tenkh, diachi, sdt FROM tbl_KhachHang WHERE (makh = @makh)</Command
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DataTable2" msprop:Generator_TableClassName="DataTable2DataTable" msprop:Generator_TableVarName="tableDataTable2" msprop:Generator_TablePropName="DataTable2" msprop:Generator_RowDeletingName="DataTable2RowDeleting" msprop:Generator_RowChangingName="DataTable2RowChanging" msprop:Generator_RowEvHandlerName="DataTable2RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable2RowDeleted" msprop:Generator_UserTableName="DataTable2" msprop:Generator_RowChangedName="DataTable2RowChanged" msprop:Generator_RowEvArgName="DataTable2RowChangeEvent" msprop:Generator_RowClassName="DataTable2Row">
+          <xs:complexType>
           </xs:complexType>
         </xs:element>
       </xs:choice>

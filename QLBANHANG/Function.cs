@@ -9,10 +9,10 @@ namespace QLBANHANG
 {
     public class Function
     {
-        Context2 db = null;
+        Context4 db = null;
         public Function()
         {
-            db = new Context2();
+            db = new Context4();
         }
         public string Random(int length)
         {
@@ -38,21 +38,37 @@ namespace QLBANHANG
             int card = rnd.Next(52);
             return month.ToString() + dice.ToString() + card.ToString();
         }
-        public List<tbl_ChiTietHoaDon> GetChiTietHoaDon(string id)
+        public List<tbl_ChiTietHoaDonBan> GetChiTietHoaDonBan(string id)
         {
-            return db.tbl_ChiTietHoaDon.Where(x=>x.Id_hd==id).ToList();
+            return db.tbl_ChiTietHoaDonBan.Where(x=>x.Id_hd==id).ToList();
+        }
+        public List<tbl_ChiTietHoaDonNhap> GetChiTietHoaDonNhap(string id)
+        {
+            return db.tbl_ChiTietHoaDonNhap.Where(x=>x.Id_hd==id).ToList();
+        }
+        public tbl_NhaCungCap GetNhaCungCap(string id)
+        {
+            return db.tbl_NhaCungCap.FirstOrDefault(x=>x.mancc==id);
         }
         public tbl_BaoGia GetBaoGia(string id)
         {
             return db.tbl_BaoGia.FirstOrDefault(x => x.mabaogia == id);
         }
-        public List<tbl_HoaDon> GetDanhSachHoaDon()
+        public List<tbl_HoaDonBan> GetDanhSachHoaDonBan()
         {
-            return db.tbl_HoaDon.ToList();
+            return db.tbl_HoaDonBan.ToList();
         }
-        public tbl_HoaDon TimHoaDonByMaPhieuBan(string id)
+        public List<tbl_HoaDonNhap> GetDanhSachHoaDonNhap()
         {
-            return GetDanhSachHoaDon().FirstOrDefault(x=>x.chungtu==id);
+            return db.tbl_HoaDonNhap.ToList();
+        }
+        public tbl_HoaDonBan TimHoaDonBanByMaPhieu(string id)
+        {
+            return GetDanhSachHoaDonBan().FirstOrDefault(x=>x.chungtu==id);
+        }
+        public tbl_HoaDonNhap TimHoaDonNhapByMaPhieu(string id)
+        {
+            return GetDanhSachHoaDonNhap().FirstOrDefault(x => x.chungtu == id);
         }
         public List<tbl_BaoGia> GetDanhSachBaoGia(DateTime start=new DateTime(), DateTime end=new DateTime())
         {
@@ -79,35 +95,72 @@ namespace QLBANHANG
             }
             return t;
         }
-        public bool AddChiTietHoaDon(string id_hd, tbl_ChiTietHoaDon cthd)
+        public bool AddChiTietHoaDonBan(string id_hd, tbl_ChiTietHoaDonBan cthd)
         {
-            if (GetHoaDon(id_hd) != null)
+            if (GetHoaDonBan(id_hd) != null)
             {
-                var o = db.tbl_ChiTietHoaDon.FirstOrDefault(x => x.masp == cthd.masp && x.Id_hd ==id_hd);
+                var o = db.tbl_ChiTietHoaDonBan.FirstOrDefault(x => x.masp == cthd.masp && x.Id_hd ==id_hd);
                 if (o != null)
                 {
                     o.soluong = cthd.soluong + o.soluong;
-                    TongTienHoaDon(id_hd);
+                    TongTienHoaDonBan(id_hd);
                     db.SaveChanges();                  
                 }
                 else
                 {
-                    db.tbl_ChiTietHoaDon.Add(cthd);
-                    TongTienHoaDon(id_hd);
+                    db.tbl_ChiTietHoaDonBan.Add(cthd);
+                    TongTienHoaDonBan(id_hd);
                     db.SaveChanges();
                 }
                 return true;
             }
             return false;
         }
-        public bool XoaChiTietHoaDon(string id_hd, string masp)
+        public bool AddChiTietHoaDonNhap(string id_hd, tbl_ChiTietHoaDonNhap cthd)
         {
-            if (GetHoaDon(id_hd) != null)
+            if (GetHoaDonNhap(id_hd) != null)
             {
-                var o = db.tbl_ChiTietHoaDon.FirstOrDefault(x => x.masp == masp);
+                var o = db.tbl_ChiTietHoaDonNhap.FirstOrDefault(x => x.masp == cthd.masp && x.Id_hd == id_hd);
                 if (o != null)
                 {
-                    db.tbl_ChiTietHoaDon.Remove(o);
+                    o.soluong = cthd.soluong + o.soluong;
+                    db.SaveChanges();
+                    TongTienHoaDonNhap(id_hd);
+                    db.SaveChanges();
+                }
+                else
+                {
+                    db.tbl_ChiTietHoaDonNhap.Add(cthd);
+                    db.SaveChanges();
+                    TongTienHoaDonNhap(id_hd);
+                    db.SaveChanges();
+                }
+                return true;
+            }
+            return false;
+        }
+        public bool XoaChiTietHoaDonBan(string id_hd, string masp)
+        {
+            if (GetHoaDonBan(id_hd) != null)
+            {
+                var o = db.tbl_ChiTietHoaDonBan.FirstOrDefault(x => x.masp == masp);
+                if (o != null)
+                {
+                    db.tbl_ChiTietHoaDonBan.Remove(o);
+                    db.SaveChanges();
+                    return true;
+                }
+            }
+            return false;
+        }
+        public bool XoaChiTietHoaDonNhap(string id_hd, string masp)
+        {
+            if (GetHoaDonNhap(id_hd) != null)
+            {
+                var o = db.tbl_ChiTietHoaDonNhap.FirstOrDefault(x => x.masp == masp);
+                if (o != null)
+                {
+                    db.tbl_ChiTietHoaDonNhap.Remove(o);
                     db.SaveChanges();
                     return true;
                 }
@@ -145,11 +198,11 @@ namespace QLBANHANG
             }
             return false;
         }
-        public bool EditHoaDon(tbl_HoaDon hd)
+        public bool EditHoaDonBan(tbl_HoaDonBan hd)
         {
             try
             {
-                var o = db.tbl_HoaDon.SingleOrDefault(x => x.Id == hd.Id);
+                var o = db.tbl_HoaDonBan.SingleOrDefault(x => x.Id == hd.Id);
                 if (o != null)
                 {
                     o.chungtu = hd.chungtu;
@@ -159,6 +212,30 @@ namespace QLBANHANG
                     o.phuongthuc = hd.phuongthuc;
                     o.stk = hd.stk;
                     o.danhan = hd.danhan;
+                    o.tongtien = hd.tongtien;
+                    o.trangthai = (int)hd.trangthai;
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool EditHoaDonNhap(tbl_HoaDonNhap hd)
+        {
+            try
+            {
+                var o = db.tbl_HoaDonNhap.SingleOrDefault(x => x.Id == hd.Id);
+                if (o != null)
+                {
+                    o.chungtu = hd.chungtu;
+                    o.mancc = hd.mancc;
+                    o.manv = hd.manv;
+                    o.Ngay = hd.Ngay;
+                    o.sdt = hd.sdt;
                     o.tongtien = hd.tongtien;
                     o.trangthai = hd.trangthai;
                     db.SaveChanges();
@@ -233,17 +310,18 @@ namespace QLBANHANG
                 throw x;
             }
         }
-        public bool ThanhToanHoaDon(string id)
+        public bool ThanhToanHoaDonBan(string id)
         {
             try
             {
-                var hd = GetHoaDon(id);
+                var hd = GetHoaDonBan(id);
                 if ( hd != null)
                 {
                     tbl_PhieuBanHang p = GetPhieuBanHang(hd.chungtu);
                     if(p!=null)
                     {
                         p.TrangThai = 1;
+                        db.SaveChanges();
                     }    
                     hd.trangthai = 1;
                     db.SaveChanges();
@@ -258,14 +336,58 @@ namespace QLBANHANG
             }
 
         }
-        public bool XoaHoaDon(string id)
+        public bool ThanhToanHoaDonNhap(string id)
         {
             try
             {
-                var o = db.tbl_HoaDon.FirstOrDefault(x=>x.Id==id);
+                var hd = GetHoaDonNhap(id);
+                if (hd != null)
+                {
+                    tbl_PhieuNhap p = GetPhieuNhap(hd.chungtu);
+                    if (p != null)
+                    {
+                        p.TrangThai = 1;
+                        db.SaveChanges();
+                    }
+                    hd.trangthai = 1;
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+
+
+            }
+            catch (Exception x)
+            {
+                throw x;
+            }
+        }
+        public bool XoaHoaDonBan(string id)
+        {
+            try
+            {
+                var o = db.tbl_HoaDonBan.FirstOrDefault(x=>x.Id==id);
                 if (o != null)
                 {
-                    db.tbl_HoaDon.Remove(o);
+                    db.tbl_HoaDonBan.Remove(o);
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception x)
+            {
+                throw x;
+            }
+        }
+        public bool XoaHoaDonNhap(string id)
+        {
+            try
+            {
+                var o = db.tbl_HoaDonNhap.FirstOrDefault(x => x.Id == id);
+                if (o != null)
+                {
+                    db.tbl_HoaDonNhap.Remove(o);
                     db.SaveChanges();
                     return true;
                 }
@@ -340,6 +462,14 @@ namespace QLBANHANG
         {
             return db.tbl_PhieuNhapChiTiet.Where(x => x.ID_PN == id).ToList();
         }
+        public IEnumerable<tbl_ChiTietHoaDonBan> ListCTHDB(string id)
+        {
+            return db.tbl_ChiTietHoaDonBan.Where(x=>x.Id_hd==id).ToList();
+        }
+        public IEnumerable<tbl_ChiTietHoaDonNhap> ListCTHDN(string id)
+        {
+            return db.tbl_ChiTietHoaDonNhap.Where(x => x.Id_hd == id).ToList();
+        }
         public tbl_KhachHang GetKhachHang(string id)
         {
             return db.tbl_KhachHang.SingleOrDefault(x => x.makh==id);
@@ -348,13 +478,21 @@ namespace QLBANHANG
         {
             return db.tbl_HANG.SingleOrDefault(x => x.Ma==id);
         }
-        public tbl_HoaDon GetHoaDon(string id)
+        public tbl_HoaDonBan GetHoaDonBan(string id)
         {
-            return db.tbl_HoaDon.SingleOrDefault(x => x.Id == id);
+            return db.tbl_HoaDonBan.SingleOrDefault(x => x.Id == id);
         }
-        public tbl_HoaDon GetHoaDonByPhieuBanHang(string id)
+        public tbl_HoaDonNhap GetHoaDonNhap(string id)
         {
-            return db.tbl_HoaDon.FirstOrDefault(x => x.chungtu ==id);
+            return db.tbl_HoaDonNhap.SingleOrDefault(x => x.Id == id);
+        }
+        public tbl_HoaDonBan GetHoaDonBanByPhieuBanHang(string id)
+        {
+            return db.tbl_HoaDonBan.FirstOrDefault(x => x.chungtu ==id);
+        }
+        public tbl_HoaDonNhap GetHoaDonNhapByPhieuNhapHang(string id)
+        {
+            return db.tbl_HoaDonNhap.FirstOrDefault(x=>x.chungtu == id);
         }
         public tbl_NhanVien GetNhanVien(string id)
         {
@@ -422,12 +560,20 @@ namespace QLBANHANG
                 db.SaveChanges();
             }
         }
-        public void TongTienHoaDon(string id)
+        public void TongTienHoaDonBan(string id)
         {
-            var o = GetHoaDon(id);
+            var o = GetHoaDonBan(id);
             if (o != null)
             {
-                o.tongtien = TotalCTHD(id);
+                o.tongtien = TotalCTHDB(id);
+            }
+        }
+        public void TongTienHoaDonNhap(string id)
+        {
+            var o = GetHoaDonNhap(id);
+            if (o != null)
+            {
+                o.tongtien = TotalCTHDN(id);
             }
         }
         public bool XoaPhieuNhap(string id)
@@ -491,10 +637,20 @@ namespace QLBANHANG
             }
             return t;
         }
-        public double? TotalCTHD(string id)
+        public double? TotalCTHDB(string id)
         {
             double? t = 0;
-            foreach (var item in GetChiTietHoaDon(id))
+            foreach (var item in GetChiTietHoaDonBan(id))
+            {
+                var dongia = GetSanPham(item.masp).DONGIA;
+                t = t + (dongia * item.soluong);
+            }
+            return t;
+        }
+        public double? TotalCTHDN(string id)
+        {
+            double? t = 0;
+            foreach (var item in GetChiTietHoaDonNhap(id))
             {
                 var dongia = GetSanPham(item.masp).DONGIA;
                 t = t + (dongia * item.soluong);
@@ -517,7 +673,32 @@ namespace QLBANHANG
                 try
                 {
                     db.tbl_PhieuNhapChiTiet.Remove(GetPhieuNhapChiTiet(id, sp));
-                    GetPhieuNhap(id).TONGTIEN = GetPhieuNhap(id).TONGTIEN - (GetPhieuNhapChiTiet(id, sp).SL * GetPhieuNhapChiTiet(id, sp).DonGia);
+                    db.SaveChanges();
+                    TongTienPhieuNhap(id);
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception x)
+                {
+                    throw x;
+                }
+            }
+            else
+                return false;
+        }
+        public tbl_ChiTietHoaDonNhap GetChiTietHoaDonNhap(string id, string masp)
+        {
+            return db.tbl_ChiTietHoaDonNhap.FirstOrDefault(x=>x.Id_hd==id && x.masp==masp);
+        }
+        public bool DeleteCTHDN(string id, string sp)
+        {
+            if (GetChiTietHoaDonNhap(id, sp) != null)
+            {
+                try
+                {
+                    db.tbl_ChiTietHoaDonNhap.Remove(GetChiTietHoaDonNhap(id, sp));
+                    db.SaveChanges();
+                    TongTienHoaDonNhap(id);
                     db.SaveChanges();
                     return true;
                 }
@@ -536,7 +717,32 @@ namespace QLBANHANG
                 try
                 {
                     db.tbl_PhieuBanChiTiet.Remove(GetPhieuBanChiTiet(id, sp));
-                    GetPhieuBanHang(id).TongTien = GetPhieuBanHang(id).TongTien - (GetPhieuBanChiTiet(id,sp).SL * GetPhieuBanChiTiet(id, sp).DonGia) ;
+                    db.SaveChanges();
+                    TongTienPhieuBan(id);
+                    db.SaveChanges();
+                    return true;
+                }
+                catch (Exception x)
+                {
+                    throw x;
+                }
+            }
+            else
+                return false;
+        }
+        public tbl_ChiTietHoaDonBan GetChiTietHoaDonBan(string id, string masp)
+        {
+            return db.tbl_ChiTietHoaDonBan.FirstOrDefault(x => x.Id_hd == id && x.masp == masp);
+        }
+        public bool DeleteCTHDB(string id, string sp)
+        {
+            if (GetChiTietHoaDonBan(id, sp) != null)
+            {
+                try
+                {
+                    db.tbl_ChiTietHoaDonBan.Remove(GetChiTietHoaDonBan(id, sp));
+                    db.SaveChanges();
+                    TongTienHoaDonBan(id);
                     db.SaveChanges();
                     return true;
                 }
@@ -640,7 +846,7 @@ namespace QLBANHANG
         }
         public bool UpdateTongTienHoaDonByMaPhieuBan(string id_pb)
         {
-            var p = TimHoaDonByMaPhieuBan(id_pb);
+            var p = TimHoaDonBanByMaPhieu(id_pb);
             if (p != null )
             {
                 p.tongtien = GetPhieuBanHang(id_pb).TongTien;
@@ -651,7 +857,7 @@ namespace QLBANHANG
         }
         public bool UpdateTienNhanHoaDon(string id_hd,float tien)
         {
-            var o = GetHoaDon(id_hd);
+            var o = GetHoaDonBan(id_hd);
             if (o != null)
             {
                 o.danhan = tien;
@@ -660,14 +866,14 @@ namespace QLBANHANG
             }
             return false;
         }
-        public bool AddHoaDon(tbl_HoaDon hd)
+        public bool AddHoaDonBan(tbl_HoaDonBan hd)
         {
             try
             {
-                if (db.tbl_HoaDon.SingleOrDefault(x => x.Id == hd.Id)==null)
+                if (db.tbl_HoaDonBan.SingleOrDefault(x => x.Id == hd.Id)==null)
                 {
                     hd.trangthai = 0;
-                    db.tbl_HoaDon.Add(hd);
+                    db.tbl_HoaDonBan.Add(hd);
                     db.SaveChanges();
                     return true;
                 }
@@ -677,7 +883,24 @@ namespace QLBANHANG
                 throw ex;
             }
         }
-
+        public bool AddHoaDonNhap(tbl_HoaDonNhap hd)
+        {
+            try
+            {
+                if (db.tbl_HoaDonNhap.SingleOrDefault(x => x.Id == hd.Id) == null)
+                {
+                    hd.trangthai = 0;
+                    db.tbl_HoaDonNhap.Add(hd);
+                    db.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public bool DeletePhieuNhap(string id)
         {
             try

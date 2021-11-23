@@ -6,26 +6,22 @@ namespace QLBANHANG.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_PhieuNhapChiTiet
+    public partial class tbl_ChiTietHoaDonBan
     {
         [Key]
         [Column(Order = 0)]
         [StringLength(50)]
-        public string ID_PN { get; set; }
+        public string Id_hd { get; set; }
 
         [Key]
         [Column(Order = 1)]
         [StringLength(50)]
-        public string HANG { get; set; }
+        public string masp { get; set; }
 
-        public int? SL { get; set; }
+        public int? soluong { get; set; }
 
-        public double? DonGia { get; set; }
+        public virtual tbl_HoaDonBan tbl_HoaDonBan { get; set; }
 
         public virtual tbl_HANG tbl_HANG { get; set; }
-
-        public virtual tbl_PhieuNhap tbl_PhieuNhap { get; set; }
-
-        public virtual tbl_PhieuNhap tbl_PhieuNhap1 { get; set; }
     }
 }

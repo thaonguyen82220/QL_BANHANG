@@ -31,7 +31,7 @@ namespace QLBANHANG
         {
             return id_don;
         }
-        public void LoadDanhSach()
+        /*public void LoadDanhSach()
         {
             string sql = @"SELECT * from tbl_PhieuNhap";
             dgDanhsach.DataSource = cn.taobang(sql);
@@ -48,6 +48,60 @@ namespace QLBANHANG
             INNER JOIN tbl_Hang ON tbl_PhieuNhapChiTiet.HANG = tbl_Hang.Ma 
             where  tbl_PhieuNhapChiTiet.ID_PN=N'" + id + "'";
             dgvChitiet.DataSource = cn.taobang(sql);
+        }*/
+        public void LoadDanhSach()
+        {
+            string sql = @"SELECT tbl_PhieuNhap.IDPN, tbl_PhieuNhap.sdt,tbl_Nhanvien.tennv, tbl_PhieuNhap.NGAY,tbl_PhieuNhap.nguoigiao, tbl_nhacungcap.tenncc, tbl_PhieuNhap.TongTien,
+                        ( case tbl_PhieuNhap.TrangThai 
+	                        when 0 then N'Đang xử lý' 
+	                        when 1 then N'Đã thanh toán' 
+	                        end) as 'TrangThai'
+                        FROM         tbl_PhieuNhap INNER JOIN
+                      tbl_NhanVien ON tbl_PhieuNhap.MANV = tbl_NhanVien.manv INNER JOIN
+                      tbl_Nhacungcap ON tbl_PhieuNhap.mancc = tbl_Nhacungcap.mancc";
+            if (pick)
+                sql = @"SELECT tbl_PhieuNhap.IDPN, tbl_PhieuNhap.sdt,tbl_Nhanvien.tennv, tbl_PhieuNhap.NGAY,tbl_PhieuNhap.nguoigiao, tbl_nhacungcap.tenncc, tbl_PhieuNhap.TongTien,
+                        ( case tbl_PhieuNhap.TrangThai 
+	                        when 0 then N'Đang xử lý' 
+	                        when 1 then N'Đã thanh toán' 
+	                        end) as 'TrangThai'
+                        FROM         tbl_PhieuNhap INNER JOIN
+                      tbl_NhanVien ON tbl_PhieuNhap.MANV = tbl_NhanVien.manv INNER JOIN
+                      tbl_Nhacungcap ON tbl_PhieuNhap.mancc = tbl_Nhacungcap.mancc
+                       where  tbl_PhieuNhap.TrangThai = 0";
+            dgDanhsach.DataSource = cn.taobang(sql);
+
+        }
+        public void LoadDanhSach(DateTime s, DateTime e)
+        {
+            string query = @"SELECT tbl_PhieuNhap.IDPN, tbl_Nhanvien.tennv,tbl_PhieuNhap.sdt, tbl_PhieuNhap.NGAY,tbl_PhieuNhap.nguoigiao, tbl_nhacungcap.tenncc, tbl_PhieuNhap.TongTien,
+                        ( case tbl_PhieuNhap.TrangThai 
+	                        when 0 then N'Đang xử lý' 
+	                        when 1 then N'Đã thanh toán' 
+	                        end) as 'TrangThai'
+                        FROM         tbl_PhieuNhap INNER JOIN
+                      tbl_NhanVien ON tbl_PhieuNhap.MANV = tbl_NhanVien.manv INNER JOIN
+                      tbl_Nhacungcap ON tbl_PhieuNhap.mancc = tbl_Nhacungcap.mancc
+                        where tbl_PhieuNhap.NGAY >= '" + s + "' and tbl_PhieuNhap.NGAY <= '" + e + "'";
+            if (pick)
+                query = @"SELECT tbl_PhieuNhap.IDPN, tbl_Nhanvien.tennv, tbl_PhieuNhap.sdt,tbl_PhieuNhap.NGAY,tbl_PhieuNhap.nguoigiao, tbl_nhacungcap.tenncc, tbl_PhieuNhap.TongTien,
+                        ( case tbl_PhieuNhap.TrangThai 
+	                        when 0 then N'Đang xử lý' 
+	                        when 1 then N'Đã thanh toán' 
+	                        end) as 'TrangThai'
+                        FROM         tbl_PhieuNhap INNER JOIN
+                      tbl_NhanVien ON tbl_PhieuNhap.MANV = tbl_NhanVien.manv INNER JOIN
+                      tbl_Nhacungcap ON tbl_PhieuNhap.mancc = tbl_Nhacungcap.mancc
+                        where tbl_PhieuNhap.TrangThai=0 and tbl_PhieuNhap.NGAY >= '" + s + "' and tbl_PhieuNhap.NGAY <= '" + e + "'";
+            dgDanhsach.DataSource = cn.taobang(query);
+        }
+        public void LoadChiTiet(string id)
+        {
+            string sql = @"SELECT  Ma,tbl_PhieuNhapChiTiet.ID_PN, tbl_Hang.Ten, tbl_PhieuNhapChiTiet.SL, tbl_PhieuNhapChiTiet.DonGia, tbl_Hang.DVT, (SL*tbl_Hang.DONGIA) as 'ThanhTien'
+            FROM tbl_PhieuNhapChiTiet 
+            INNER JOIN tbl_Hang ON tbl_PhieuNhapChiTiet.HANG = tbl_Hang.Ma 
+            where  tbl_PhieuNhapChiTiet.ID_PN=N'" + id + "'";
+            dgvChitiet.DataSource = cn.taobang(sql);
         }
         private void Select(object sender, DataGridViewCellEventArgs e)
         {
@@ -59,6 +113,7 @@ namespace QLBANHANG
                     btnXoa.Enabled = true;
                     btnSua.Enabled = true;
                     id_don = dgDanhsach.Rows[dong].Cells["IDPN"].Value.ToString();
+                    btnChon.Enabled = true;
                     LoadChiTiet(id_don);
                 }
                 else
@@ -102,21 +157,16 @@ namespace QLBANHANG
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            try
-            {
                 var phieu = f.GetPhieuNhap(id_don);
+            if (phieu != null)
+            {
                 frm_DonHangNhap frm = new frm_DonHangNhap(phieu);
-                this.Hide();
                 frm.ShowDialog();
-                this.Show();
+            }
+            else
+                MessageBox.Show("Đơn hàng không tồn tại hoặc đã bị xóa");
                 LoadDanhSach();
                 LoadChiTiet("");
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -137,6 +187,24 @@ namespace QLBANHANG
         }
 
         private void btnChon_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.OK;
+        }
+
+        private void btnTimkiem_Click(object sender, EventArgs e)
+        {
+            if (dpNgay.Value > dpNgayGiao.Value)
+            {
+                MessageBox.Show("Ngày chọn không hợp lệ");
+            }
+            else
+            {
+                LoadDanhSach(dpNgay.Value, dpNgayGiao.Value);
+                LoadChiTiet(null);
+            }
+        }
+
+        private void btnTrove_Click_1(object sender, EventArgs e)
         {
             DialogResult = DialogResult.OK;
         }

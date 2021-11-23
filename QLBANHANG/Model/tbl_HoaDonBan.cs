@@ -6,12 +6,12 @@ namespace QLBANHANG.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class tbl_HoaDon
+    public partial class tbl_HoaDonBan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_HoaDon()
+        public tbl_HoaDonBan()
         {
-            tbl_ChiTietHoaDon = new HashSet<tbl_ChiTietHoaDon>();
+            tbl_ChiTietHoaDonBan = new HashSet<tbl_ChiTietHoaDonBan>();
         }
 
         [StringLength(50)]
@@ -41,9 +41,9 @@ namespace QLBANHANG.Model
 
         public double? danhan { get; set; }
 
-        public int? trangthai { get; set; }
+        public int trangthai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_ChiTietHoaDon> tbl_ChiTietHoaDon { get; set; }
+        public virtual ICollection<tbl_ChiTietHoaDonBan> tbl_ChiTietHoaDonBan { get; set; }
     }
 }

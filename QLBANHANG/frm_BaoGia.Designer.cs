@@ -43,12 +43,6 @@ namespace QLBANHANG
             this.txtKhachhang = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.dgChitiet = new System.Windows.Forms.DataGridView();
-            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMasp = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -76,6 +70,12 @@ namespace QLBANHANG
             this.label24 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnTrove = new System.Windows.Forms.Button();
+            this.masp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgChitiet)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -130,10 +130,10 @@ namespace QLBANHANG
             this.btnThemKH.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemKH.Image = ((System.Drawing.Image)(resources.GetObject("btnThemKH.Image")));
             this.btnThemKH.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnThemKH.Location = new System.Drawing.Point(515, 34);
+            this.btnThemKH.Location = new System.Drawing.Point(514, 32);
             this.btnThemKH.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemKH.Name = "btnThemKH";
-            this.btnThemKH.Size = new System.Drawing.Size(47, 34);
+            this.btnThemKH.Size = new System.Drawing.Size(62, 34);
             this.btnThemKH.TabIndex = 156;
             this.btnThemKH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThemKH.UseVisualStyleBackColor = false;
@@ -161,7 +161,7 @@ namespace QLBANHANG
             this.cbNhanvien.Enabled = false;
             this.cbNhanvien.FormattingEnabled = true;
             this.cbNhanvien.Location = new System.Drawing.Point(175, 210);
-            this.cbNhanvien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbNhanvien.Margin = new System.Windows.Forms.Padding(4);
             this.cbNhanvien.Name = "cbNhanvien";
             this.cbNhanvien.Size = new System.Drawing.Size(284, 24);
             this.cbNhanvien.TabIndex = 152;
@@ -172,10 +172,10 @@ namespace QLBANHANG
             this.btnTim.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTim.Image = ((System.Drawing.Image)(resources.GetObject("btnTim.Image")));
             this.btnTim.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnTim.Location = new System.Drawing.Point(456, 34);
+            this.btnTim.Location = new System.Drawing.Point(455, 32);
             this.btnTim.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTim.Name = "btnTim";
-            this.btnTim.Size = new System.Drawing.Size(39, 34);
+            this.btnTim.Size = new System.Drawing.Size(53, 34);
             this.btnTim.TabIndex = 180;
             this.btnTim.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTim.UseVisualStyleBackColor = false;
@@ -203,11 +203,11 @@ namespace QLBANHANG
             // txtKhachhang
             // 
             this.txtKhachhang.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtKhachhang.Location = new System.Drawing.Point(160, 34);
+            this.txtKhachhang.Location = new System.Drawing.Point(159, 35);
             this.txtKhachhang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtKhachhang.Name = "txtKhachhang";
             this.txtKhachhang.ReadOnly = true;
-            this.txtKhachhang.Size = new System.Drawing.Size(275, 29);
+            this.txtKhachhang.Size = new System.Drawing.Size(274, 29);
             this.txtKhachhang.TabIndex = 142;
             // 
             // txtDiaChi
@@ -233,7 +233,7 @@ namespace QLBANHANG
             this.Column8,
             this.Column11});
             this.dgChitiet.Location = new System.Drawing.Point(23, 81);
-            this.dgChitiet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgChitiet.Margin = new System.Windows.Forms.Padding(4);
             this.dgChitiet.Name = "dgChitiet";
             this.dgChitiet.ReadOnly = true;
             this.dgChitiet.RowHeadersWidth = 51;
@@ -242,65 +242,11 @@ namespace QLBANHANG
             this.dgChitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             this.dgChitiet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             // 
-            // masp
-            // 
-            this.masp.DataPropertyName = "masp";
-            this.masp.HeaderText = "Mã sản phẩm";
-            this.masp.MinimumWidth = 6;
-            this.masp.Name = "masp";
-            this.masp.ReadOnly = true;
-            this.masp.Width = 125;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "tensp";
-            this.Column7.HeaderText = "Tên sản phẩm";
-            this.Column7.MinimumWidth = 6;
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 125;
-            // 
-            // soluong
-            // 
-            this.soluong.DataPropertyName = "soluong";
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.MinimumWidth = 6;
-            this.soluong.Name = "soluong";
-            this.soluong.ReadOnly = true;
-            this.soluong.Width = 125;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "dongia";
-            this.Column9.HeaderText = "Đơn giá";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 125;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "dvt";
-            this.Column8.HeaderText = "Đơn vị tính";
-            this.Column8.MinimumWidth = 6;
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 125;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "thanhtien";
-            this.Column11.HeaderText = "Thành tiền";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Width = 125;
-            // 
             // txtMasp
             // 
             this.txtMasp.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMasp.Location = new System.Drawing.Point(176, 26);
-            this.txtMasp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMasp.Margin = new System.Windows.Forms.Padding(4);
             this.txtMasp.Name = "txtMasp";
             this.txtMasp.ReadOnly = true;
             this.txtMasp.Size = new System.Drawing.Size(280, 29);
@@ -334,7 +280,7 @@ namespace QLBANHANG
             // 
             this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(712, 26);
-            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(96, 29);
             this.txtSoLuong.TabIndex = 176;
@@ -367,7 +313,7 @@ namespace QLBANHANG
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(1352, 17);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(132, 39);
             this.btnXoa.TabIndex = 174;
@@ -393,7 +339,7 @@ namespace QLBANHANG
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThem.Location = new System.Drawing.Point(1185, 17);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(139, 41);
             this.btnThem.TabIndex = 173;
@@ -435,9 +381,9 @@ namespace QLBANHANG
             this.groupBox4.Controls.Add(this.panel5);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox4.Location = new System.Drawing.Point(32, 75);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1511, 337);
             this.groupBox4.TabIndex = 182;
             this.groupBox4.TabStop = false;
@@ -451,7 +397,7 @@ namespace QLBANHANG
             this.panel2.Controls.Add(this.btnSua);
             this.panel2.Controls.Add(this.btnLuu);
             this.panel2.Location = new System.Drawing.Point(1267, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(216, 291);
             this.panel2.TabIndex = 23;
@@ -496,9 +442,9 @@ namespace QLBANHANG
             this.panel4.Controls.Add(this.btnThemKH);
             this.panel4.Controls.Add(this.txtDiaChi);
             this.panel4.Location = new System.Drawing.Point(576, 30);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(649, 291);
+            this.panel4.Size = new System.Drawing.Size(648, 291);
             this.panel4.TabIndex = 22;
             // 
             // label14
@@ -561,7 +507,7 @@ namespace QLBANHANG
             this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.txtSoBaoGia);
             this.panel5.Location = new System.Drawing.Point(23, 30);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(513, 291);
             this.panel5.TabIndex = 21;
@@ -627,7 +573,7 @@ namespace QLBANHANG
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Location = new System.Drawing.Point(32, 434);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1511, 450);
             this.panel1.TabIndex = 183;
@@ -647,7 +593,61 @@ namespace QLBANHANG
             this.btnTrove.UseVisualStyleBackColor = true;
             this.btnTrove.Click += new System.EventHandler(this.btnTrove_Click);
             // 
-            // Thao_frm_BaoGia
+            // masp
+            // 
+            this.masp.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.masp.DataPropertyName = "masp";
+            this.masp.HeaderText = "Mã sản phẩm";
+            this.masp.MinimumWidth = 6;
+            this.masp.Name = "masp";
+            this.masp.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column7.DataPropertyName = "tensp";
+            this.Column7.HeaderText = "Tên sản phẩm";
+            this.Column7.MinimumWidth = 6;
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.soluong.DataPropertyName = "soluong";
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.MinimumWidth = 6;
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column9.DataPropertyName = "dongia";
+            this.Column9.HeaderText = "Đơn giá";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column8.DataPropertyName = "dvt";
+            this.Column8.HeaderText = "Đơn vị tính";
+            this.Column8.MinimumWidth = 6;
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column11.DataPropertyName = "thanhtien";
+            this.Column11.HeaderText = "Thành tiền";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // frm_BaoGia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -658,7 +658,7 @@ namespace QLBANHANG
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label11);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Thao_frm_BaoGia";
+            this.Name = "frm_BaoGia";
             this.Text = "Bảng báo giá";
             this.Load += new System.EventHandler(this.frm_BaoGia_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgChitiet)).EndInit();
@@ -700,12 +700,6 @@ namespace QLBANHANG
         private System.Windows.Forms.TextBox txtLienHe;
         private System.Windows.Forms.DateTimePicker dpNgaybaogia;
         private System.Windows.Forms.DateTimePicker dpHieuLuc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn masp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.Button btnTao;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.GroupBox groupBox4;
@@ -724,5 +718,11 @@ namespace QLBANHANG
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnTrove;
+        private System.Windows.Forms.DataGridViewTextBoxColumn masp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

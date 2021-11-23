@@ -12,6 +12,7 @@ namespace QLBANHANG.Model
         public tbl_PhieuNhap()
         {
             tbl_PhieuNhapChiTiet = new HashSet<tbl_PhieuNhapChiTiet>();
+            tbl_PhieuNhapChiTiet1 = new HashSet<tbl_PhieuNhapChiTiet>();
         }
 
         [Key]
@@ -39,5 +40,8 @@ namespace QLBANHANG.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_PhieuNhapChiTiet> tbl_PhieuNhapChiTiet { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tbl_PhieuNhapChiTiet> tbl_PhieuNhapChiTiet1 { get; set; }
     }
 }

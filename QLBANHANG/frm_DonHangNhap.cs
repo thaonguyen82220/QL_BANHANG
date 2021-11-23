@@ -49,6 +49,7 @@ namespace QLBANHANG
             else
             {
                 cbTrangthai.SelectedIndex = 1;
+                btnXuathoadon.Text = "Xem hóa đơn";
             }
             Reload();
         }
@@ -71,10 +72,13 @@ namespace QLBANHANG
             dgvChitiet.DataSource = cn.taobang(sql);
         }        
         public void Reload()
-        {
+        {           
+            var ph = f.GetPhieuNhap(txtMaphieu.Text);
+            if (ph != null)
+            {              
+                txtTongtien.Text = ph.TONGTIEN.ToString();
+            }
             LoadChiTiet();
-            if(f.GetPhieuNhap(txtMaphieu.Text)!=null)
-            txtTongtien.Text = f.GetPhieuNhap(txtMaphieu.Text).TONGTIEN.ToString();
         }
         private void btnTrove_Click(object sender, EventArgs e)
         {
@@ -103,6 +107,7 @@ namespace QLBANHANG
                     p.MANV = cbManv.SelectedValue.ToString();
                     p.NguoiGiao = txtNguoigiao.Text;
                     p.Sdt = txtSdt.Text;
+                    p.TrangThai = 0;
                     p.TONGTIEN = 0;
                     var up = f.AddPhieuNhap(p);
                     if (up)
@@ -269,8 +274,9 @@ namespace QLBANHANG
             var p = f.GetPhieuNhap(txtMaphieu.Text);
             if (p != null)
             {
-                frm_HoaDon frm = new frm_HoaDon(p);
+                frm_HoaDonNhap frm = new frm_HoaDonNhap(p);
                 frm.ShowDialog();
+                Reload();
             }
             else
                 MessageBox.Show("Vui lòng tạo đơn trước khi thanh toán");

@@ -44,7 +44,7 @@ namespace QLBANHANG
             txtSdt.Text = khach.sdt;
             dpNgaylap.Value = phieu.NGAYLAP.Value;
             dpNgaygiao.Value = phieu.NGAYGIAO.Value;
-            cbKhachhang.SelectedValue = phieu.MAKH;
+            
             cbManv.SelectedValue = phieu.MANV;
             if (f.GetPhieuBanHang(id).TrangThai == 1)
             {
@@ -61,6 +61,15 @@ namespace QLBANHANG
             }
             else
                 cbTrangthai.SelectedIndex = 1;
+            
+            cbKhachhang.SelectedValue = phieu.MAKH;
+            var k = f.GetKhachHang(cbKhachhang.SelectedValue.ToString());
+            if (k != null)
+            {
+                txtNguoinhan.Text = k.tenkh;
+                txtSdt.Text = k.sdt;
+                txtDiachi.Text = k.diachi;
+            }
             this.flag = 1;
             Lock();
             Reload();
@@ -70,6 +79,15 @@ namespace QLBANHANG
             InitializeComponent();
             load();
             txtMadonhang.Text = "DH" + f.RandomNumber() + f.Random(2);
+            cbKhachhang.SelectedIndex = 0;
+            var k = f.GetKhachHang(cbKhachhang.SelectedValue.ToString());
+            if (k != null)
+            {
+                txtNguoinhan.Text = k.tenkh;
+                txtSdt.Text = k.sdt;
+                txtDiachi.Text = k.diachi;
+            }
+            this.flag = 1;
         }
 
         public void hienthi(string SOHD)
@@ -92,7 +110,7 @@ namespace QLBANHANG
             else
             {
                 txtTongtien.Text = f.GetPhieuBanHang(id).TongTien.ToString();
-                var hd = f.TimHoaDonByMaPhieuBan(txtMadonhang.Text);
+                var hd = f.TimHoaDonBanByMaPhieu(txtMadonhang.Text);
                 if (hd != null)
                 {
                     var up = f.UpdateTongTienHoaDonByMaPhieuBan(txtMadonhang.Text);
@@ -220,7 +238,7 @@ namespace QLBANHANG
             var p = f.GetPhieuBanHang(id);
             if (p != null)
             {
-                frm_HoaDon frm = new frm_HoaDon(p);
+                frm_HoaDonBan frm = new frm_HoaDonBan(p);
                 frm.ShowDialog();
             }
             else
@@ -361,8 +379,6 @@ namespace QLBANHANG
                     txtSdt.Text = khach.sdt;
                     txtDiachi.Text = khach.diachi;
                 }
-                else
-                    MessageBox.Show("Lỗi");
             }
             
         }

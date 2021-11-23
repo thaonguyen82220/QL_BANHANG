@@ -204,67 +204,67 @@ namespace QLBANHANG
             // 
             // IDPhieu
             // 
+            this.IDPhieu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.IDPhieu.DataPropertyName = "ID_PB";
             this.IDPhieu.HeaderText = "Mã Phiếu ";
             this.IDPhieu.MinimumWidth = 6;
             this.IDPhieu.Name = "IDPhieu";
             this.IDPhieu.ReadOnly = true;
             this.IDPhieu.Visible = false;
-            this.IDPhieu.Width = 125;
             // 
             // MaSP
             // 
+            this.MaSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.MaSP.DataPropertyName = "Ma";
             this.MaSP.HeaderText = "Mã sản phẩm";
             this.MaSP.MinimumWidth = 6;
             this.MaSP.Name = "MaSP";
             this.MaSP.ReadOnly = true;
-            this.MaSP.Width = 125;
             // 
             // TenSP
             // 
+            this.TenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenSP.DataPropertyName = "Ten";
             this.TenSP.HeaderText = "Tên sản phẩm";
             this.TenSP.MinimumWidth = 6;
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
-            this.TenSP.Width = 125;
             // 
             // DonGia
             // 
+            this.DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DonGia.DataPropertyName = "DONGIA";
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 125;
             // 
             // SL
             // 
+            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SL.DataPropertyName = "SL";
             this.SL.HeaderText = "Số lượng";
             this.SL.MinimumWidth = 6;
             this.SL.Name = "SL";
             this.SL.ReadOnly = true;
-            this.SL.Width = 125;
             // 
             // DVT
             // 
+            this.DVT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DVT.DataPropertyName = "DVT";
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.MinimumWidth = 6;
             this.DVT.Name = "DVT";
             this.DVT.ReadOnly = true;
-            this.DVT.Width = 125;
             // 
             // ThanhTien
             // 
+            this.ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ThanhTien.DataPropertyName = "ThanhTien";
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 125;
             // 
             // txtT
             // 
@@ -679,7 +679,7 @@ namespace QLBANHANG
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // frm_DonHang
+            // frm_DonHangBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -695,7 +695,7 @@ namespace QLBANHANG
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnTrove);
             this.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "frm_DonHang";
+            this.Name = "frm_DonHangBan";
             this.Text = "Chi tiết đơn hàng";
             this.Load += new System.EventHandler(this.frm_DonHang_Load);
             this.panel4.ResumeLayout(false);
@@ -724,13 +724,6 @@ namespace QLBANHANG
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.DataGridView dgvChitiet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDPhieu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
         private System.Windows.Forms.Label txtT;
         private System.Windows.Forms.TextBox txtTongtien;
         private System.Windows.Forms.TextBox txtSoluong;
@@ -766,5 +759,12 @@ namespace QLBANHANG
         private System.Windows.Forms.ComboBox cbTrangthai;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDPhieu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DVT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace QLBANHANG
 {
-    partial class frm_HoaDon
+    partial class frm_HoaDonBan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,6 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_HoaDon));
             this.cbKhachhang = new System.Windows.Forms.ComboBox();
             this.cbNhanvien = new System.Windows.Forms.ComboBox();
             this.dpNgaylap = new System.Windows.Forms.DateTimePicker();
@@ -64,7 +63,6 @@ namespace QLBANHANG
             this.btnLuu = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnThanhToan = new System.Windows.Forms.Button();
-            this.grStt = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -126,7 +124,6 @@ namespace QLBANHANG
             // 
             // btnThemkhach
             // 
-            this.btnThemkhach.Image = ((System.Drawing.Image)(resources.GetObject("btnThemkhach.Image")));
             this.btnThemkhach.Location = new System.Drawing.Point(549, 25);
             this.btnThemkhach.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThemkhach.Name = "btnThemkhach";
@@ -136,7 +133,6 @@ namespace QLBANHANG
             // 
             // button1
             // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.Location = new System.Drawing.Point(465, 210);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
@@ -144,7 +140,7 @@ namespace QLBANHANG
             this.button1.TabIndex = 18;
             this.button1.Text = "+";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.ChungTu_Click);
             // 
             // rbVidientu
             // 
@@ -241,7 +237,6 @@ namespace QLBANHANG
             this.dgvChitiet.Size = new System.Drawing.Size(1541, 207);
             this.dgvChitiet.TabIndex = 20;
             this.dgvChitiet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Get);
-            this.dgvChitiet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvChitiet_CellContentClick);
             // 
             // IDPhieu
             // 
@@ -265,53 +260,52 @@ namespace QLBANHANG
             // 
             // TenSP
             // 
+            this.TenSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.TenSP.DataPropertyName = "Ten";
             this.TenSP.HeaderText = "Tên sản phẩm";
             this.TenSP.MinimumWidth = 6;
             this.TenSP.Name = "TenSP";
             this.TenSP.ReadOnly = true;
-            this.TenSP.Width = 125;
             // 
             // DonGia
             // 
+            this.DonGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DonGia.DataPropertyName = "DONGIA";
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.MinimumWidth = 6;
             this.DonGia.Name = "DonGia";
             this.DonGia.ReadOnly = true;
-            this.DonGia.Width = 125;
             // 
             // SL
             // 
+            this.SL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.SL.DataPropertyName = "SL";
             this.SL.HeaderText = "Số lượng";
             this.SL.MinimumWidth = 6;
             this.SL.Name = "SL";
             this.SL.ReadOnly = true;
-            this.SL.Width = 125;
             // 
             // DVT
             // 
+            this.DVT.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.DVT.DataPropertyName = "DVT";
             this.DVT.HeaderText = "Đơn vị tính";
             this.DVT.MinimumWidth = 6;
             this.DVT.Name = "DVT";
             this.DVT.ReadOnly = true;
-            this.DVT.Width = 125;
             // 
             // ThanhTien
             // 
+            this.ThanhTien.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.ThanhTien.DataPropertyName = "ThanhTien";
             this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.MinimumWidth = 6;
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
-            this.ThanhTien.Width = 125;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.Location = new System.Drawing.Point(683, 18);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
@@ -326,7 +320,6 @@ namespace QLBANHANG
             this.btnXoa.Enabled = false;
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Navy;
-            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnXoa.Location = new System.Drawing.Point(1443, 20);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -343,7 +336,6 @@ namespace QLBANHANG
             this.btnChon.Enabled = false;
             this.btnChon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChon.ForeColor = System.Drawing.Color.Navy;
-            this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
             this.btnChon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnChon.Location = new System.Drawing.Point(1264, 21);
             this.btnChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -438,14 +430,12 @@ namespace QLBANHANG
             this.label9.Size = new System.Drawing.Size(84, 21);
             this.label9.TabIndex = 12;
             this.label9.Text = "Trả khách";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // btnInhoadon
             // 
             this.btnInhoadon.BackColor = System.Drawing.Color.White;
             this.btnInhoadon.Enabled = false;
             this.btnInhoadon.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInhoadon.Image = ((System.Drawing.Image)(resources.GetObject("btnInhoadon.Image")));
             this.btnInhoadon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnInhoadon.Location = new System.Drawing.Point(37, 71);
             this.btnInhoadon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -461,7 +451,6 @@ namespace QLBANHANG
             // 
             this.btnLuu.BackColor = System.Drawing.Color.White;
             this.btnLuu.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
             this.btnLuu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLuu.Location = new System.Drawing.Point(37, 208);
             this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -476,15 +465,13 @@ namespace QLBANHANG
             // 
             this.button5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1524, 423);
+            this.button5.Location = new System.Drawing.Point(1522, 423);
             this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(143, 54);
             this.button5.TabIndex = 14;
             this.button5.Text = "Trở về";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -493,7 +480,6 @@ namespace QLBANHANG
             this.btnThanhToan.BackColor = System.Drawing.Color.White;
             this.btnThanhToan.Enabled = false;
             this.btnThanhToan.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThanhToan.Image = ((System.Drawing.Image)(resources.GetObject("btnThanhToan.Image")));
             this.btnThanhToan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnThanhToan.Location = new System.Drawing.Point(37, 139);
             this.btnThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -504,22 +490,6 @@ namespace QLBANHANG
             this.btnThanhToan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThanhToan.UseVisualStyleBackColor = false;
             this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
-            // 
-            // grStt
-            // 
-            this.grStt.AutoSize = true;
-            this.grStt.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.grStt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.grStt.ForeColor = System.Drawing.Color.Cornsilk;
-            this.grStt.Location = new System.Drawing.Point(683, 361);
-            this.grStt.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grStt.Name = "grStt";
-            this.grStt.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grStt.Size = new System.Drawing.Size(164, 69);
-            this.grStt.TabIndex = 19;
-            this.grStt.TabStop = false;
-            this.grStt.Visible = false;
-            this.grStt.Enter += new System.EventHandler(this.grStt_Enter);
             // 
             // label14
             // 
@@ -541,9 +511,9 @@ namespace QLBANHANG
             this.groupBox4.Controls.Add(this.panel1);
             this.groupBox4.ForeColor = System.Drawing.SystemColors.ControlText;
             this.groupBox4.Location = new System.Drawing.Point(39, 80);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox4.Size = new System.Drawing.Size(1628, 337);
             this.groupBox4.TabIndex = 122;
             this.groupBox4.TabStop = false;
@@ -557,7 +527,7 @@ namespace QLBANHANG
             this.panel3.Controls.Add(this.btnThanhToan);
             this.panel3.Controls.Add(this.btnLuu);
             this.panel3.Location = new System.Drawing.Point(1360, 30);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(216, 291);
             this.panel3.TabIndex = 23;
@@ -600,7 +570,7 @@ namespace QLBANHANG
             this.panel2.Controls.Add(this.label20);
             this.panel2.Controls.Add(this.txtStk);
             this.panel2.Location = new System.Drawing.Point(649, 30);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(649, 291);
             this.panel2.TabIndex = 22;
@@ -654,7 +624,7 @@ namespace QLBANHANG
             this.panel1.Controls.Add(this.txtMahoadon);
             this.panel1.Controls.Add(this.txtChungtu);
             this.panel1.Location = new System.Drawing.Point(23, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(564, 291);
             this.panel1.TabIndex = 21;
@@ -713,7 +683,6 @@ namespace QLBANHANG
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.cbTrangthai);
             this.panel4.Controls.Add(this.dgvChitiet);
-            this.panel4.Controls.Add(this.grStt);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.btnXoa);
             this.panel4.Controls.Add(this.btnSearch);
@@ -730,7 +699,7 @@ namespace QLBANHANG
             this.panel4.Controls.Add(this.txtTongtien);
             this.panel4.Controls.Add(this.txtDanhan);
             this.panel4.Location = new System.Drawing.Point(29, 484);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1636, 450);
             this.panel4.TabIndex = 123;
@@ -755,7 +724,7 @@ namespace QLBANHANG
             "0",
             "1"});
             this.cbTrangthai.Location = new System.Drawing.Point(151, 393);
-            this.cbTrangthai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbTrangthai.Margin = new System.Windows.Forms.Padding(4);
             this.cbTrangthai.Name = "cbTrangthai";
             this.cbTrangthai.Size = new System.Drawing.Size(160, 24);
             this.cbTrangthai.TabIndex = 125;
@@ -818,19 +787,19 @@ namespace QLBANHANG
             this.lbStt.Size = new System.Drawing.Size(0, 21);
             this.lbStt.TabIndex = 21;
             // 
-            // frm_HoaDon
+            // frm_HoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1604, 981);
+            this.ClientSize = new System.Drawing.Size(1693, 1055);
             this.Controls.Add(this.lbStt);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.button5);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frm_HoaDon";
+            this.Name = "frm_HoaDonBan";
             this.Text = "Hóa đơn";
             this.Load += new System.EventHandler(this.frm_HoaDon_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChitiet)).EndInit();
@@ -876,7 +845,6 @@ namespace QLBANHANG
         private System.Windows.Forms.ComboBox cbNhanvien;
         private System.Windows.Forms.DateTimePicker dpNgaylap;
         private System.Windows.Forms.DataGridView dgvChitiet;
-        private System.Windows.Forms.GroupBox grStt;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Panel panel3;

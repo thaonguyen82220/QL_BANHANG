@@ -1,7 +1,7 @@
 ﻿
 namespace QLBANHANG
 {
-    partial class frm_ChiTietHoaDon
+    partial class frm_ChiTietHoaDonBan
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChiTietHoaDon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ChiTietHoaDonBan));
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.txtTenHoaDon = new System.Windows.Forms.Label();
@@ -38,15 +38,15 @@ namespace QLBANHANG
             this.sd = new System.Windows.Forms.Label();
             this.bf = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lbChitiet = new System.Windows.Forms.ListBox();
-            this.d = new System.Windows.Forms.Label();
+            this.theanh = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtTongtien = new System.Windows.Forms.Label();
+            this.d = new System.Windows.Forms.Label();
             this.txtTenkach = new System.Windows.Forms.Label();
             this.txtDiachi = new System.Windows.Forms.Label();
             this.txtSdt = new System.Windows.Forms.Label();
             this.txtNgaysinh = new System.Windows.Forms.Label();
             this.txtNhanvien = new System.Windows.Forms.Label();
-            this.txtTongtien = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -103,18 +103,17 @@ namespace QLBANHANG
             // 
             this.SF.AutoSize = true;
             this.SF.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SF.Location = new System.Drawing.Point(27, 242);
+            this.SF.Location = new System.Drawing.Point(29, 242);
             this.SF.Name = "SF";
             this.SF.Size = new System.Drawing.Size(65, 21);
             this.SF.TabIndex = 2;
             this.SF.Text = "Địa chỉ";
-            this.SF.Click += new System.EventHandler(this.txtDiachi_Click);
             // 
             // sd
             // 
             this.sd.AutoSize = true;
             this.sd.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sd.Location = new System.Drawing.Point(27, 286);
+            this.sd.Location = new System.Drawing.Point(29, 286);
             this.sd.Name = "sd";
             this.sd.Size = new System.Drawing.Size(108, 21);
             this.sd.TabIndex = 3;
@@ -124,7 +123,7 @@ namespace QLBANHANG
             // 
             this.bf.AutoSize = true;
             this.bf.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bf.Location = new System.Drawing.Point(924, 199);
+            this.bf.Location = new System.Drawing.Point(938, 201);
             this.bf.Name = "bf";
             this.bf.Size = new System.Drawing.Size(84, 21);
             this.bf.TabIndex = 4;
@@ -132,44 +131,58 @@ namespace QLBANHANG
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.lbChitiet);
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.theanh);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.txtTongtien);
             this.groupBox1.Location = new System.Drawing.Point(33, 358);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(1104, 420);
+            this.groupBox1.Size = new System.Drawing.Size(1118, 429);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
-            // lbChitiet
+            // theanh
             // 
-            this.lbChitiet.FormattingEnabled = true;
-            this.lbChitiet.ItemHeight = 16;
-            this.lbChitiet.Location = new System.Drawing.Point(0, 2);
-            this.lbChitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.lbChitiet.Name = "lbChitiet";
-            this.lbChitiet.Size = new System.Drawing.Size(1103, 356);
-            this.lbChitiet.TabIndex = 0;
-            // 
-            // d
-            // 
-            this.d.AutoSize = true;
-            this.d.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.d.Location = new System.Drawing.Point(924, 242);
-            this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(84, 21);
-            this.d.TabIndex = 6;
-            this.d.Text = "Nhân viên";
+            this.theanh.AutoSize = true;
+            this.theanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.theanh.ForeColor = System.Drawing.Color.BlueViolet;
+            this.theanh.Location = new System.Drawing.Point(3, 17);
+            this.theanh.Name = "theanh";
+            this.theanh.Size = new System.Drawing.Size(76, 29);
+            this.theanh.TabIndex = 11;
+            this.theanh.Text = "chitiet";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(951, 720);
+            this.label3.Location = new System.Drawing.Point(905, 369);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 21);
             this.label3.TabIndex = 7;
             this.label3.Text = "Tổng tiền";
+            // 
+            // txtTongtien
+            // 
+            this.txtTongtien.AutoSize = true;
+            this.txtTongtien.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTongtien.Location = new System.Drawing.Point(905, 390);
+            this.txtTongtien.Name = "txtTongtien";
+            this.txtTongtien.Size = new System.Drawing.Size(69, 21);
+            this.txtTongtien.TabIndex = 10;
+            this.txtTongtien.Text = "tongtien";
+            // 
+            // d
+            // 
+            this.d.AutoSize = true;
+            this.d.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d.Location = new System.Drawing.Point(938, 267);
+            this.d.Name = "d";
+            this.d.Size = new System.Drawing.Size(84, 21);
+            this.d.TabIndex = 6;
+            this.d.Text = "Nhân viên";
             // 
             // txtTenkach
             // 
@@ -185,7 +198,7 @@ namespace QLBANHANG
             // 
             this.txtDiachi.AutoSize = true;
             this.txtDiachi.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiachi.Location = new System.Drawing.Point(222, 242);
+            this.txtDiachi.Location = new System.Drawing.Point(225, 242);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(54, 21);
             this.txtDiachi.TabIndex = 10;
@@ -195,7 +208,7 @@ namespace QLBANHANG
             // 
             this.txtSdt.AutoSize = true;
             this.txtSdt.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSdt.Location = new System.Drawing.Point(222, 286);
+            this.txtSdt.Location = new System.Drawing.Point(225, 286);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(33, 21);
             this.txtSdt.TabIndex = 11;
@@ -205,7 +218,7 @@ namespace QLBANHANG
             // 
             this.txtNgaysinh.AutoSize = true;
             this.txtNgaysinh.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNgaysinh.Location = new System.Drawing.Point(1059, 199);
+            this.txtNgaysinh.Location = new System.Drawing.Point(938, 223);
             this.txtNgaysinh.Name = "txtNgaysinh";
             this.txtNgaysinh.Size = new System.Drawing.Size(75, 21);
             this.txtNgaysinh.TabIndex = 10;
@@ -215,25 +228,15 @@ namespace QLBANHANG
             // 
             this.txtNhanvien.AutoSize = true;
             this.txtNhanvien.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhanvien.Location = new System.Drawing.Point(1063, 242);
+            this.txtNhanvien.Location = new System.Drawing.Point(938, 288);
             this.txtNhanvien.Name = "txtNhanvien";
             this.txtNhanvien.Size = new System.Drawing.Size(28, 21);
             this.txtNhanvien.TabIndex = 10;
             this.txtNhanvien.Text = "nv";
             // 
-            // txtTongtien
-            // 
-            this.txtTongtien.AutoSize = true;
-            this.txtTongtien.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTongtien.Location = new System.Drawing.Point(1064, 720);
-            this.txtTongtien.Name = "txtTongtien";
-            this.txtTongtien.Size = new System.Drawing.Size(69, 21);
-            this.txtTongtien.TabIndex = 10;
-            this.txtTongtien.Text = "tongtien";
-            // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(648, 199);
+            this.btnPrint.Location = new System.Drawing.Point(528, 199);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(108, 23);
@@ -251,7 +254,7 @@ namespace QLBANHANG
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.txtTenHoaDon);
             this.panel1.Location = new System.Drawing.Point(31, 15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1120, 173);
             this.panel1.TabIndex = 13;
@@ -290,7 +293,7 @@ namespace QLBANHANG
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(227, 86);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -321,7 +324,7 @@ namespace QLBANHANG
             // 
             this.txtNguoiban.AutoSize = true;
             this.txtNguoiban.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNguoiban.Location = new System.Drawing.Point(1083, 800);
+            this.txtNguoiban.Location = new System.Drawing.Point(938, 838);
             this.txtNguoiban.Name = "txtNguoiban";
             this.txtNguoiban.Size = new System.Drawing.Size(28, 21);
             this.txtNguoiban.TabIndex = 18;
@@ -331,7 +334,7 @@ namespace QLBANHANG
             // 
             this.txtNguoimua.AutoSize = true;
             this.txtNguoimua.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNguoimua.Location = new System.Drawing.Point(168, 800);
+            this.txtNguoimua.Location = new System.Drawing.Point(33, 838);
             this.txtNguoimua.Name = "txtNguoimua";
             this.txtNguoimua.Size = new System.Drawing.Size(82, 21);
             this.txtNguoimua.TabIndex = 19;
@@ -341,7 +344,7 @@ namespace QLBANHANG
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(944, 800);
+            this.label9.Location = new System.Drawing.Point(938, 800);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 21);
             this.label9.TabIndex = 17;
@@ -357,13 +360,13 @@ namespace QLBANHANG
             this.label10.TabIndex = 16;
             this.label10.Text = "Người mua";
             // 
-            // frm_ChiTietHoaDon
+            // frm_ChiTietHoaDonBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1165, 912);
+            this.ClientSize = new System.Drawing.Size(1165, 966);
             this.Controls.Add(this.txtNguoiban);
             this.Controls.Add(this.txtNguoimua);
             this.Controls.Add(this.label9);
@@ -372,13 +375,11 @@ namespace QLBANHANG
             this.Controls.Add(this.label6);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnPrint);
-            this.Controls.Add(this.txtTongtien);
             this.Controls.Add(this.txtNhanvien);
             this.Controls.Add(this.txtNgaysinh);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.txtDiachi);
             this.Controls.Add(this.txtTenkach);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.d);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.bf);
@@ -386,10 +387,10 @@ namespace QLBANHANG
             this.Controls.Add(this.SF);
             this.Controls.Add(this.S);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "frm_ChiTietHoaDon";
-            this.Text = "Chi tiết hóa đơn";
-            this.Load += new System.EventHandler(this.frm_ChiTietHoaDon_Load);
+            this.Name = "frm_ChiTietHoaDonBan";
+            this.Text = "Chi tiết hóa đơn bán";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -408,7 +409,6 @@ namespace QLBANHANG
         private System.Windows.Forms.Label sd;
         private System.Windows.Forms.Label bf;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ListBox lbChitiet;
         private System.Windows.Forms.Label d;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label txtTenkach;
@@ -429,5 +429,6 @@ namespace QLBANHANG
         private System.Windows.Forms.Label txtNguoimua;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label theanh;
     }
 }
