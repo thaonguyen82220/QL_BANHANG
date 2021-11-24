@@ -153,7 +153,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 136);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1106, 35);
+            this.panel2.Size = new System.Drawing.Size(1197, 35);
             this.panel2.TabIndex = 55;
             // 
             // cmdluu
@@ -189,7 +189,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1106, 171);
+            this.panel1.Size = new System.Drawing.Size(1197, 171);
             this.panel1.TabIndex = 24;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -741,7 +741,7 @@
             // 
             // frm_Hang
             // 
-            this.ClientSize = new System.Drawing.Size(1106, 582);
+            this.ClientSize = new System.Drawing.Size(1197, 582);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.panel1);

@@ -29,12 +29,9 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Thao_DSHoaDon));
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.dgDanhsach = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +41,6 @@ namespace QLBANHANG
             this.tongtien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.trangthai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnTimkiem = new System.Windows.Forms.Button();
             this.dpHieuluc = new System.Windows.Forms.DateTimePicker();
             this.dpNgay = new System.Windows.Forms.DateTimePicker();
             this.dgChiTiet = new System.Windows.Forms.DataGridView();
@@ -58,39 +54,30 @@ namespace QLBANHANG
             ((System.ComponentModel.ISupportInitialize)(this.dgChiTiet)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(806, 99);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(104, 25);
-            this.button1.TabIndex = 188;
-            this.button1.Text = "Làm mới";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // btnXoa
             // 
+            this.btnXoa.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnXoa.Enabled = false;
             this.btnXoa.Location = new System.Drawing.Point(1400, 90);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(83, 34);
+            this.btnXoa.Size = new System.Drawing.Size(93, 28);
             this.btnXoa.TabIndex = 187;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
+            this.btnSua.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnSua.Enabled = false;
             this.btnSua.Location = new System.Drawing.Point(1300, 90);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(83, 34);
+            this.btnSua.Size = new System.Drawing.Size(93, 28);
             this.btnSua.TabIndex = 186;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
@@ -141,12 +128,11 @@ namespace QLBANHANG
             this.Column5,
             this.tongtien,
             this.trangthai});
-            this.dgDanhsach.Location = new System.Drawing.Point(41, 158);
-            this.dgDanhsach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgDanhsach.Location = new System.Drawing.Point(31, 128);
             this.dgDanhsach.Name = "dgDanhsach";
             this.dgDanhsach.ReadOnly = true;
             this.dgDanhsach.RowHeadersWidth = 51;
-            this.dgDanhsach.Size = new System.Drawing.Size(1447, 212);
+            this.dgDanhsach.Size = new System.Drawing.Size(1085, 172);
             this.dgDanhsach.TabIndex = 176;
             this.dgDanhsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             this.dgDanhsach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
@@ -219,10 +205,10 @@ namespace QLBANHANG
             this.btnThem.Location = new System.Drawing.Point(1200, 90);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(83, 34);
+            this.btnThem.Size = new System.Drawing.Size(93, 28);
             this.btnThem.TabIndex = 185;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnTimkiem
@@ -241,7 +227,7 @@ namespace QLBANHANG
             this.dpHieuluc.Location = new System.Drawing.Point(402, 102);
             this.dpHieuluc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dpHieuluc.Name = "dpHieuluc";
-            this.dpHieuluc.Size = new System.Drawing.Size(243, 22);
+            this.dpHieuluc.Size = new System.Drawing.Size(183, 20);
             this.dpHieuluc.TabIndex = 179;
             // 
             // dpNgay
@@ -249,7 +235,7 @@ namespace QLBANHANG
             this.dpNgay.Location = new System.Drawing.Point(92, 102);
             this.dpNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dpNgay.Name = "dpNgay";
-            this.dpNgay.Size = new System.Drawing.Size(255, 22);
+            this.dpNgay.Size = new System.Drawing.Size(192, 20);
             this.dpNgay.TabIndex = 178;
             // 
             // dgChiTiet
@@ -265,12 +251,11 @@ namespace QLBANHANG
             this.Column9,
             this.Column8,
             this.Column11});
-            this.dgChiTiet.Location = new System.Drawing.Point(41, 394);
-            this.dgChiTiet.Margin = new System.Windows.Forms.Padding(4);
+            this.dgChiTiet.Location = new System.Drawing.Point(31, 358);
             this.dgChiTiet.Name = "dgChiTiet";
             this.dgChiTiet.ReadOnly = true;
             this.dgChiTiet.RowHeadersWidth = 51;
-            this.dgChiTiet.Size = new System.Drawing.Size(1447, 271);
+            this.dgChiTiet.Size = new System.Drawing.Size(1085, 220);
             this.dgChiTiet.TabIndex = 177;
             // 
             // Column6
@@ -329,15 +314,16 @@ namespace QLBANHANG
             // 
             // frm_DSHoaDonBan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1515, 772);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnXoa);
-            this.Controls.Add(this.btnSua);
+            this.ClientSize = new System.Drawing.Size(1136, 627);
+            this.Controls.Add(this.btnTrove);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnSua);
             this.Controls.Add(this.dgDanhsach);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.btnTimkiem);
@@ -355,16 +341,10 @@ namespace QLBANHANG
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgDanhsach;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnTimkiem;
         private System.Windows.Forms.DateTimePicker dpHieuluc;
         private System.Windows.Forms.DateTimePicker dpNgay;
         private System.Windows.Forms.DataGridView dgChiTiet;

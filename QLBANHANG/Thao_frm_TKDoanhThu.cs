@@ -9,16 +9,11 @@ using System.Windows.Forms;
 
 namespace QLBANHANG
 {
-    public partial class frm_Main2 : Form
+    public partial class Thao_frm_TKDoanhThu : Form
     {
-        public frm_Main2()
+        public Thao_frm_TKDoanhThu()
         {
             InitializeComponent();
-        }
-
-        private void danhMụcToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
