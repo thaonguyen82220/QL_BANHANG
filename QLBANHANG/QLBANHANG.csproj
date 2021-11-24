@@ -97,6 +97,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_ChiTietHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ChiTietHoaDonNhap.Designer.cs">
+      <DependentUpon>frm_ChiTietHoaDonNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DSDonHangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DSDonHangNhap.Designer.cs">
+      <DependentUpon>frm_DSDonHangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_DSHoaDonNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_DSHoaDonNhap.Designer.cs">
+      <DependentUpon>frm_DSHoaDonNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_DSThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
