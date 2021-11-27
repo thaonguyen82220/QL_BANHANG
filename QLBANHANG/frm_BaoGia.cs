@@ -32,10 +32,10 @@ namespace QLBANHANG
             btnXoa.Enabled = false;
             create = true;
             var listnv = f.GetListNhanVien();
-            for (int i = 0; i < listnv.Count; i++)
-            {
-                cbNhanvien.Items.Add(listnv[i].manv);
-            }
+            //for (int i = 0; i < listnv.Count; i++)
+            //{
+            //    cbNhanvien.Items.Add(listnv[i].manv);
+            //}
         }
         public frm_BaoGia(string id)
         {

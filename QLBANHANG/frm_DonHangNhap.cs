@@ -282,6 +282,18 @@ namespace QLBANHANG
                 MessageBox.Show("Vui lòng tạo đơn trước khi thanh toán");
         }
 
+        private void btnPick_Click(object sender, EventArgs e)
+        {
+            frm_NhaCungCap frm = new frm_NhaCungCap();
+            frm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frm_Hang frm = new frm_Hang();
+            frm.ShowDialog();
+        }
+
         private void Select(object sender, DataGridViewCellEventArgs e)
         {
             try

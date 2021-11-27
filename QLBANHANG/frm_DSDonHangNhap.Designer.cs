@@ -69,14 +69,12 @@ namespace QLBANHANG
             // 
             // panel1
             // 
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Location = new System.Drawing.Point(1045, 466);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(784, 379);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(438, 55);
+            this.panel1.Size = new System.Drawing.Size(329, 45);
             this.panel1.TabIndex = 202;
             // 
             // btnThem
@@ -84,10 +82,10 @@ namespace QLBANHANG
             this.btnThem.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnThem.Location = new System.Drawing.Point(20, 9);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnThem.Location = new System.Drawing.Point(15, 7);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(133, 34);
+            this.btnThem.Size = new System.Drawing.Size(100, 28);
             this.btnThem.TabIndex = 182;
             this.btnThem.Text = "Thêm mới";
             this.btnThem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -100,10 +98,10 @@ namespace QLBANHANG
             this.btnSua.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(171, 9);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSua.Location = new System.Drawing.Point(128, 7);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(123, 34);
+            this.btnSua.Size = new System.Drawing.Size(92, 28);
             this.btnSua.TabIndex = 183;
             this.btnSua.Text = "Chỉnh sửa";
             this.btnSua.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -116,10 +114,10 @@ namespace QLBANHANG
             this.btnXoa.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(299, 9);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnXoa.Location = new System.Drawing.Point(224, 7);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(124, 34);
+            this.btnXoa.Size = new System.Drawing.Size(93, 28);
             this.btnXoa.TabIndex = 184;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -130,11 +128,11 @@ namespace QLBANHANG
             this.gbChon.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.gbChon.Controls.Add(this.btnChon);
             this.gbChon.ForeColor = System.Drawing.Color.Coral;
-            this.gbChon.Location = new System.Drawing.Point(1284, 41);
-            this.gbChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gbChon.Location = new System.Drawing.Point(963, 33);
+            this.gbChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gbChon.Name = "gbChon";
-            this.gbChon.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gbChon.Size = new System.Drawing.Size(200, 100);
+            this.gbChon.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbChon.Size = new System.Drawing.Size(150, 81);
             this.gbChon.TabIndex = 200;
             this.gbChon.TabStop = false;
             this.gbChon.Visible = false;
@@ -145,10 +143,10 @@ namespace QLBANHANG
             this.btnChon.Enabled = false;
             this.btnChon.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChon.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnChon.Location = new System.Drawing.Point(43, 31);
-            this.btnChon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnChon.Location = new System.Drawing.Point(32, 25);
+            this.btnChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(127, 38);
+            this.btnChon.Size = new System.Drawing.Size(95, 31);
             this.btnChon.TabIndex = 185;
             this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = false;
@@ -160,10 +158,10 @@ namespace QLBANHANG
             this.btnTrove.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrove.Image = ((System.Drawing.Image)(resources.GetObject("btnTrove.Image")));
             this.btnTrove.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrove.Location = new System.Drawing.Point(1357, 739);
-            this.btnTrove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTrove.Location = new System.Drawing.Point(1018, 600);
+            this.btnTrove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTrove.Name = "btnTrove";
-            this.btnTrove.Size = new System.Drawing.Size(127, 38);
+            this.btnTrove.Size = new System.Drawing.Size(95, 31);
             this.btnTrove.TabIndex = 199;
             this.btnTrove.Text = "Trở về";
             this.btnTrove.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -175,9 +173,10 @@ namespace QLBANHANG
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Navy;
-            this.label2.Location = new System.Drawing.Point(324, 101);
+            this.label2.Location = new System.Drawing.Point(243, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 25);
+            this.label2.Size = new System.Drawing.Size(35, 20);
             this.label2.TabIndex = 198;
             this.label2.Text = "đến";
             // 
@@ -186,9 +185,10 @@ namespace QLBANHANG
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Navy;
-            this.label1.Location = new System.Drawing.Point(24, 101);
+            this.label1.Location = new System.Drawing.Point(18, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 25);
+            this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 197;
             this.label1.Text = "Từ";
             // 
@@ -197,9 +197,10 @@ namespace QLBANHANG
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(451, 26);
+            this.label5.Location = new System.Drawing.Point(338, 21);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(555, 42);
+            this.label5.Size = new System.Drawing.Size(431, 32);
             this.label5.TabIndex = 196;
             this.label5.Text = "DANH MỤC ĐƠN HÀNG NHẬP";
             // 
@@ -209,10 +210,10 @@ namespace QLBANHANG
             this.btnTimkiem.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimkiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimkiem.Image")));
             this.btnTimkiem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimkiem.Location = new System.Drawing.Point(629, 101);
-            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTimkiem.Location = new System.Drawing.Point(472, 82);
+            this.btnTimkiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTimkiem.Name = "btnTimkiem";
-            this.btnTimkiem.Size = new System.Drawing.Size(33, 25);
+            this.btnTimkiem.Size = new System.Drawing.Size(25, 20);
             this.btnTimkiem.TabIndex = 195;
             this.btnTimkiem.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnTimkiem.UseVisualStyleBackColor = true;
@@ -220,18 +221,18 @@ namespace QLBANHANG
             // 
             // dpNgayGiao
             // 
-            this.dpNgayGiao.Location = new System.Drawing.Point(376, 101);
-            this.dpNgayGiao.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dpNgayGiao.Location = new System.Drawing.Point(282, 82);
+            this.dpNgayGiao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dpNgayGiao.Name = "dpNgayGiao";
-            this.dpNgayGiao.Size = new System.Drawing.Size(237, 22);
+            this.dpNgayGiao.Size = new System.Drawing.Size(179, 20);
             this.dpNgayGiao.TabIndex = 194;
             // 
             // dpNgay
             // 
-            this.dpNgay.Location = new System.Drawing.Point(70, 101);
-            this.dpNgay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dpNgay.Location = new System.Drawing.Point(52, 82);
+            this.dpNgay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dpNgay.Name = "dpNgay";
-            this.dpNgay.Size = new System.Drawing.Size(244, 22);
+            this.dpNgay.Size = new System.Drawing.Size(184, 20);
             this.dpNgay.TabIndex = 193;
             // 
             // label3
@@ -239,11 +240,12 @@ namespace QLBANHANG
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(24, 478);
+            this.label3.Location = new System.Drawing.Point(18, 388);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 25);
+            this.label3.Size = new System.Drawing.Size(133, 20);
             this.label3.TabIndex = 201;
-            this.label3.Text = "Chi tiết ";
+            this.label3.Text = "Chi tiết đơn hàng";
             // 
             // dgvChitiet
             // 
@@ -260,13 +262,13 @@ namespace QLBANHANG
             this.SL,
             this.DVT,
             this.ThanhTien});
-            this.dgvChitiet.Location = new System.Drawing.Point(29, 532);
-            this.dgvChitiet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvChitiet.Location = new System.Drawing.Point(22, 432);
+            this.dgvChitiet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvChitiet.Name = "dgvChitiet";
             this.dgvChitiet.ReadOnly = true;
             this.dgvChitiet.RowHeadersWidth = 51;
             this.dgvChitiet.RowTemplate.Height = 24;
-            this.dgvChitiet.Size = new System.Drawing.Size(1455, 186);
+            this.dgvChitiet.Size = new System.Drawing.Size(1091, 151);
             this.dgvChitiet.TabIndex = 191;
             // 
             // MaSP
@@ -348,12 +350,13 @@ namespace QLBANHANG
             this.sdt,
             this.tong,
             this.trangthai});
-            this.dgDanhsach.Location = new System.Drawing.Point(29, 146);
+            this.dgDanhsach.Location = new System.Drawing.Point(22, 119);
+            this.dgDanhsach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgDanhsach.Name = "dgDanhsach";
             this.dgDanhsach.ReadOnly = true;
             this.dgDanhsach.RowHeadersWidth = 51;
             this.dgDanhsach.RowTemplate.Height = 24;
-            this.dgDanhsach.Size = new System.Drawing.Size(1454, 294);
+            this.dgDanhsach.Size = new System.Drawing.Size(1090, 239);
             this.dgDanhsach.TabIndex = 203;
             this.dgDanhsach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Select);
             // 
@@ -431,10 +434,10 @@ namespace QLBANHANG
             // 
             // frm_DSDonHangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1707, 788);
+            this.ClientSize = new System.Drawing.Size(1203, 640);
             this.Controls.Add(this.dgDanhsach);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.gbChon);
@@ -447,6 +450,7 @@ namespace QLBANHANG
             this.Controls.Add(this.dpNgay);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dgvChitiet);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_DSDonHangNhap";
             this.Text = "Danh sách phiếu nhập";
             this.panel1.ResumeLayout(false);

@@ -29,6 +29,7 @@ namespace QLBANHANG
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_PickKhachHang));
             this.dgvSanPham = new System.Windows.Forms.DataGridView();
             this.Ma = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,13 +61,13 @@ namespace QLBANHANG
             this.gioitinh,
             this.g,
             this.stk});
-            this.dgvSanPham.Location = new System.Drawing.Point(11, 26);
+            this.dgvSanPham.Location = new System.Drawing.Point(6, 61);
             this.dgvSanPham.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSanPham.Name = "dgvSanPham";
             this.dgvSanPham.ReadOnly = true;
             this.dgvSanPham.RowHeadersWidth = 62;
             this.dgvSanPham.RowTemplate.Height = 28;
-            this.dgvSanPham.Size = new System.Drawing.Size(1203, 350);
+            this.dgvSanPham.Size = new System.Drawing.Size(902, 284);
             this.dgvSanPham.TabIndex = 102;
             this.dgvSanPham.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.setID);
             this.dgvSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.setID);
@@ -138,20 +139,22 @@ namespace QLBANHANG
             // 
             // btnChon
             // 
-            this.btnChon.Location = new System.Drawing.Point(554, 399);
+            this.btnChon.Image = ((System.Drawing.Image)(resources.GetObject("btnChon.Image")));
+            this.btnChon.Location = new System.Drawing.Point(210, 15);
+            this.btnChon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChon.Name = "btnChon";
-            this.btnChon.Size = new System.Drawing.Size(96, 32);
+            this.btnChon.Size = new System.Drawing.Size(27, 26);
             this.btnChon.TabIndex = 101;
-            this.btnChon.Text = "Chọn";
             this.btnChon.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 399);
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(179, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 32);
+            this.button1.Size = new System.Drawing.Size(27, 26);
             this.button1.TabIndex = 103;
-            this.button1.Text = "Tìm ";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -159,22 +162,25 @@ namespace QLBANHANG
             // 
             this.txtSdt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic);
             this.txtSdt.ForeColor = System.Drawing.Color.Gray;
-            this.txtSdt.Location = new System.Drawing.Point(123, 404);
+            this.txtSdt.Location = new System.Drawing.Point(11, 15);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSdt.Multiline = true;
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.PlaceHolderText = null;
-            this.txtSdt.Size = new System.Drawing.Size(217, 22);
+            this.txtSdt.Size = new System.Drawing.Size(164, 26);
             this.txtSdt.TabIndex = 105;
             this.txtSdt.Text = "Tìm theo số điện thoại";
             // 
             // frm_PickKhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1225, 452);
+            this.ClientSize = new System.Drawing.Size(919, 367);
             this.Controls.Add(this.txtSdt);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvSanPham);
             this.Controls.Add(this.btnChon);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frm_PickKhachHang";
             this.Text = "Khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dgvSanPham)).EndInit();

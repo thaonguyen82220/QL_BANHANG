@@ -90,7 +90,5 @@ namespace QLBANHANG
         {
             e.Graphics.DrawImage(memoryImage, 0, 0);
         }
-
-
     }
 }

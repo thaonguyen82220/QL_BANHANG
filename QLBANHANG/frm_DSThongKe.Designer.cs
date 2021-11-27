@@ -47,18 +47,17 @@ namespace QLBANHANG
             this.txtMaKhoa1 = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.rdbMaNV1 = new System.Windows.Forms.RadioButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.cbTG = new System.Windows.Forms.CheckBox();
             this.tbDT = new System.Windows.Forms.CheckBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.btnThoat = new System.Windows.Forms.Button();
             this.btnSearchMaKhoa1 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnThoat = new System.Windows.Forms.Button();
             this.btnLoc1 = new System.Windows.Forms.Button();
             this.btnDonHang = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.HocPhanBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachHang1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -86,9 +85,9 @@ namespace QLBANHANG
             this.label1.Location = new System.Drawing.Point(614, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(357, 37);
+            this.label1.Size = new System.Drawing.Size(384, 37);
             this.label1.TabIndex = 130;
-            this.label1.Text = "BÁO CÁO ĐƠN HÀNG";
+            this.label1.Text = "THỐNG KÊ ĐƠN HÀNG";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label6
@@ -96,7 +95,7 @@ namespace QLBANHANG
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Navy;
-            this.label6.Location = new System.Drawing.Point(728, 470);
+            this.label6.Location = new System.Drawing.Point(732, 523);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 17);
             this.label6.TabIndex = 120;
@@ -104,7 +103,7 @@ namespace QLBANHANG
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(498, 460);
+            this.txtTongTien.Location = new System.Drawing.Point(502, 513);
             this.txtTongTien.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongTien.Multiline = true;
             this.txtTongTien.Name = "txtTongTien";
@@ -117,7 +116,7 @@ namespace QLBANHANG
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(365, 468);
+            this.label5.Location = new System.Drawing.Point(369, 521);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(134, 17);
             this.label5.TabIndex = 118;
@@ -136,7 +135,7 @@ namespace QLBANHANG
             this.dgvKhachHang1.ReadOnly = true;
             this.dgvKhachHang1.RowHeadersWidth = 62;
             this.dgvKhachHang1.RowTemplate.Height = 28;
-            this.dgvKhachHang1.Size = new System.Drawing.Size(768, 436);
+            this.dgvKhachHang1.Size = new System.Drawing.Size(768, 479);
             this.dgvKhachHang1.TabIndex = 93;
             // 
             // groupBox2
@@ -148,15 +147,15 @@ namespace QLBANHANG
             this.groupBox2.Controls.Add(this.txtTongDon);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(399, 115);
+            this.groupBox2.Location = new System.Drawing.Point(422, 77);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(778, 512);
+            this.groupBox2.Size = new System.Drawing.Size(778, 555);
             this.groupBox2.TabIndex = 129;
             this.groupBox2.TabStop = false;
             // 
             // txtTongDon
             // 
-            this.txtTongDon.Location = new System.Drawing.Point(142, 468);
+            this.txtTongDon.Location = new System.Drawing.Point(146, 521);
             this.txtTongDon.Margin = new System.Windows.Forms.Padding(2);
             this.txtTongDon.Multiline = true;
             this.txtTongDon.Name = "txtTongDon";
@@ -169,7 +168,7 @@ namespace QLBANHANG
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Navy;
-            this.label3.Location = new System.Drawing.Point(5, 469);
+            this.label3.Location = new System.Drawing.Point(9, 522);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(114, 17);
             this.label3.TabIndex = 116;
@@ -240,16 +239,6 @@ namespace QLBANHANG
             this.rdbMaNV1.Text = "Nhân Viên";
             this.rdbMaNV1.UseVisualStyleBackColor = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(893, 76);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 19);
-            this.label2.TabIndex = 131;
-            this.label2.Text = "Ngày tạo: ";
-            // 
             // cbTG
             // 
             this.cbTG.AutoSize = true;
@@ -287,6 +276,16 @@ namespace QLBANHANG
             this.panel2.Size = new System.Drawing.Size(317, 104);
             this.panel2.TabIndex = 128;
             // 
+            // btnSearchMaKhoa1
+            // 
+            this.btnSearchMaKhoa1.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchMaKhoa1.Image")));
+            this.btnSearchMaKhoa1.Location = new System.Drawing.Point(270, 65);
+            this.btnSearchMaKhoa1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearchMaKhoa1.Name = "btnSearchMaKhoa1";
+            this.btnSearchMaKhoa1.Size = new System.Drawing.Size(22, 21);
+            this.btnSearchMaKhoa1.TabIndex = 89;
+            this.btnSearchMaKhoa1.UseVisualStyleBackColor = true;
+            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
@@ -298,18 +297,26 @@ namespace QLBANHANG
             this.groupBox1.Controls.Add(this.btnLoc1);
             this.groupBox1.Controls.Add(this.btnDonHang);
             this.groupBox1.Controls.Add(this.panel4);
-            this.groupBox1.Location = new System.Drawing.Point(11, 7);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(369, 620);
             this.groupBox1.TabIndex = 128;
             this.groupBox1.TabStop = false;
             // 
-            // reportViewer1
+            // button1
             // 
-            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
-            this.reportViewer1.Name = "ReportViewer";
-            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
-            this.reportViewer1.TabIndex = 0;
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(24, 575);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(132, 34);
+            this.button1.TabIndex = 135;
+            this.button1.Text = "Chi tiết";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnThoat
             // 
@@ -325,16 +332,6 @@ namespace QLBANHANG
             this.btnThoat.Text = "Trở về";
             this.btnThoat.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnThoat.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchMaKhoa1
-            // 
-            this.btnSearchMaKhoa1.Image = ((System.Drawing.Image)(resources.GetObject("btnSearchMaKhoa1.Image")));
-            this.btnSearchMaKhoa1.Location = new System.Drawing.Point(270, 65);
-            this.btnSearchMaKhoa1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSearchMaKhoa1.Name = "btnSearchMaKhoa1";
-            this.btnSearchMaKhoa1.Size = new System.Drawing.Size(22, 21);
-            this.btnSearchMaKhoa1.TabIndex = 89;
-            this.btnSearchMaKhoa1.UseVisualStyleBackColor = true;
             // 
             // btnLoc1
             // 
@@ -366,24 +363,16 @@ namespace QLBANHANG
             this.btnDonHang.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDonHang.UseVisualStyleBackColor = false;
             // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "ReportViewer";
+            this.reportViewer1.Size = new System.Drawing.Size(396, 246);
+            this.reportViewer1.TabIndex = 0;
+            // 
             // HocPhanBindingSource
             // 
             this.HocPhanBindingSource.DataMember = "HocPhan";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(24, 575);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 34);
-            this.button1.TabIndex = 135;
-            this.button1.Text = "Chi tiết";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -411,7 +400,6 @@ namespace QLBANHANG
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_DSThongKe";
             this.Text = "Thống kê";
@@ -451,7 +439,6 @@ namespace QLBANHANG
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RadioButton rdbMaNV1;
         private System.Windows.Forms.Button btnLoc1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnThoat;
         private System.Windows.Forms.CheckBox cbTG;
         private System.Windows.Forms.CheckBox tbDT;

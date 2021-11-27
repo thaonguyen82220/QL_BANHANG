@@ -151,5 +151,10 @@ namespace QLBANHANG
             }
             Reload();
         }
+
+        private void frm_DSHoaDonNhap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
