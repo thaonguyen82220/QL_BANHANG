@@ -15,7 +15,7 @@ namespace QLBANHANG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false); 
-                Application.Run(new Thao_ThongKeDonHang());
+                Application.Run(new Thao_Main());
         }
     }
 }

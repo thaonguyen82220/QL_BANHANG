@@ -139,9 +139,7 @@
     <Compile Include="frm_PickKhachHang.Designer.cs">
       <DependentUpon>frm_PickKhachHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Context2.cs" />
-    <Compile Include="Model\Context3.cs" />
-    <Compile Include="Model\Context4.cs" />
+    <Compile Include="Model\Context.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\tbl_BaoGia.cs" />
     <Compile Include="Model\tbl_ChiTietBaoGia.cs" />

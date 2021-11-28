@@ -5,9 +5,9 @@ using System.Linq;
 
 namespace QLBANHANG.Model
 {
-    public partial class Context4 : DbContext
+    public partial class Context : DbContext
     {
-        public Context4()
+        public Context()
             : base("name=Context")
         {
         }

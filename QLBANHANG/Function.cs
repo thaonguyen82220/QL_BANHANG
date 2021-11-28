@@ -9,10 +9,10 @@ namespace QLBANHANG
 {
     public class Function
     {
-        Context4 db = null;
+        Context db = null;
         public Function()
         {
-            db = new Context4();
+            db = new Context();
         }
         public string Random(int length)
         {

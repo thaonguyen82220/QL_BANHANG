@@ -12,8 +12,9 @@ namespace QLBANHANG
     public partial class Thao_ThongKeDonHang : Form
     {
         ConnectDB cn = new ConnectDB();
-        int flag = 0;
+        int flag = 0, dong = -1;
         Function f = new Function();
+        string current_id;
         string query = @"SELECT tbl_PhieuBanHang.IDPHIEU as id, tbl_KhachHang.tenkh, tbl_NhanVien.tennv, tbl_PhieuBanHang.TongTien, tbl_PhieuBanHang.NGAYGIAO as ngay,                     
             ( case tbl_PhieuBanHang.TrangThai 
 	                                    when 0 then N'Đang xử lý' 
@@ -218,6 +219,45 @@ namespace QLBANHANG
                 txtTongTien.Text = tong.ToString();
             }
             
+        }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            DialogResult = DialogResult.Cancel;
+        }
+        private void Select(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                dong = e.RowIndex;
+                if (dong > -1)
+                {
+                    current_id = dgDanhSach.Rows[dong].Cells["id"].Value.ToString();
+                    btnChiTiet.Enabled = true;
+                }
+                else
+                {
+                    btnChiTiet.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        private void btnChiTiet_Click(object sender, EventArgs e)
+        {
+            LoadChiTiet(current_id);
+        }
+
+        public void LoadChiTiet(string id)
+        {
+            string sql = @"SELECT  Ma, tbl_Hang.Ten as tensp, tbl_PhieuBanChiTiet.SL as soluong, tbl_PhieuBanChiTiet.DonGia, (SL*tbl_Hang.DONGIA) as 'ThanhTien'
+            FROM tbl_PhieuBanChiTiet 
+            INNER JOIN tbl_Hang ON tbl_PhieuBanChiTiet.HANG = tbl_Hang.Ma 
+            where  tbl_PhieuBanChiTiet.ID_PB=N'" + id + "'";
+            dgChiTiet.DataSource = cn.taobang(sql);
         }
     }
 }

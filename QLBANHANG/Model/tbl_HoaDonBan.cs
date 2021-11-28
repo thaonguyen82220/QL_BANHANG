@@ -43,6 +43,10 @@ namespace QLBANHANG.Model
 
         public int trangthai { get; set; }
 
+        [Required]
+        [StringLength(50)]
+        public string loai { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_ChiTietHoaDonBan> tbl_ChiTietHoaDonBan { get; set; }
     }

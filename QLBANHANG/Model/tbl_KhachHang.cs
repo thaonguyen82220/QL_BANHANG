@@ -30,10 +30,10 @@ namespace QLBANHANG.Model
         [Column(TypeName = "date")]
         public DateTime? ngaysinh { get; set; }
 
-        public int? gioitinh { get; set; }
-
         [StringLength(20)]
         public string stk { get; set; }
+
+        public int? gioitinh { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tbl_PhieuBanHang> tbl_PhieuBanHang { get; set; }
