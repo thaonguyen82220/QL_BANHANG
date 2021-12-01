@@ -224,7 +224,7 @@ namespace QLBANHANG
                             p.ID_PN = phieu.IDPN;
                             p.HANG = txtMasp.Text;
                             p.SL = int.Parse(txtSoluong.Text);
-                            p.DonGia = new Function().GetSanPham(txtMasp.Text).DONGIA;
+                            p.DonGia = new Function().GetSanPham(txtMasp.Text).DONGIANHAP;
                             bool up = f.AddCTPN(p);
                             if (up)
                             {

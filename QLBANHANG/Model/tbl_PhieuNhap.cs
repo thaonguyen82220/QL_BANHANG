@@ -8,13 +8,6 @@ namespace QLBANHANG.Model
 
     public partial class tbl_PhieuNhap
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_PhieuNhap()
-        {
-            tbl_PhieuNhapChiTiet = new HashSet<tbl_PhieuNhapChiTiet>();
-            tbl_PhieuNhapChiTiet1 = new HashSet<tbl_PhieuNhapChiTiet>();
-        }
-
         [Key]
         [StringLength(50)]
         public string IDPN { get; set; }
@@ -37,11 +30,5 @@ namespace QLBANHANG.Model
 
         [StringLength(50)]
         public string MANV { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_PhieuNhapChiTiet> tbl_PhieuNhapChiTiet { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_PhieuNhapChiTiet> tbl_PhieuNhapChiTiet1 { get; set; }
     }
 }

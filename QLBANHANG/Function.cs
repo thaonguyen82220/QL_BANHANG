@@ -50,6 +50,42 @@ namespace QLBANHANG
         {
             return db.tbl_NhaCungCap.FirstOrDefault(x=>x.mancc==id);
         }
+        public List<tbl_HANG> GetListSanPham()
+        {
+            return db.tbl_HANG.ToList();
+        }
+        public List<tbl_HANG> GetListSanPhamByName(string name)
+        {
+            return db.tbl_HANG.Where(x=>x.Ten.Contains(name)).ToList();
+        }
+        public List<tbl_HANG> GetListSanPhamByLoai(string loai)
+        {
+            return db.tbl_HANG.Where(x=>x.LOAI==loai).ToList();
+        }
+        public List<tbl_HANG> GetListSanPham(string ten, float giaS, float giaE)
+        {
+            return db.tbl_HANG.Where(x=> x.Ten.Contains(ten) && x.DONGIABAN>= giaS && x.DONGIABAN<=giaE).ToList();
+        }
+        public List<tbl_HANG> GetListSanPhamByGiaBan(float giaS, float giaE)
+        {
+            return db.tbl_HANG.Where(x => x.DONGIABAN>= giaS && x.DONGIANHAP<= giaE).ToList();
+        }
+        public tbl_Loai GetLoaiSanPham(string id)
+        {
+            return db.tbl_Loai.FirstOrDefault(x=>x.Ma==id);
+        }
+        public List<tbl_Loai> GetDanhSachLoai()
+        {
+            return db.tbl_Loai.ToList();
+        }
+        public tbl_DVT GetDonViTinh(string id)
+        {
+            return db.tbl_DVT.FirstOrDefault(x => x.ID == id);
+        }
+        public List<tbl_DVT> GetDanhSachDonViTinh()
+        {
+            return db.tbl_DVT.ToList();
+        }
         public tbl_BaoGia GetBaoGia(string id)
         {
             return db.tbl_BaoGia.FirstOrDefault(x => x.mabaogia == id);
@@ -474,6 +510,48 @@ namespace QLBANHANG
         {
             return db.tbl_KhachHang.SingleOrDefault(x => x.makh==id);
         }
+        public bool XoaSanPham(string id)
+        {
+            var o = GetSanPham(id);
+            if (o != null)
+            {
+                db.tbl_HANG.Remove(o);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+        public bool AddSanPham(tbl_HANG sp)
+        {
+            if (GetSanPham(sp.Ma)==null)
+            {
+                db.tbl_HANG.Add(sp);
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+        public bool EditSanPham(tbl_HANG sp)
+        {
+            var obj = GetSanPham(sp.Ma);
+            if (obj != null)
+            {
+                obj.Ten = sp.Ten;
+                obj.Mausac = sp.Mausac;
+                obj.Mota = sp.Mota;
+                obj.LOAI = sp.LOAI;
+                obj.Thue = sp.Thue;
+                obj.DVT = sp.DVT;
+                obj.Chietkhau = sp.Chietkhau;
+                obj.DONGIABAN = sp.DONGIABAN;
+                obj.DONGIANHAP = sp.DONGIANHAP;
+                obj.Anh = sp.Anh;
+                obj.Trangthai = sp.Trangthai;
+                db.SaveChanges();
+                return true;
+            }
+            return false;
+        }
         public tbl_HANG GetSanPham(string id)
         {
             return db.tbl_HANG.SingleOrDefault(x => x.Ma==id);
@@ -642,7 +720,7 @@ namespace QLBANHANG
             double? t = 0;
             foreach (var item in GetChiTietHoaDonBan(id))
             {
-                var dongia = GetSanPham(item.masp).DONGIA;
+                var dongia = GetSanPham(item.masp).DONGIABAN;
                 t = t + (dongia * item.soluong);
             }
             return t;
@@ -652,7 +730,7 @@ namespace QLBANHANG
             double? t = 0;
             foreach (var item in GetChiTietHoaDonNhap(id))
             {
-                var dongia = GetSanPham(item.masp).DONGIA;
+                var dongia = GetSanPham(item.masp).DONGIANHAP;
                 t = t + (dongia * item.soluong);
             }
             return t;

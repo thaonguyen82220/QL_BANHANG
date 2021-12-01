@@ -19,9 +19,5 @@ namespace QLBANHANG.Model
         public string masp { get; set; }
 
         public int? soluong { get; set; }
-
-        public virtual tbl_HoaDonBan tbl_HoaDonBan { get; set; }
-
-        public virtual tbl_HANG tbl_HANG { get; set; }
     }
 }

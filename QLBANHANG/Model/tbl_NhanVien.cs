@@ -8,13 +8,6 @@ namespace QLBANHANG.Model
 
     public partial class tbl_NhanVien
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_NhanVien()
-        {
-            tbl_nguoidung = new HashSet<tbl_nguoidung>();
-            tbl_PhieuBanHang = new HashSet<tbl_PhieuBanHang>();
-        }
-
         [Key]
         [StringLength(50)]
         public string manv { get; set; }
@@ -30,11 +23,5 @@ namespace QLBANHANG.Model
 
         [StringLength(50)]
         public string CMND { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_nguoidung> tbl_nguoidung { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_PhieuBanHang> tbl_PhieuBanHang { get; set; }
     }
 }

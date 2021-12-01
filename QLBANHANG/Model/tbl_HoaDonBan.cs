@@ -8,12 +8,6 @@ namespace QLBANHANG.Model
 
     public partial class tbl_HoaDonBan
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tbl_HoaDonBan()
-        {
-            tbl_ChiTietHoaDonBan = new HashSet<tbl_ChiTietHoaDonBan>();
-        }
-
         [StringLength(50)]
         public string Id { get; set; }
 
@@ -46,8 +40,5 @@ namespace QLBANHANG.Model
         [Required]
         [StringLength(50)]
         public string loai { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_ChiTietHoaDonBan> tbl_ChiTietHoaDonBan { get; set; }
     }
 }

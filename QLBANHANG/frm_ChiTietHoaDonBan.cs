@@ -39,7 +39,7 @@ namespace QLBANHANG
                 {
                     var i = (tbl_ChiTietHoaDonBan)item;
                     var sp = f.GetSanPham(i.masp);
-                    var ct = "Sản phẩm: " + i.masp + " x Số lượng: " + i.soluong + " --- Đơn giá: " + sp.DONGIA.ToString()+ '\n';
+                    var ct = "Sản phẩm: " + i.masp + " x Số lượng: " + i.soluong + " --- Đơn giá: " + sp.DONGIABAN.ToString()+ '\n';
                     theanh.Text += ct;
                 }
             }

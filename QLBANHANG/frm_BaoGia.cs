@@ -265,7 +265,7 @@ namespace QLBANHANG
                             ct.mabaogia = txtSoBaoGia.Text;
                             ct.masp = txtMasp.Text;
                             ct.soluong = int.Parse(txtSoLuong.Text);
-                            ct.dongia = f.GetSanPham(txtMasp.Text).DONGIA;
+                            ct.dongia = f.GetSanPham(txtMasp.Text).DONGIABAN;
                             ct.thanhtien = ct.dongia * ct.soluong;
                             var up = f.AddChiTietBaoGia(ct);
                             if (up)
@@ -283,7 +283,7 @@ namespace QLBANHANG
                             ct.mabaogia = txtSoBaoGia.Text;
                             ct.masp = txtMasp.Text;
                             ct.soluong = int.Parse(txtSoLuong.Text);
-                            ct.dongia = f.GetSanPham(txtMasp.Text).DONGIA;
+                            ct.dongia = f.GetSanPham(txtMasp.Text).DONGIABAN;
                             ct.thanhtien = ct.dongia * ct.soluong;
                             var up = f.EditChiTietBaoGia(ct);
                             if (up)

@@ -21,11 +21,5 @@ namespace QLBANHANG.Model
         public int? SL { get; set; }
 
         public double? DonGia { get; set; }
-
-        public virtual tbl_HANG tbl_HANG { get; set; }
-
-        public virtual tbl_PhieuNhap tbl_PhieuNhap { get; set; }
-
-        public virtual tbl_PhieuNhap tbl_PhieuNhap1 { get; set; }
     }
 }
